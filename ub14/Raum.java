@@ -44,8 +44,8 @@ public class Raum
 
 
     //Weitere Methoden
-    
-    //TODO : add a toString-Method like asked in the exercice
+
+    //TODO : find how to add the name of the prof.
 
     /**
      * Einfache Check-Methode
@@ -70,6 +70,21 @@ public class Raum
         check(neueReservierung != null, RES_NULL_FEHLER);
         reservierungArray[anzReservierung++] = neueReservierung;
 
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Raum");
+        sb.append(" ")
+                .append(geb)
+                .append("-")
+                .append(etage)
+                .append(".")
+                .append(raum);
+        for (int i = 0; i < anzReservierung; i++){
+            sb.append("\n").append(reservierungArray[i]);
+        }
+        return sb.toString();
     }
 
     public int getGeb() {
