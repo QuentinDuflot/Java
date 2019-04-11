@@ -36,7 +36,7 @@ public class Person
      * @param bedingung Bedingung, die man überprüfen möchtet
      * @param msg Fehler-Message
      */
-    public static void check(boolean bedingung, String msg) {
+    private static void check(boolean bedingung, String msg) {
         if (!bedingung)
             throw new IllegalArgumentException(msg);
     }
