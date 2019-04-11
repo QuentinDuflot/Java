@@ -14,11 +14,15 @@ public class Reservierung
     private static final String BEGINN_NULL_FEHLER = "Die Beginnstunde ist null !";
     private static final String ENDE_NULL_FEHLER = "Die Endestunde ist null !";
     private static final String ENDE_VOR_BEGINN_FEHLER = "Die Endestunde befindet sich vor die Beginnstunde !";
+    private static final String RAUM_NULL_FEHLER = "Sie haben keine Raum gegeben !";
+    private static final String MITARBEITER_NULL_FEHLER = "Sie haben kein Mitarbeiter gegeben !";
 
     //Attribute
     private String bemerkung;
     private Uhrzeit beginn;
     private Uhrzeit ende;
+    private Raum raum;
+    private Mitarbeiter mitarbeiter;
 
     //Konstruktoren
 
@@ -84,9 +88,20 @@ public class Reservierung
         this.ende = ende;
     }
 
+    public void setRaum(Raum raum) {
+        check(raum != null, RAUM_NULL_FEHLER);
+        this.raum = raum;
+    }
+
+    public void setMitarbeiter(Mitarbeiter mitarbeiter) {
+        check(mitarbeiter != null, MITARBEITER_NULL_FEHLER);
+        this.mitarbeiter = mitarbeiter;
+    }
+
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("gebucht von");
+        final StringBuilder sb = new StringBuilder("Gebucht von");
+        sb.append(mitarbeiter);
         sb.append(" von ").append(beginn);
         sb.append(" bis ").append(ende);
         sb.append(" für ").append(bemerkung).append('\'');

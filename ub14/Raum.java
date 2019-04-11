@@ -44,8 +44,7 @@ public class Raum
 
 
     //Weitere Methoden
-
-    //TODO : find how to add the name of the prof.
+    
 
     /**
      * Einfache Check-Methode
@@ -64,7 +63,7 @@ public class Raum
      *
      * @param neueReservierung Die Reservierung, die hingefügt werden muss
      */
-    private void addReservierung(Reservierung neueReservierung)
+    public void addReservierung(Reservierung neueReservierung)
     {
         check(anzReservierung < 50, TAB_UBERSCHREITEN);
         check(neueReservierung != null, RES_NULL_FEHLER);
