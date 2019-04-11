@@ -64,7 +64,7 @@ public class Raum
      *
      * @param neueReservierung Die Reservierung, die hingefügt werden muss
      */
-    private void addReservierung(Reservierung neueReservierung)
+    public void addReservierung(Reservierung neueReservierung)
     {
         check(anzReservierung < 50, TAB_UBERSCHREITEN);
         check(neueReservierung != null, RES_NULL_FEHLER);
