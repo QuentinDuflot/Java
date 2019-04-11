@@ -44,8 +44,7 @@ public class Raum
 
 
     //Weitere Methoden
-
-    //TODO : find how to add the name of the prof.
+    
 
     /**
      * Einfache Check-Methode
