@@ -23,18 +23,21 @@ public class Raum
     private int etage;
     private int raum;
     private Reservierung[] reservierungArray;
+    private int anzReservierung;
 
 
     //Konstruktoren
 
-    public Raum(int geb, int etage, int raum, Reservierung[] reservierungArray) {
+    public Raum(int geb, int etage, int raum) {
         check(geb > 0, NEG_GEB_FEHLER );
         check(etage > 0, NEG_ETG_FEHLER);
         check(raum > 0, NEG_RAUM_FEHLER);
+
         this.geb = geb;
         this.etage = etage;
         this.raum = raum;
         this.reservierungArray = new Reservierung[ANZAHL_MOEGLICHE_RESERVIERUNG];
+        anzReservierung = 0;
     }
 
 
@@ -51,4 +54,19 @@ public class Raum
             throw new IllegalArgumentException(msg);
     }
 
+    public int getGeb() {
+        return geb;
+    }
+
+    public int getEtage() {
+        return etage;
+    }
+
+    public int getRaum() {
+        return raum;
+    }
+
+    public int getAnzReservierung() {
+        return anzReservierung;
+    }
 }
