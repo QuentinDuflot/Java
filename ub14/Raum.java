@@ -29,6 +29,8 @@ public class Raum
 
     public Raum(int geb, int etage, int raum, Reservierung[] reservierungArray) {
         check(geb > 0, NEG_GEB_FEHLER );
+        check(etage > 0, NEG_ETG_FEHLER);
+        check(raum > 0, NEG_RAUM_FEHLER);
         this.geb = geb;
         this.etage = etage;
         this.raum = raum;
