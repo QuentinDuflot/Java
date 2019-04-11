@@ -40,4 +40,8 @@ public class Mitarbeiter extends Person
         if (!bedingung)
             throw new IllegalArgumentException(msg);
     }
+
+    public String geteMail() {
+        return eMail;
+    }
 }
