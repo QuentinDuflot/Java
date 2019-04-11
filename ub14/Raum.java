@@ -14,7 +14,10 @@ public class Raum
 
     //Meldung-Konstanten
 
-    private static final String NEG_GEB_FEHLER = "Das Gebaudenummer darf nicht negativ sein !";
+    private static final String NEG_GEB_FEHLER = "Der Gebaudenummer darf nicht negativ sein !";
+    private static final String NEG_ETG_FEHLER = "Der Etagenummer darf nicht negativ sein !";
+    private static final String NEG_RAUM_FEHLER = "Der Raumnummer darf nicht negativ sein !";
+
     //Attribute
     private int geb;
     private int etage;
