@@ -18,6 +18,7 @@ public class Mitarbeiter extends Person
     private String eMail;
 
     //Konstruktor
+    //TODO : If time try to check @ and . with regex !
 
     public Mitarbeiter(String name, String vorname, String eMail) {
         super(name, vorname);
@@ -39,6 +40,13 @@ public class Mitarbeiter extends Person
     private static void check(boolean bedingung, String msg) {
         if (!bedingung)
             throw new IllegalArgumentException(msg);
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder(super.getVorname());
+        sb.append(super.toString()).append(" (").append(eMail).append(") ");
+        return sb.toString();
     }
 
     public String geteMail() {

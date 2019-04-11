@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d9f78ccc-b6ba-45e5-a122-17e9e2c04767" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Mitarbeiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mitarbeiter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +56,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Mitarbeiter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            <state relative-caret-position="768">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+              <folding>
+                <element signature="e#1151#1152#0" expanded="true" />
+                <element signature="e#1179#1180#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -257,8 +260,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mitarbeiter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        <state relative-caret-position="768">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#1151#1152#0" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
