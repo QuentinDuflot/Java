@@ -17,6 +17,8 @@ public class Raum
     private static final String NEG_GEB_FEHLER = "Der Gebaudenummer darf nicht negativ sein !";
     private static final String NEG_ETG_FEHLER = "Der Etagenummer darf nicht negativ sein !";
     private static final String NEG_RAUM_FEHLER = "Der Raumnummer darf nicht negativ sein !";
+    private static final String TAB_UBERSCHREITEN = "Es ist nicht mehr möglich für dieses Raum zu reservieren !";
+    private static final String RES_NULL_FEHLER = "Ihre Reservierung ist nicht vollständig !";
 
     //Attribute
     private int geb;
@@ -42,6 +44,8 @@ public class Raum
 
 
     //Weitere Methoden
+    
+    //TODO : add a toString-Method like asked in the exercice
 
     /**
      * Einfache Check-Methode
@@ -52,6 +56,20 @@ public class Raum
     private static void check(boolean bedingung, String msg) {
         if (!bedingung)
             throw new IllegalArgumentException(msg);
+    }
+
+    /**
+     *
+     * Eine einfache Methode, um eine Rersierung für unsere Raum hinzufügen
+     *
+     * @param neueReservierung Die Reservierung, die hingefügt werden muss
+     */
+    private void addReservierung(Reservierung neueReservierung)
+    {
+        check(anzReservierung < 50, TAB_UBERSCHREITEN);
+        check(neueReservierung != null, RES_NULL_FEHLER);
+        reservierungArray[anzReservierung++] = neueReservierung;
+
     }
 
     public int getGeb() {
