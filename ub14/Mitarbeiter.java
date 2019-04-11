@@ -42,6 +42,10 @@ public class Mitarbeiter extends Person
             throw new IllegalArgumentException(msg);
     }
 
+    public void reserviere(Raum raum, Uhrzeit beginn, Uhrzeit ende, String bez){
+
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder(super.getVorname());
