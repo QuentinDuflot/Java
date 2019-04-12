@@ -47,9 +47,8 @@ public class Mitarbeiter extends Person
         check(raum != null, INVALID_RAUM_FEHLER);
         Reservierung res = new Reservierung(bez,beginn,ende);
         raum.addReservierung(res);
-
-
-
+        Mitarbeiter mitarbeiter = new Mitarbeiter(super.getName(),super.getVorname(),this.eMail);
+        res.setMitarbeiter(mitarbeiter);
     }
 
     @Override
