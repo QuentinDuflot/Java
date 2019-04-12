@@ -12,11 +12,11 @@ public class Mitarbeiter extends Person
     private static final String MISSING_AT_FEHLER = "Ihre E-Mail braucht ein @ !";
     private static final String MISSING_DOT_FEHLER = "Ihre E-Mail braucht ein '.' !";
     private static final String LEER_EMAIL_FEHLER = "Ihre E-Mail ist leer !";
+    private static final String INVALID_RAUM_FEHLER = "Die angegebene Raum ist ungültig !";
 
     //Attribute
 
     private String eMail;
-
     //Konstruktor
     //TODO : If time try to check @ and . with regex !
 
@@ -29,7 +29,7 @@ public class Mitarbeiter extends Person
     }
 
 
-    //Weitere Methode
+    //Weitere Methoden
 
     /**
      * Einfache Check-Methode
@@ -43,6 +43,9 @@ public class Mitarbeiter extends Person
     }
 
     public void reserviere(Raum raum, Uhrzeit beginn, Uhrzeit ende, String bez){
+
+        check(raum != null, INVALID_RAUM_FEHLER);
+
 
     }
 
