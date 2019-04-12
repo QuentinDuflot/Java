@@ -45,6 +45,9 @@ public class Mitarbeiter extends Person
     public void reserviere(Raum raum, Uhrzeit beginn, Uhrzeit ende, String bez){
 
         check(raum != null, INVALID_RAUM_FEHLER);
+        Reservierung res = new Reservierung(bez,beginn,ende);
+        raum.addReservierung(res);
+
 
 
     }
