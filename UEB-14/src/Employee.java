@@ -27,8 +27,9 @@ public class Employee extends Person {
 	 * @param start time
 	 * @param end time
 	 * @param comment String course
+	 * @throws ReservationException 
 	 */
-	public void reserve(Room room, Time start, Time end, String comment) {
+	public void reserve(Room room, Time start, Time end, String comment) throws ReservationException {
 		Reservation newReservation = new Reservation(start, end, comment, this, room);
 		room.addReservation(newReservation);
 	}

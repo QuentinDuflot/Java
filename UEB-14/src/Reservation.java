@@ -17,8 +17,11 @@ public class Reservation {
 	 * @param commentG String course
 	 * @param employeeG employee who reserves room
 	 * @param roomG to reserve
+	 * @throws ReservationException 
 	 */
-	public Reservation(Time startG, Time endG, String commentG, Employee employeeG, Room roomG) {
+	public Reservation(Time startG, Time endG, String commentG, Employee employeeG, Room roomG) throws ReservationException {
+		ReservationException.endBeforeStart(startG, endG);
+		
 		this.start = startG;
 		this.end = endG;
 		this.comment = commentG;

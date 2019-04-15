@@ -22,6 +22,14 @@ public class Time {
 		this.minute = minuteG;
 	}
 	
+	public int getHour() {
+		return hour;
+	}
+	
+	public int getMinute() {
+		return minute;
+	}
+	
 	@Override
 	public String toString() {
 		return hour +":"+ minute +" Uhr";

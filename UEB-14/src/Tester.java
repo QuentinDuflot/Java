@@ -5,11 +5,11 @@
  */
 
 public class Tester {
-	public void run() throws TimeException, RoomException, EmployeeException, PersonException {
+	public void run() throws TimeException, RoomException, EmployeeException, PersonException, ReservationException {
 		testCaseReservation();
 	}
 	
-	public void testCaseReservation() throws TimeException, RoomException, EmployeeException, PersonException {
+	public void testCaseReservation() throws TimeException, RoomException, EmployeeException, PersonException, ReservationException {
 		Employee e1 = new Employee("Max", "Patterson", "max.patterson@gmail.com");
 		Employee e2 = new Employee("Arnold", "King", "arnking89@gmail.com");
 		
@@ -31,7 +31,7 @@ public class Tester {
 		
 		try {
 			tester.run();
-		} catch (TimeException | RoomException | EmployeeException | PersonException e) {
+		} catch (TimeException | RoomException | EmployeeException | PersonException | ReservationException e) {
 			System.err.println(e);
 		}
 	}
