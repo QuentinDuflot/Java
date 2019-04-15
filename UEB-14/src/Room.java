@@ -21,6 +21,10 @@ public class Room {
 	 * @throws RoomException when room is incorrect
 	 */
 	public Room(int buildingG, int floorG, int roomG) throws RoomException {
+		RoomException.negativeBuildingNumber(buildingG);
+		RoomException.negativeFloorNumber(floorG);
+		RoomException.negativeRoomNumber(roomG);
+		
 		this.building = buildingG;
 		this.floor = floorG;
 		this.room = roomG;
