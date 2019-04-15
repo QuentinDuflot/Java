@@ -23,8 +23,8 @@ public class ReservationException extends Exception {
 	}
 	
 	/**
-	 * @param startG
-	 * @param endG
+	 * @param startG begin of the reservation
+	 * @param endG end of the reservation
 	 * @throws ReservationException when end time is inferior to start time
 	 */
 	public static void endBeforeStart(Time startG, Time endG) throws ReservationException {

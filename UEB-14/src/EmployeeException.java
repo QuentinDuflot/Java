@@ -14,7 +14,7 @@ public class EmployeeException extends Exception {
 	// \\. to have '.' as a non regex
 
 	private static final String MSG_EMAIL_INCORRECT =
-			"Die Email-Adresse ist inkorrekt. Bitte respektieren Sie den Format: name@domaine.ext";
+			"Die Email-Adresse ist inkorrekt. Bitte respektieren Sie den Format: name@domain.ext";
 
 	public EmployeeException() {
 		super();
@@ -29,7 +29,7 @@ public class EmployeeException extends Exception {
 
 
 	/**
-	 * @param email employee
+	 * @param email email address that has to be checked
 	 * @throws EmployeeException when email is invalid
 	 */
 	public static void emailRight(String email) throws EmployeeException {
