@@ -1,4 +1,10 @@
 
+/**
+ * Class RoomException
+ * @author marie-louwechsler/Quentin Duflot
+ * @version 1.1
+ */
+
 public class RoomException extends Exception {
 	public static final String MSG_NEG_BUILDING_NBR =
 			"Die Gebäude Nummer darf nicht negativ sein.";

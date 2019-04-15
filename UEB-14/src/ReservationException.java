@@ -1,4 +1,10 @@
 
+/**
+ * Class ReservationException
+ * @author marie-louwechsler/Quentin Duflot
+ * @version 1.1
+ */
+
 public class ReservationException extends Exception {
 	public static final String MSG_HOURS_INCORRECT =
 			"Die End-Stunde kann nicht kleiner als die Start-Stunde sein.";

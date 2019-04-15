@@ -1,3 +1,10 @@
+
+/**
+ * Class EmployeeException
+ * @author marie-louwechsler/Quentin Duflot
+ * @version 1.1
+ */
+
 import java.util.regex.*;
 public class EmployeeException extends Exception {
 
@@ -26,9 +33,8 @@ public class EmployeeException extends Exception {
 	 * @throws EmployeeException when email is invalid
 	 */
 	public static void emailRight(String email) throws EmployeeException {
-		Matcher matcher = VALID_EMAIL_ADDRESS_REGEX .matcher(email);
+		Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
 		if(!matcher.find()) {
 			throw new EmployeeException(MSG_EMAIL_INCORRECT);
 		}
 	}
-}

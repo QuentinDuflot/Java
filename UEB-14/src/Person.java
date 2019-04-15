@@ -1,7 +1,7 @@
 
 /**
  * Class Person
- * @author marie-louwechsler
+ * @author marie-louwechsler/Quentin Duflot
  * @version 1.1
  */
 
