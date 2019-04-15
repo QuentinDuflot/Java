@@ -40,6 +40,9 @@ public class Employee extends Person {
 
 	@Override
 	public String toString() {
-		return super.toString() +" ("+ email +")";
+		final StringBuilder sb = new StringBuilder(super.toString());
+		sb..append(" (").append(eMail).append(") ");
+		return sb.toString();
 	}
+
 }

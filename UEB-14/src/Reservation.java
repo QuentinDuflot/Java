@@ -65,7 +65,13 @@ public class Reservation {
 	}
 
 	/* Methods */
+	@Override
 	public String toString() {
-		return "gebucht von "+ employee +" von "+ start +" bis "+ end +" für "+ comment;
+		final StringBuilder sb = new StringBuilder("Gebucht von");
+		sb.append(employee);
+		sb.append(" von ").append(start);
+		sb.append(" bis ").append(end);
+		sb.append(" für ").append(comment).append('\'');
+		return sb.toString();
 	}
 }

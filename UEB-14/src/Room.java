@@ -59,12 +59,16 @@ public class Room {
 
 	@Override
 	public String toString() {
-		String output = "Raum "+ building +"-"+ floor +"."+ room;
-		
-		for(int i = 0; i < reservationNumber; i++) {
-			output += "\n"+ reservationList[i];
+		StringBuilder sb = new StringBuilder("Raum");
+		sb.append(" ")
+				.append(building)
+				.append("-")
+				.append(floor)
+				.append(".")
+				.append(room);
+		for (int i = 0; i < reservationNumber; i++){
+			sb.append("\n").append(reservationList[i]);
 		}
-		
-		return output + "\n";
+		return sb.toString();
 	}
 }
