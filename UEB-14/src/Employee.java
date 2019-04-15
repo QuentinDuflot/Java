@@ -33,7 +33,11 @@ public class Employee extends Person {
 		Reservation newReservation = new Reservation(start, end, comment, this, room);
 		room.addReservation(newReservation);
 	}
-	
+
+	public String getEmail() {
+		return email;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString() +" ("+ email +")";

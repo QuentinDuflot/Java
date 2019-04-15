@@ -40,7 +40,23 @@ public class Room {
 		reservationList[reservationNumber] = reservationG;
 		reservationNumber++;
 	}
-	
+
+	public int getBuilding() {
+		return building;
+	}
+
+	public int getFloor() {
+		return floor;
+	}
+
+	public int getRoom() {
+		return room;
+	}
+
+	public int getReservationNumber() {
+		return reservationNumber;
+	}
+
 	@Override
 	public String toString() {
 		String output = "Raum "+ building +"-"+ floor +"."+ room;

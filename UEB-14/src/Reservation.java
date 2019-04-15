@@ -47,7 +47,23 @@ public class Reservation {
 	 */
 	public void setRoom(Room roomG) {
 	}
-	
+
+	public String getComment() {
+		return comment;
+	}
+
+	public Time getStart() {
+		return start;
+	}
+
+	public Time getEnd() {
+		return end;
+	}
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
 	/* Methods */
 	public String toString() {
 		return "gebucht von "+ employee +" von "+ start +" bis "+ end +" für "+ comment;

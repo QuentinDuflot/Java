@@ -21,7 +21,15 @@ public class Person {
 		this.firstName = firstNameG;
 		this.lastName = lastNameG;
 	}
-	
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
 	@Override
 	public String toString() {
 		return firstName +" "+ lastName;
