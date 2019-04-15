@@ -10,8 +10,8 @@ public class Time {
 	private int minute;
 	
 	/**
-	 * @param hourG time
-	 * @param minuteG time
+	 * @param hourG hours number (between 0 and 23)
+	 * @param minuteG minutes number (between 0 and 59)
 	 * @throws TimeException when time is incorrect
 	 */
 	public Time(int hourG, int minuteG) throws TimeException {

@@ -1,6 +1,9 @@
 
 /**
  * Class Reservation
+ * Create a reservation-object with a begin of the reservation and an end
+ * Every reservation has a comment
+ * Each reservation is related to an employee who reserved it
  * @author marie-louwechsler/Quentin Duflot
  * @version 1.1
  */
@@ -12,20 +15,20 @@ public class Reservation {
 	private Employee employee;
 	
 	/**
-	 * @param startG time
-	 * @param endG time
-	 * @param commentG String course
-	 * @param employeeG employee who reserves room
-	 * @param roomG to reserve
+	 * @param startG start time of the reservation
+	 * @param endG end time of the reservation (end > start)
+	 * @param commentG String subject of the reservation
+	 * @param employeeG employee who is reserving the room
+	 * @param roomG room to reserve
 	 * @throws ReservationException 
 	 */
-	public Reservation(Time startG, Time endG, String commentG, Employee employeeG, Room roomG) throws ReservationException {
+	public Reservation(Time startG, Time endG, String commentG, Room roomG) throws ReservationException {
 		ReservationException.endBeforeStart(startG, endG);
 		
 		this.start = startG;
 		this.end = endG;
 		this.comment = commentG;
-		this.employee = employeeG;
+
 	}
 	
 	/**

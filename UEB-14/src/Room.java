@@ -15,9 +15,9 @@ public class Room {
 	private int reservationNumber;
 	
 	/**
-	 * @param buildingG int
-	 * @param floorG int
-	 * @param roomG int
+	 * @param buildingG int building number (>0)
+	 * @param floorG int floor number (>0)
+	 * @param roomG int room number (>0)
 	 * @throws RoomException when room is incorrect
 	 */
 	public Room(int buildingG, int floorG, int roomG) throws RoomException {
@@ -34,9 +34,12 @@ public class Room {
 	}
 	
 	/**
-	 * @param reservationG Reservation
+	 * addReservation-method: add a resevation to the reservation array
+	 *
+	 * @param reservationG Reservation to added to the array
 	 */
-	public void addReservation(Reservation reservationG) {
+	public void addReservation(Reservation reservationG) throws RoomException {
+		RoomExeption.arrayFull(reservationNumber,RESERVATION_NUMBER_MAX);
 		reservationList[reservationNumber] = reservationG;
 		reservationNumber++;
 	}

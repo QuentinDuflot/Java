@@ -1,6 +1,7 @@
 
 /**
  * Class Person
+ * Create a person-object with a first and last name
  * @author marie-louwechsler/Quentin Duflot
  * @version 1.1
  */

@@ -12,6 +12,8 @@ public class RoomException extends Exception {
 			"Die Etagen Nummer darf nicht negativ sein.";
 	public static final String MSG_NEG_ROOM_NBR =
 			"Die Raum Nummer darf nicht negativ sein.";
+	public static final String MSG_ARR_FULL =
+			"Diese Raum kann keine Reservierung mehr aufnehmen !";
 	
 	public RoomException() {
 		super();
@@ -51,6 +53,12 @@ public class RoomException extends Exception {
 	public static void negativeRoomNumber(int roomG) throws RoomException {
 		if(roomG < 0) {
 			throw new RoomException(MSG_NEG_ROOM_NBR);
+		}
+	}
+
+	public static void arrayFull(int nbRes, int maxRes)throws RoomException {
+		if (nbRes == maxRes){
+			throw new RoomException(MSG_ARR_FULL);
 		}
 	}
 }
