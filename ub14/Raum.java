@@ -73,7 +73,7 @@ public class Raum
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Raum");
+        StringBuilder sb = new StringBuilder("Raum");
         sb.append(" ")
                 .append(geb)
                 .append("-")
