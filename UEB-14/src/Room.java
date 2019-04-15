@@ -39,7 +39,7 @@ public class Room {
 	 * @param reservationG Reservation to added to the array
 	 */
 	public void addReservation(Reservation reservationG) throws RoomException {
-		RoomExeption.arrayFull(reservationNumber,RESERVATION_NUMBER_MAX);
+		RoomException.arrayFull(reservationNumber,RESERVATION_NUMBER_MAX);
 		reservationList[reservationNumber] = reservationG;
 		reservationNumber++;
 	}

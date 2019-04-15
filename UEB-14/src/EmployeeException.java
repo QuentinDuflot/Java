@@ -38,3 +38,4 @@ public class EmployeeException extends Exception {
 			throw new EmployeeException(MSG_EMAIL_INCORRECT);
 		}
 	}
+}

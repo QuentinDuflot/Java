@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Time
+comment0.text=\n\ Class\ Time\n\ @author\ marie-louwechsler/Quentin\ Duflot\n\ @version\ 1.1\n
+comment1.params=hourG\ minuteG
+comment1.target=Time(int,\ int)
+comment1.text=\n\ @param\ hourG\ hours\ number\ (between\ 0\ and\ 23)\n\ @param\ minuteG\ minutes\ number\ (between\ 0\ and\ 59)\n\ @throws\ TimeException\ when\ time\ is\ incorrect\n
+comment2.params=
+comment2.target=int\ getHour()
+comment3.params=
+comment3.target=int\ getMinute()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5
