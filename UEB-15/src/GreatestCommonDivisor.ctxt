@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=GreatestCommonDivisor
+comment0.text=\r\n\ GreatestCommonDivisor\ class\ to\ calculate\ the\ gcd\ between\ two\ numbers\ (recursive)\r\n\ @author\ marie-louwechsler/\ Quentin\ Duflot\r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=GreatestCommonDivisor()
+comment2.params=a\ b
+comment2.target=long\ calculateGCD(long,\ long)
+comment2.text=\r\n\ @param\ a\ int\ first\ natural\ number\r\n\ @param\ b\ int\ second\ natural\ number\r\n\ @return\ the\ greatest\ common\ divisor\ of\ both\ numbers\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

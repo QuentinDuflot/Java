@@ -189,15 +189,15 @@ public class Tester {
 		if(way == true) {
 			System.out.println("\n Geben Sie irgendwelche Zeichenkette ein, um iterativ zu ueberpruefen, ob es ein Palindrom ist:");
 			str = InputReaders.readString(in);
-			int startTime = System.nanoTime();
+			long startTime = System.nanoTime();
 			System.out.println("\n" + str + ": " + pi.isPalindrom(str));
-			System.out.println("\n Verstrichene Zeit : " + System.nanoTime() - startTime);
+			System.out.println("\n Verstrichene Zeit : " + (System.nanoTime() - startTime));
 		} else {
 			System.out.println("\n Geben Sie irgendwelche Zeichenkette ein, um rekursiv zu ueberpruefen, ob es ein Palindrom ist:");
-			int startTime = System.nanoTime();
+			long startTime = System.nanoTime();
 			str = InputReaders.readString(in);
 			System.out.println("\n" + str + ": " + pr.isPalindrom(str));
-			System.out.println("\n Verstrichene Zeit : " + System.nanoTime() - startTime);
+			System.out.println("\n Verstrichene Zeit : " + (System.nanoTime() - startTime));
 		}
 	}
 
@@ -217,15 +217,15 @@ public class Tester {
 
 		if(way == true) {
 			while((str = br.readLine()) != null) {
-				int startTime = System.nanoTime();
+				long startTime = System.nanoTime();
 				System.out.println("\n" + str + ": "+ pi.isPalindrom(str));
-				System.out.println("\n Verstrichene Zeit : " + System.nanoTime() - startTime);
+				System.out.println("\n Verstrichene Zeit : " + (System.nanoTime() - startTime));
 			}
 		} else {
 			while((str = br.readLine()) != null) {
-				int startTime = System.nanoTime();
+				long startTime = System.nanoTime();
 				System.out.println("\n" + str + ": "+ pr.isPalindrom(str));
-				System.out.println("\n Verstrichene Zeit : " + System.nanoTime() - startTime);
+				System.out.println("\n Verstrichene Zeit : " + (System.nanoTime() - startTime));
 			}
 		}
 	}

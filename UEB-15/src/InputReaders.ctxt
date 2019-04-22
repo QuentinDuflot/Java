@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=InputReaders
+comment0.text=\r\n\ InputReaders\ class\ to\ read\ inputs\ from\ different\ types\r\n\ @author\ marie-louwechsler/\ Quentin\ Duflot\r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=InputReaders()
+comment2.params=in
+comment2.target=int\ readInt(java.util.Scanner)
+comment2.text=\r\n\ @param\ in\ scanner\ type\ int\r\n\ @return\ \ the\ next\ int-value\ found\r\n
+comment3.params=in
+comment3.target=long\ readLong(java.util.Scanner)
+comment3.text=\r\n\ @param\ in\ scanner\ type\ long\r\n\ @return\ the\ next\ long-value\r\n
+comment4.params=in
+comment4.target=java.lang.String\ readString(java.util.Scanner)
+comment4.text=\r\n\ @param\ in\ scanner\ type\ String\r\n\ @return\ the\ next\ line\ as\ a\ string\ (only\ if\ there\ is\ a\ next\ line)\r\n
+comment5.params=in
+comment5.target=char\ readChar(java.util.Scanner)
+comment5.text=\r\n\ @param\ in\ scanner\ type\ char\r\n\ @return\ the\ next\ character\ found\r\n
+numComments=6
