@@ -1,6 +1,6 @@
 /**
  * PalindromIterative class to test palindroms in an iterative way
- * @author marie-louwechsler
+ * @author marie-louwechsler/ Quentin Duflot
  * @version 1.0
  */
 

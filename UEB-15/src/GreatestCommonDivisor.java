@@ -1,6 +1,6 @@
 /**
  * GreatestCommonDivisor class to calculate the gcd between two numbers (recursive)
- * @author marie-louwechsler
+ * @author marie-louwechsler/ Quentin Duflot
  * @version 1.0
  */
 

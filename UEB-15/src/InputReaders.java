@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * InputReaders class to read inputs from different types
- * @author marie-louwechsler
+ * @author marie-louwechsler/ Quentin Duflot
  * @version 1.0
  */
 public class InputReaders {

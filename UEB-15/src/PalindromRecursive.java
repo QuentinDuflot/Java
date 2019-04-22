@@ -1,6 +1,6 @@
 /**
  * PalindromRecursive class to test palindroms in a recursive way
- * @author marie-louwechsler
+ * @author marie-louwechsler/ Quentin Duflot
  * @version 1.0
  */
 
