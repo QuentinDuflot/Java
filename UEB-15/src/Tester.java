@@ -149,13 +149,17 @@ public class Tester {
 		String str;
 		
 		if(way == true) {
-			System.out.println("Geben Sie irgendwas ein um iterativ zu ueberpruefen, ob es ein Palindrom ist:");
+			System.out.println("\n Geben Sie irgendwas ein um iterativ zu ueberpruefen, ob es ein Palindrom ist:");
 			str = InputReaders.readString(in);
-			System.out.println(str +": "+ pi.isPalindrom(str));
+			int startTime = System.nanoTime();
+			System.out.println("\n" + str + ": " + pi.isPalindrom(str));
+			System.out.println("\n Elapsed time : " + System.nanoTime() - startTime);
 		} else {
-			System.out.println("Geben Sie irgendwas ein um rekursiv zu ueberpruefen, ob es ein Palindrom ist:");
+			System.out.println("\n Geben Sie irgendwas ein um rekursiv zu ueberpruefen, ob es ein Palindrom ist:");
+			int startTime = System.nanoTime();
 			str = InputReaders.readString(in);
-			System.out.println(str +": "+ pr.isPalindrom(str));
+			System.out.println("\n" + str + ": " + pr.isPalindrom(str));
+			System.out.println("\n Elapsed time : " + System.nanoTime() - startTime);
 		}
 	}
 	
@@ -167,11 +171,15 @@ public class Tester {
 		
 		if(way == true) {
 			while((str = br.readLine()) != null) {
-				System.out.println(str +": "+ pi.isPalindrom(str));
+				int startTime = System.nanoTime();
+				System.out.println("\n" + str + ": "+ pi.isPalindrom(str));
+				System.out.println("\n Elapsed time : " + System.nanoTime() - startTime);
 			}
 		} else {
 			while((str = br.readLine()) != null) {
-				System.out.println(str +": "+ pr.isPalindrom(str));
+				int startTime = System.nanoTime();
+				System.out.println("\n" + str + ": "+ pr.isPalindrom(str));
+				System.out.println("\n Elapsed time : " + System.nanoTime() - startTime);
 			}
 		}
 	}
