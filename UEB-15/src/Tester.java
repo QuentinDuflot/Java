@@ -171,12 +171,18 @@ public class Tester {
 	/**
 	 * Method that permits the user to choose if he wants to test palindroms from a file or not
 	 *
-	 * @return
+	 * @return true if it's reading from file and false if not
 	 */
 	public boolean isReadingFromFile() {
 		return t.yesOrNo(in, "Wollen Sie das Palindrom aus einer Datei testen? (Y: Ja, N: Nein");
 	}
-	
+
+	/**
+	 * method that read a palindrom  and write if it's one or not
+	 * also give the execution time
+	 *
+	 * @param way the way the palindrom should be analyse, true is iterativ and false recursiv
+	 */
 	public void readFromString(boolean way) {
 		String str;
 		
@@ -194,7 +200,15 @@ public class Tester {
 			System.out.println("\n Verstrichene Zeit : " + System.nanoTime() - startTime);
 		}
 	}
-	
+
+	/**
+	 * method that read a palindrom from a file and write if it's one or not
+	 * also give the execution time
+	 *
+	 * @param fileName file that must be read
+	 * @param way the way the palindrom should be analyse, true is iterativ and false recursiv
+	 * @throws IOException if there is a problem with the file
+	 */
 	public void readFromFile(String fileName, boolean way) throws IOException {
 		String str;
 		

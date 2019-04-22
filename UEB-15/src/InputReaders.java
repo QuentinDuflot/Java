@@ -11,7 +11,7 @@ public class InputReaders {
 
 	/**
 	 * @param in scanner type int
-	 * @return
+	 * @return  the next int-value found
 	 */
 	public static int readInt(Scanner in) {
 		int number = in.nextInt();
@@ -21,7 +21,7 @@ public class InputReaders {
 	
 	/**
 	 * @param in scanner type long
-	 * @return
+	 * @return the next long-value
 	 */
 	public static long readLong(Scanner in) {
 		long number = in.nextLong();
@@ -31,7 +31,7 @@ public class InputReaders {
 	
 	/**
 	 * @param in scanner type String
-	 * @return
+	 * @return the next line as a string (only if there is a next line)
 	 */
 	public static String readString(Scanner in) {
 		String str = null;
@@ -43,7 +43,7 @@ public class InputReaders {
 	
 	/**
 	 * @param in scanner type char
-	 * @return
+	 * @return the next character found
 	 */
 	public static char readChar(Scanner in) {
 		char result = in.nextLine().charAt(0);

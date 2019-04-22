@@ -6,9 +6,9 @@
 
 public abstract class Palindrom {
 	/**
-	 * isPalindrom test if a string is a palindrom
-	 * @param String testValue
-	 * @return boolean 
+	 * isPalindrom test if a string is a palindrom or not
+	 * @param String string that must be test
+	 * @return boolean  true = is palindrom, false = is not a palindrom
 	 */
 	public abstract boolean isPalindrom(String testValue);
 	
