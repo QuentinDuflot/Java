@@ -1,0 +1,26 @@
+java c name
+java name.jar
+java ClassName
+grep Name…
+
+** ÜBUNG 14
+
+- Eigene Exception ist gut: Name der Exception sollte sagen was passiert
+- EmployeeException => EmailIncorrect, falseEmailFormat
+- Wo passiert die Exception? Print traceStack
+- Wenn Exception, hoursRight => checkHours, minutesRight => checkMinute
+- Attribut room
+- 2 Konstruktoren: Standard + Reservierung(Beginn, Ende, Bemerkung)
+- setRoom() { … }
+
+25 Pkt
+
+** ÜBUNG 15
+
+- Abstrakte Klasse für GGT, um es erweitern zu können.
+- Testfall: Gleiche Werte testen für GGT, oder negative Werten.
+- Verstrichene Zeit: Angabe Wert angeben.
+
+35 Pkt
+
+** ÜBUNG 16
