@@ -1,7 +1,8 @@
 
 /**
  * Class Person
- * @author marie-louwechsler
+ * Create a person-object with a first and last name
+ * @author marie-louwechsler/Quentin Duflot
  * @version 1.1
  */
 
@@ -21,7 +22,15 @@ public class Person {
 		this.firstName = firstNameG;
 		this.lastName = lastNameG;
 	}
-	
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
 	@Override
 	public String toString() {
 		return firstName +" "+ lastName;

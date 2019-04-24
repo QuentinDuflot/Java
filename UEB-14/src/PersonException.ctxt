@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=PersonException
+comment0.text=\n\ Class\ PersonException\n\ @author\ marie-louwechsler/Quentin\ Duflot\n\ @version\ 1.1\n
+comment1.params=
+comment1.target=PersonException()
+comment2.params=message
+comment2.target=PersonException(java.lang.String)
+comment2.text=\n\ @param\ message\ error\n
+comment3.params=name
+comment3.target=void\ nameRight(java.lang.String)
+comment3.text=\n\ @param\ name\ first\ or\ last\ name\ of\ person\n\ @throws\ PersonException\ when\ name\ is\ invalid\n
+numComments=4

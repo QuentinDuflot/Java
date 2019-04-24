@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=TimeException
+comment0.text=\n\ Class\ TimeException\n\ @author\ marie-louwechsler/Quentin\ Duflot\n\ @version\ 1.1\n
+comment1.params=
+comment1.target=TimeException()
+comment2.params=message
+comment2.target=TimeException(java.lang.String)
+comment2.text=\n\ @param\ message\ error\n
+comment3.params=hoursG
+comment3.target=void\ hoursRight(int)
+comment3.text=\n\ @param\ hoursG\ hours\ number\n\ @throws\ TimeException\ when\ hour\ is\ incorrect\n
+comment4.params=minutesG
+comment4.target=void\ minutesRight(int)
+comment4.text=\n\ @param\ minutesG\ minutes\ number\n\ @throws\ TimeException\ when\ minutes\ are\ incorrect\n
+numComments=5

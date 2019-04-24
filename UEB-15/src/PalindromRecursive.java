@@ -1,6 +1,6 @@
 /**
  * PalindromRecursive class to test palindroms in a recursive way
- * @author marie-louwechsler
+ * @author marie-louwechsler/ Quentin Duflot
  * @version 1.0
  */
 
@@ -9,8 +9,10 @@ public class PalindromRecursive extends Palindrom {
 	public PalindromRecursive() { }
 	
 	/**
-	 * isPalindrom recursive test of a string
-	 * @param String testvalue 
+	 * Method that tells if a string is a palindrom or not
+	 * The test is done on a recursiv way
+	 *
+	 * @param String string that must be test
 	 * @return boolean, true = is palindrom, false = is not a palindrom
 	 */
 	@Override

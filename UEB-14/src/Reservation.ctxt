@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Reservation
+comment0.text=\n\ Class\ Reservation\n\ Create\ a\ reservation-object\ with\ a\ begin\ of\ the\ reservation\ and\ an\ end\n\ Every\ reservation\ has\ a\ comment\n\ Each\ reservation\ is\ related\ to\ an\ employee\ who\ reserved\ it\n\ @author\ marie-louwechsler/Quentin\ Duflot\n\ @version\ 1.1\n
+comment1.params=startG\ endG\ commentG\ roomG
+comment1.target=Reservation(Time,\ Time,\ java.lang.String,\ Room)
+comment1.text=\n\ @param\ startG\ start\ time\ of\ the\ reservation\n\ @param\ endG\ end\ time\ of\ the\ reservation\ (end\ >\ start)\n\ @param\ commentG\ String\ subject\ of\ the\ reservation\n\ @param\ employeeG\ employee\ who\ is\ reserving\ the\ room\n\ @param\ roomG\ room\ to\ reserve\n\ @throws\ ReservationException\ \n
+comment2.params=commentG
+comment2.target=void\ setComment(java.lang.String)
+comment2.text=\n\ @param\ commentG\ course\n
+comment3.params=employeeG
+comment3.target=void\ setEmployee(Employee)
+comment3.text=\n\ @param\ employeeG\ who\ reserves\n
+comment4.params=roomG
+comment4.target=void\ setRoom(Room)
+comment4.text=\n\ @param\ roomG\ to\ reserve\n
+comment5.params=
+comment5.target=java.lang.String\ getComment()
+comment6.params=
+comment6.target=Time\ getStart()
+comment7.params=
+comment7.target=Time\ getEnd()
+comment8.params=
+comment8.target=Employee\ getEmployee()
+comment9.params=
+comment9.target=java.lang.String\ toString()
+comment9.text=Methods
+numComments=10

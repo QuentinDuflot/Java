@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Person
+comment0.text=\n\ Class\ Person\n\ Create\ a\ person-object\ with\ a\ first\ and\ last\ name\n\ @author\ marie-louwechsler/Quentin\ Duflot\n\ @version\ 1.1\n
+comment1.params=firstNameG\ lastNameG
+comment1.target=Person(java.lang.String,\ java.lang.String)
+comment1.text=\n\ @param\ firstNameG\ person\ first\ name\n\ @param\ lastNameG\ person\ last\ name\n\ @throws\ PersonException\ when\ name\ is\ incorrect\n
+comment2.params=
+comment2.target=java.lang.String\ getFirstName()
+comment3.params=
+comment3.target=java.lang.String\ getLastName()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

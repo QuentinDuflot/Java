@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * Tools Class methods that can be useful
- * @author marie-louwechsler
+ * @author marie-louwechsler/ Quentin Duflot
  * @version 1.0
  */
 public class Tools {

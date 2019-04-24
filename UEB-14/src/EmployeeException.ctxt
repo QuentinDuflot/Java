@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=EmployeeException
+comment1.params=
+comment1.target=EmployeeException()
+comment2.params=message
+comment2.target=EmployeeException(java.lang.String)
+comment2.text=\n\ @param\ message\ error\n
+comment3.params=email
+comment3.target=void\ emailRight(java.lang.String)
+comment3.text=\n\ @param\ email\ email\ address\ that\ has\ to\ be\ checked\n\ @throws\ EmployeeException\ when\ email\ is\ invalid\n
+numComments=4

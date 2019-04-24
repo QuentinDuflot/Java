@@ -1,7 +1,7 @@
 
 /**
  * Class TimeException
- * @author marie-louwechsler
+ * @author marie-louwechsler/Quentin Duflot
  * @version 1.1
  */
 
@@ -28,7 +28,7 @@ public class TimeException extends Exception {
 	}
 	
 	/**
-	 * @param hoursG time
+	 * @param hoursG hours number
 	 * @throws TimeException when hour is incorrect
 	 */
 	public static void hoursRight(int hoursG) throws TimeException {
@@ -38,7 +38,7 @@ public class TimeException extends Exception {
 	}
 	
 	/**
-	 * @param minutesG time
+	 * @param minutesG minutes number
 	 * @throws TimeException when minutes are incorrect
 	 */
 	public static void minutesRight(int minutesG) throws TimeException {

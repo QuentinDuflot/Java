@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Employee
+comment0.text=\n\ Class\ Employee\n\ Extend\ from\ Person\n\ Create\ an\ Employee-object\ with\ a\ first\ and\ last\ name\ and\ an\ email\n\ @author\ marie-louwechsler/Quentin\ Duflot\n\ @version\ 1.1\n
+comment1.params=firstNameG\ lastNameG\ emailG
+comment1.target=Employee(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\n\ Constructor\n\n\ @param\ firstNameG\ employee\ first\ name\ (can't\ be\ null)\n\ @param\ lastNameG\ employee\ last\ name\ (can't\ be\ null)\n\ @param\ emailG\ employee's\ email\ (can't\ be\ null\ and\ has\ to\ follow\ the\ format\ name@domain.ext)\n\ @throws\ EmployeeException\ when\ employee\ is\ incorrect\n\ @throws\ PersonException\ when\ name\ is\ invalid\n
+comment2.params=room\ start\ end\ comment
+comment2.target=void\ reserve(Room,\ Time,\ Time,\ java.lang.String)
+comment2.text=\n\ A\ reserve-method\n\n\ @param\ room\ room\ to\ reserve\n\ @param\ start\ start\ of\ the\ reservation\n\ @param\ end\ end\ of\ the\ reservation\ (end\ >\ start)\n\ @param\ comment\ String\ subject\n\ @throws\ ReservationException\n
+comment3.params=
+comment3.target=java.lang.String\ getEmail()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

@@ -1,4 +1,10 @@
 
+/**
+ * Class PersonException
+ * @author marie-louwechsler/Quentin Duflot
+ * @version 1.1
+ */
+
 public class PersonException extends Exception {
 	private static final String MSG_NAME_INCORRECT = 
 			"Der Name darf nicht leer sein";
