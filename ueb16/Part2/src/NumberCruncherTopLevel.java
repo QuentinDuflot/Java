@@ -1,6 +1,5 @@
-public class NumberCruncherTopLevel {
-    private int groesse;
-    private float[] array;
+public class NumberCruncherTopLevel extends NumberCruncherSuperClass{
+
     private Divide divide;
     private Swirl swirl;
     private Sum sum;
@@ -8,14 +7,12 @@ public class NumberCruncherTopLevel {
     private Average average;
 
     public NumberCruncherTopLevel(int groesse) {
-        this.groesse = groesse;
-        this.array = new float[groesse];
-        for(int i = 0; i < groesse; i++) {
-            this.array[i] =  (float)Math.random();
-        }
-        this.divide = new Divide(array,groesse);
-        this.swirl = new Swirl(array,groesse);
-        this.sum = new Sum(array,groesse);
+        super(groesse);
+        this.divide = new Divide(super.getArray(),super.getGroesse());
+        this.swirl = new Swirl(super.getArray(),super.getGroesse());
+        this.sum = new Sum(super.getArray(),super.getGroesse());
+        this.substract = new Substract(super.getArray(),super.getGroesse());
+        this.average = new Average(super.getArray(),super.getGroesse());
     }
 
     public void crunch(String[] operations) {
@@ -23,18 +20,23 @@ public class NumberCruncherTopLevel {
             switch (operations[counter]) {
                 case "sum":
                     sum.doOperation();
+                    this.sum = new Sum(super.getArray(),super.getGroesse());
                     break;
                 case "swirl":
                     swirl.doOperation();
+                    this.swirl = new Swirl(super.getArray(),super.getGroesse());
                     break;
                 case "divide":
                     divide.doOperation();
+                    this.divide = new Divide(super.getArray(),super.getGroesse());
                     break;
                 case "subtract":
                     substract.doOperation();
+                    this.substract = new Substract(super.getArray(),super.getGroesse());
                     break;
                 case "average":
                     average.doOperation();
+                    this.average = new Average(super.getArray(),super.getGroesse());
                     break;
                 default:
                     System.out.println("Falsche Operation");

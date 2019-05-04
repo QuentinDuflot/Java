@@ -1,16 +1,11 @@
 import java.util.Random;
 import java.util.Arrays;
 
-public class NumberCruncherAnonyme {
-    private int groesse;
-    private float[] array;
+public class NumberCruncherAnonyme extends NumberCruncherSuperClass{
+
 
     public NumberCruncherAnonyme(int groesse) {
-        this.groesse = groesse;
-        this.array = new float[groesse];
-        for(int i = 0; i < groesse; i++) {
-            this.array[i] =  (float)Math.random();
-        }
+        super(groesse);
     }
     
     public void crunch(String[] operations) {
@@ -20,8 +15,9 @@ public class NumberCruncherAnonyme {
                 	Operation sum = new Operation() {
                         @Override
                 		public void doOperation() {
-                			for(int i = 1; i < groesse; i++) {
-                				array[i] = array[i - 1] + array[i];
+                			for(int i = 1; i < NumberCruncherAnonyme.super.getGroesse(); i++) {
+                				NumberCruncherAnonyme.super.getArray()[i] =
+                                        NumberCruncherAnonyme.super.getArray()[i - 1] + NumberCruncherAnonyme.super.getArray()[i];
                 			}
                 		}
                 	};
@@ -31,8 +27,9 @@ public class NumberCruncherAnonyme {
                         @Override
                 		public void doOperation() {
                 			Random randomNumber = new Random();
-                			for(int i = 1; i < groesse; i++) {
-                				array[randomNumber.nextInt(groesse)] = array[randomNumber.nextInt(groesse)]; 
+                			for(int i = 1; i < NumberCruncherAnonyme.super.getGroesse(); i++) {
+                                NumberCruncherAnonyme.super.getArray()[randomNumber.nextInt(NumberCruncherAnonyme.super.getGroesse())] =
+                                        NumberCruncherAnonyme.super.getArray()[randomNumber.nextInt(NumberCruncherAnonyme.super.getGroesse())];
                 			}
                 		}
                 	};
@@ -42,9 +39,10 @@ public class NumberCruncherAnonyme {
 
                         @Override
                         public void doOperation() {
-                            Arrays.sort(array);
-                            for(int i = 0; i < groesse/2; i++) {
-                                array[groesse-i-1] /= array[i];
+                            Arrays.sort(NumberCruncherAnonyme.super.getArray());
+                            for(int i = 0; i < NumberCruncherAnonyme.super.getGroesse()/2; i++) {
+                                NumberCruncherAnonyme.super.getArray()[NumberCruncherAnonyme.super.getGroesse()-i-1] /=
+                                        NumberCruncherAnonyme.super.getArray()[i];
                             }
                         }
                     };
@@ -53,8 +51,9 @@ public class NumberCruncherAnonyme {
                     Operation sub = new Operation() {
                         @Override
                         public void doOperation() {
-                            for(int i = 1; i < groesse; i++) {
-                                array[i] = array [i-1] - array[i];
+                            for(int i = 1; i < NumberCruncherAnonyme.super.getGroesse(); i++) {
+                                NumberCruncherAnonyme.super.getArray()[i] =
+                                        NumberCruncherAnonyme.super.getArray() [i-1] - NumberCruncherAnonyme.super.getArray()[i];
                             }
                         }
                     };
@@ -63,19 +62,19 @@ public class NumberCruncherAnonyme {
                     Operation avg = new Operation() {
                         @Override
                         public void doOperation() {
-                            float average = array[0];
-                            float biggestValue = array[0];
+                            float average = NumberCruncherAnonyme.super.getArray()[0];
+                            float biggestValue = NumberCruncherAnonyme.super.getArray()[0];
                             int position = 0;
 
-                            for (int i = 1; i < groesse; i++) {
-                                average += array[i];
-                                if (array[i] > biggestValue) {
-                                    biggestValue = array[i];
+                            for (int i = 1; i < NumberCruncherAnonyme.super.getGroesse(); i++) {
+                                average += NumberCruncherAnonyme.super.getArray()[i];
+                                if (NumberCruncherAnonyme.super.getArray()[i] > biggestValue) {
+                                    biggestValue = NumberCruncherAnonyme.super.getArray()[i];
                                     position = i;
                                 }
                             }
-                            average /= groesse;
-                            array[position] = average;
+                            average /= NumberCruncherAnonyme.super.getGroesse();
+                            NumberCruncherAnonyme.super.getArray()[position] = average;
                         }
                     };
                     break;
