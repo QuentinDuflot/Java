@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Swirl extends Operation{
+public class Swirl implements Operation{
 
     float[] array;
     int groesse;
@@ -14,11 +14,11 @@ public class Swirl extends Operation{
     }
 
     @Override
-    public void doOperation(int n) {
+    public void doOperation() {
 
         int random1, random2;
         float save;
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < groesse; i++)
         {
             random1 = random.nextInt(groesse);
             random2 = random.nextInt(groesse);
