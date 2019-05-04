@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdbafae2-45f4-4f17-9f24-f0fbc8dd5089" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/OperationSuperClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Part1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/Average.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/Average.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/Divide.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/Divide.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherAnonyme$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherAnonyme$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherAnonyme$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherAnonyme$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherAnonyme$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherAnonyme$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherAnonyme$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherAnonyme$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherAnonyme$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherAnonyme$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherAnonyme.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherAnonyme.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherSuperClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherSuperClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherTopLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/NumberCruncherTopLevel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/OperationSuperClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/OperationSuperClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/Substract.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/Substract.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/Sum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/Sum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ueb16P2/Swirl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ueb16P2/Swirl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Average.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Average.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Divide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Divide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NumberCruncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NumberCruncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NumberCruncherAnonyme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NumberCruncherAnonyme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NumberCruncherDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NumberCruncherDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NumberCruncherSuperClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NumberCruncherSuperClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NumberCruncherTopLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NumberCruncherTopLevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Substract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Substract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Swirl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Swirl.java" afterDir="false" />
-    </list>
+    <list default="true" id="cdbafae2-45f4-4f17-9f24-f0fbc8dd5089" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Average.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="345">
+              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -434,8 +404,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Average.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="345">
+          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
         </state>
       </provider>
     </entry>

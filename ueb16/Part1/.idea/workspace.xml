@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f9424e6-b1ee-4db1-ad22-180c14dcd451" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Part2/src/OperationSuperClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Part2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Average.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Average.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Divide.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Divide.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherSuperClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherSuperClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherTopLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherTopLevel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/OperationSuperClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/OperationSuperClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Substract.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Substract.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Sum.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Sum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Swirl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Swirl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/src/Average.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Average.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/src/Divide.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Divide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncherAnonyme.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncherAnonyme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncherDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncherDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncherSuperClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncherSuperClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncherTopLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncherTopLevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/src/Substract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Substract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/src/Sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Sum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Part2/src/Swirl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Swirl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +112,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-102" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25728154" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
