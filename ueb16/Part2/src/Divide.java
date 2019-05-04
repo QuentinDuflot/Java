@@ -1,7 +1,7 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class Divide extends Operation {
+public class Divide implements Operation {
 
     float[] array;
     int groesse;

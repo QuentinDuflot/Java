@@ -1,12 +1,5 @@
-public class Operation {
+public interface Operation {
 
-    public Operation(){
+    public void doOperation();
 
-    }
-    public void doOperation(){
-
-    }
-    public void doOperation(int n){
-
-    }
 }

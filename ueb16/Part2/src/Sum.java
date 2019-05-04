@@ -1,4 +1,4 @@
-public class Sum extends Operation{
+public class Sum implements Operation{
     float[] array;
     int groesse;
 
