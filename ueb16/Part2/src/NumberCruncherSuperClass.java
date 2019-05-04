@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class NumberCruncherSuperClass implements NumberCruncher {
     private int groesse;
     private float[] array;
@@ -33,5 +35,10 @@ public class NumberCruncherSuperClass implements NumberCruncher {
     @Override
     public void setArray(float[] array) {
         this.array = array;
+    }
+
+    @Override
+    public String toString() {
+        return  Arrays.toString(array);
     }
 }

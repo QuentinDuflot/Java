@@ -2,13 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f9424e6-b1ee-4db1-ad22-180c14dcd451" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncherSuperClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Part2/src/OperationSuperClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Part2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Average.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Average.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Divide.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Divide.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherAnonyme.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherSuperClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherSuperClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherTopLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/NumberCruncherTopLevel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/OperationSuperClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/OperationSuperClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Substract.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Substract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Sum.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Sum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Swirl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/out/production/Ueb16P2/Swirl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/Average.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Average.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/Divide.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Divide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncherAnonyme.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncherAnonyme.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncherDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncherDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncherSuperClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncherSuperClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncherTopLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncherTopLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/Substract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Substract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/Sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Sum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/Swirl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Swirl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +43,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OberklasseQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
+            <state relative-caret-position="-2047">
               <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
             </state>
           </provider>
@@ -35,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PersonQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="894">
+            <state relative-caret-position="1598">
               <caret line="100" selection-start-line="100" selection-end-line="100" />
             </state>
           </provider>
@@ -49,15 +71,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/QueueDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="93" column="8" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="106" selection-end-column="24" />
+            <state relative-caret-position="408">
+              <caret line="222" selection-start-line="222" selection-end-line="240" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StringQueue.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-459" />
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -178,30 +202,32 @@
     <entry file="file://$PROJECT_DIR$/Person.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/StringQueue.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Queue.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/OberklasseQueue.java">
+    <entry file="file://$PROJECT_DIR$/PersonQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="1598">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PersonQueue.java">
+    <entry file="file://$PROJECT_DIR$/StringQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="894">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="-459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OberklasseQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2047">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/QueueDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="93" column="8" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="106" selection-end-column="24" />
+        <state relative-caret-position="408">
+          <caret line="222" selection-start-line="222" selection-end-line="240" selection-end-column="5" />
         </state>
       </provider>
     </entry>

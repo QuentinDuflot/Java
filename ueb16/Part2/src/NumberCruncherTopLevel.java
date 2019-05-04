@@ -19,28 +19,30 @@ public class NumberCruncherTopLevel extends NumberCruncherSuperClass{
         for(int counter = 0; counter < operations.length; counter++) {
             switch (operations[counter]) {
                 case "sum":
-                    sum.doOperation();
                     this.sum = new Sum(super.getArray(),super.getGroesse());
+                    sum.doOperation();
                     break;
                 case "swirl":
-                    swirl.doOperation();
                     this.swirl = new Swirl(super.getArray(),super.getGroesse());
+                    swirl.doOperation();
                     break;
                 case "divide":
-                    divide.doOperation();
                     this.divide = new Divide(super.getArray(),super.getGroesse());
+                    divide.doOperation();
                     break;
                 case "subtract":
-                    substract.doOperation();
                     this.substract = new Substract(super.getArray(),super.getGroesse());
+                    substract.doOperation();
                     break;
                 case "average":
-                    average.doOperation();
                     this.average = new Average(super.getArray(),super.getGroesse());
+                    average.doOperation();
                     break;
                 default:
-                    System.out.println("Falsche Operation");
+                    System.out.println("Falsche Operation: " + operations[counter]);
             }
+
         }
     }
+
 }

@@ -1,28 +1,27 @@
 
-public class Average implements Operation {
-	float[] array;
-	int groesse;
-	
-	public Average(float[] array, int groesse) {
-		this.array = array;
-		this.groesse = groesse;
+public class Average extends OperationSuperClass{
+
+
+	public Average(float[] array, int groesse){
+
+		super(array,groesse);
 	}
-	
+
 	@Override
 	public void doOperation() {
 		float average = 0;
-		for(int i = 0; i < groesse; i++) {
-			average += array[i];
+		for(int i = 0; i < super.getGroesse(); i++) {
+			average += super.getArray()[i];
 		}
-		average /= groesse;
-		array[searchBiggestValueIndex(array)] = average;
+		average /= super.getGroesse();
+		super.getArray()[searchBiggestValueIndex(super.getArray())] = average;
 	}
 	
-	public int searchBiggestValueIndex(float[] array) {
+	private int searchBiggestValueIndex(float[] array) {
 		int index = 0;
 		float indexValue = array[index];
 		
-		for(int i = 0; i < groesse; i++) {
+		for(int i = 0; i < super.getGroesse(); i++) {
 			if(array[i] > indexValue) {
 				indexValue = array[i];
 				index = i;

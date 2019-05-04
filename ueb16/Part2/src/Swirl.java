@@ -1,26 +1,23 @@
 import java.util.Random;
 
-public class Swirl implements Operation {
-    float[] array;
-    int groesse;
-    Random random;
+public class Swirl extends OperationSuperClass{
 
-    public Swirl(float[] array, int groesse) {
-        this.array = array;
-        this.groesse = groesse;
-        this.random = new Random();
+    Random random = new Random();
+    public Swirl(float[] array, int groesse){
+
+        super(array,groesse);
     }
 
     @Override
     public void doOperation() {
         int random1, random2;
         float save;
-        for (int i = 0; i < groesse; i++) {
-            random1 = random.nextInt(groesse);
-            random2 = random.nextInt(groesse);
-            save = array[random1];
-            array[random1] = array[random2];
-            array[random2] = save;
+        for (int i = 0; i < super.getGroesse(); i++) {
+            random1 = random.nextInt(super.getGroesse());
+            random2 = random.nextInt(super.getGroesse());
+            save = super.getArray()[random1];
+            super.getArray()[random1] = super.getArray()[random2];
+            super.getArray()[random2] = save;
         }
     }
 }

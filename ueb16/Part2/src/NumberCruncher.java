@@ -2,11 +2,13 @@ public interface NumberCruncher {
 
     void crunch(String[] operations);
 
-    public int getGroesse();
+    int getGroesse();
 
-    public float[] getArray();
+    float[] getArray();
 
-    public void setGroesse(int groesse);
+    void setGroesse(int groesse);
 
-    public void setArray(float[] array);
+    void setArray(float[] array);
+
+    String toString();
 }

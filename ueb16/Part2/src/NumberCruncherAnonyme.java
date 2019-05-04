@@ -7,6 +7,8 @@ public class NumberCruncherAnonyme extends NumberCruncherSuperClass{
     public NumberCruncherAnonyme(int groesse) {
         super(groesse);
     }
+
+
     
     public void crunch(String[] operations) {
         for(int counter = 0; counter < operations.length; counter++) {
@@ -79,8 +81,9 @@ public class NumberCruncherAnonyme extends NumberCruncherSuperClass{
                     };
                     break;
                     default:
-                        System.out.println("Falsche Operation");
+                        System.out.println("Falsche Operation: " + operations[counter]);
             }
+
         }
     }
 }

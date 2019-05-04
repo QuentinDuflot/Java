@@ -1,17 +1,16 @@
 
-public class Substract implements Operation {
-	float[] array;
-	int groesse;
-	
-	public Substract(float[] array, int groesse) {
-		this.array = array;
-		this.groesse = groesse;
+public class Substract extends OperationSuperClass{
+
+
+	public Substract(float[] array, int groesse){
+
+		super(array,groesse);
 	}
 	
 	@Override
 	public void doOperation() {
-		for(int i = 1; i < groesse; i++) {
-			array[i] = array[i - 1] - array[i];
+		for(int i = 1; i < super.getGroesse(); i++) {
+			super.getArray()[i] = super.getArray()[i - 1] - super.getArray()[i];
 		}
 	}
 }

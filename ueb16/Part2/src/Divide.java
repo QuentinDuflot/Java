@@ -1,20 +1,19 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class Divide implements Operation {
-    float[] array;
-    int groesse;
+public class Divide extends OperationSuperClass{
 
-    public Divide(float[] array, int groesse) {
-        this.array = array;
-        this.groesse = groesse;
+
+    public Divide(float[] array, int groesse){
+
+        super(array,groesse);
     }
 
     @Override
     public void doOperation() {
-        Arrays.sort(array);
-        for(int i = 0; i < groesse/2; i++) {
-            array[groesse-i-1] /= array[i];
+        Arrays.sort(super.getArray());
+        for(int i = 0; i < super.getGroesse()/2; i++) {
+            super.getArray()[super.getGroesse()-i-1] /= super.getArray()[i];
         }
     }
 }

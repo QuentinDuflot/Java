@@ -1,17 +1,15 @@
-public class Sum implements Operation{
-    float[] array;
-    int groesse;
+public class Sum extends OperationSuperClass{
+
 
     public Sum(float[] array, int groesse){
 
-        this.array = array;
-        this.groesse = groesse;
+        super(array,groesse);
     }
     @Override
     public void doOperation() {
-        for(int i = 1; i < groesse; i++)
+        for(int i = 1; i < super.getGroesse(); i++)
         {
-            array[i] = array [i-1] - array[i];
+            super.getArray()[i] = super.getArray() [i-1] + super.getArray()[i];
         }
 
     }
