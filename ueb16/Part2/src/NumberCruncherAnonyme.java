@@ -6,18 +6,24 @@ public class NumberCruncherAnonyme {
     public NumberCruncherAnonyme(int groesse) {
         this.groesse = groesse;
         this.array = new float[groesse];
-        for(int i = 0; i < groesse; i++)
-        {
+        for(int i = 0; i < groesse; i++) {
             this.array[i] =  (float)Math.random();
         }
     }
-    public void crunch(String[] operations){
-        for(int counter = 0; counter < operations.length; counter++)
-        {
-            switch (operations[counter]){
+    
+    public void crunch(String[] operations) {
+        for(int counter = 0; counter < operations.length; counter++) {
+            switch (operations[counter]) {
                 case "sum":
+                	Operation sum = new Operation() {
+                		@Override
+                		public void doOperation() {
+                			for(int i = 1; i < groesse; i++) {
+                				array[i] = array[i - 1] + array[i];
+                			}
+                		}
+                	}
                     break;
-
                 case "swirl":
                     break;
                 case "divide":
@@ -26,8 +32,7 @@ public class NumberCruncherAnonyme {
                     Operation sub = new Operation() {
                         @Override
                         public void doOperation() {
-                            for(int i = 1; i < groesse; i++)
-                            {
+                            for(int i = 1; i < groesse; i++) {
                                 array[i] = array [i-1] - array[i];
                             }
                         }
@@ -41,11 +46,9 @@ public class NumberCruncherAnonyme {
                             float biggestValue = array[0];
                             int position = 0;
 
-                            for (int i = 1; i < groesse; i++)
-                            {
+                            for (int i = 1; i < groesse; i++) {
                                 average += array[i];
-                                if (array[i] > biggestValue)
-                                {
+                                if (array[i] > biggestValue) {
                                     biggestValue = array[i];
                                     position = i;
                                 }
