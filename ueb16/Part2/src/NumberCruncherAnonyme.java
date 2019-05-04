@@ -1,5 +1,7 @@
-public class NumberCruncherAnonyme {
+import java.util.Random;
+import java.util.Arrays;
 
+public class NumberCruncherAnonyme {
     private int groesse;
     private float[] array;
 
@@ -16,7 +18,6 @@ public class NumberCruncherAnonyme {
             switch (operations[counter]) {
                 case "sum":
                 	Operation sum = new Operation() {
-                		@Override
                 		public void doOperation() {
                 			for(int i = 1; i < groesse; i++) {
                 				array[i] = array[i - 1] + array[i];
@@ -25,8 +26,22 @@ public class NumberCruncherAnonyme {
                 	}
                     break;
                 case "swirl":
+                	Operation swirl = new Operation() {
+                		public void doOperation() {
+                			Random randomNumber = new Random();
+                			for(int i = 1; i < groesse; i++) {
+                				array[randomNumber.nextInt(groesse)] = array[randomNumber.nextInt(groesse)]; 
+                			}
+                		}
+                	}
                     break;
                 case "divide":
+                	Operation divide = new Operation() {
+                		Arrays.sort(array);
+                		for(int i = 0; i < groesse/2; i++) {
+                            array[groesse-i-1] /= array[i];
+                        }
+                	}
                     break;
                 case "subtract":
                     Operation sub = new Operation() {
@@ -63,5 +78,4 @@ public class NumberCruncherAnonyme {
             }
         }
     }
-
 }
