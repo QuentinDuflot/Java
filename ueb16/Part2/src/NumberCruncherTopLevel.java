@@ -4,6 +4,8 @@ public class NumberCruncherTopLevel {
     private Divide divide;
     private Swirl swirl;
     private Sum sum;
+    private Substract substract;
+    private Average average;
 
     public NumberCruncherTopLevel(int groesse) {
         this.groesse = groesse;
@@ -20,14 +22,19 @@ public class NumberCruncherTopLevel {
         for(int counter = 0; counter < operations.length; counter++) {
             switch (operations[counter]) {
                 case "sum":
+                    sum.doOperation();
                     break;
                 case "swirl":
+                    swirl.doOperation();
                     break;
                 case "divide":
+                    divide.doOperation();
                     break;
                 case "subtract":
+                    substract.doOperation();
                     break;
                 case "average":
+                    average.doOperation();
                     break;
                 default:
                     System.out.println("Falsche Operation");
