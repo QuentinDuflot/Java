@@ -1,11 +1,21 @@
+/**
+ * NumberCruncherTopLevel class that extends the NumberCruncherSuperClass
+ * Operations of the crunch-method are implemented with top-level classes
+ */
 public class NumberCruncherTopLevel extends NumberCruncherSuperClass{
 
+    //Attributes
     private Divide divide;
     private Swirl swirl;
     private Sum sum;
     private Substract substract;
     private Average average;
 
+    /**
+     *Constructor with 1 parameter
+     * Initialise an array of random floats but also the different top-level classes needed
+     * @param groesse size of the array
+     */
     public NumberCruncherTopLevel(int groesse) {
         super(groesse);
         this.divide = new Divide(super.getArray(),super.getGroesse());
@@ -15,6 +25,11 @@ public class NumberCruncherTopLevel extends NumberCruncherSuperClass{
         this.average = new Average(super.getArray(),super.getGroesse());
     }
 
+    /**
+     * crunch method
+     * possible operations are sum, swirl, divide, subtract and average
+     * @param operations array of String that contains the operations to do
+     */
     public void crunch(String[] operations) {
         for(int counter = 0; counter < operations.length; counter++) {
             switch (operations[counter]) {

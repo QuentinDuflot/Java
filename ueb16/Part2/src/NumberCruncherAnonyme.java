@@ -1,15 +1,28 @@
 import java.util.Random;
 import java.util.Arrays;
 
+/**
+ * NumberCruncherAnonyme class that extends the NumberCruncherSuperClass
+ * Operations of the crunch-method are implemented with anonymous classes
+ */
 public class NumberCruncherAnonyme extends NumberCruncherSuperClass{
 
 
+    /**
+     * Constructor with 1 parameter
+     * Array is set with random floats
+     * @param groesse size of the array
+     */
     public NumberCruncherAnonyme(int groesse) {
         super(groesse);
     }
 
 
-    
+    /**
+     * crunch method
+     * possible operations are sum, swirl, divide, subtract and average
+     * @param operations array of String that contains the operations to do
+     */
     public void crunch(String[] operations) {
         for(int counter = 0; counter < operations.length; counter++) {
             switch (operations[counter]) {
