@@ -2,6 +2,8 @@ import java.util.Arrays;
 
 /**
  * NumberCruncherSuperClass that implements the NumberCruncher interface
+ * @author Quentin Duflot/ Marie-Lou Wechsler
+ * @version 05/05/2019
  */
 public class NumberCruncherSuperClass implements NumberCruncher {
 

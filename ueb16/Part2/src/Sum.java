@@ -2,6 +2,8 @@
  * Sum class that extends of OperationSuperClass
  * Add the elements of the array in pairs from left to right and stores
  * the new value in the right-hand data field.
+ * @author Quentin Duflot/ Marie-Lou Wechsler
+ * @version 05/05/2019
  */
 public class Sum extends OperationSuperClass{
 

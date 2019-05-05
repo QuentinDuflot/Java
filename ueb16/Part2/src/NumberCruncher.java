@@ -1,5 +1,7 @@
 /**
  * NumberCruncher interface
+ * @author Quentin Duflot/ Marie-Lou Wechsler
+ * @version 05/05/2019
  */
 public interface NumberCruncher {
 

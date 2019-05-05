@@ -1,6 +1,8 @@
 /**
  * NumberCruncherTopLevel class that extends the NumberCruncherSuperClass
  * Operations of the crunch-method are implemented with top-level classes
+ * @author Quentin Duflot/ Marie-Lou Wechsler
+ * @version 05/05/2019
  */
 public class NumberCruncherTopLevel extends NumberCruncherSuperClass{
 

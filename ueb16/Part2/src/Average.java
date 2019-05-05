@@ -2,6 +2,8 @@
  * Average class that extends OperationSuperClass
  * Determines the average of all values in the array and stores the average value.
  * in the data field with the largest value.
+ * @author Quentin Duflot/ Marie-Lou Wechsler
+ * @version 05/05/2019
  */
 public class Average extends OperationSuperClass{
 

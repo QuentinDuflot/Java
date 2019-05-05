@@ -2,8 +2,8 @@
 /**
  * implementierung eine PersonQueue durch unsere OberklasseQueue
  *
- * @author Quentin/Raymonde/Arnold
- * @version 24.01.2019
+ * @author Quentin Duflot/ Marie-Lou Wechsler
+ * @version 05/05/2019
  */
 public class PersonQueue extends OberklasseQueue
 {

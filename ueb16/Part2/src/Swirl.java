@@ -4,6 +4,8 @@ import java.util.Random;
  * Swirl class that extends of OperationSuperClass
  * Performs n random permutations of the data fields; n is equal to the length of the
  * float arrays.
+ * @author Quentin Duflot/ Marie-Lou Wechsler
+ * @version 05/05/2019
  */
 public class Swirl extends OperationSuperClass{
 

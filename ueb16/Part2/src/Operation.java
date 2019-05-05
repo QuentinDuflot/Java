@@ -1,5 +1,7 @@
 /**
  * Basic Operation interface with one method
+ * @author Quentin Duflot/ Marie-Lou Wechsler
+ * @version 05/05/2019
  */
 public interface Operation {
 

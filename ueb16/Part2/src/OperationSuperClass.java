@@ -1,5 +1,7 @@
 /**
  * OperationsSuperClass that implements the Operation interface
+ * @author Quentin Duflot/ Marie-Lou Wechsler
+ * @version 05/05/2019
  */
 public class OperationSuperClass implements Operation{
 
