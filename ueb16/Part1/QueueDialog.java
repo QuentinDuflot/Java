@@ -2,8 +2,8 @@
 /**
  * Einfache QueueDialog-Klasse zum Testen unsere Programm
  *
- * @author Quentin/Raymonde/Arnold
- * @version 27.01.2019
+ * @author Quentin Duflot/ Marie-Lou Wechsler
+ * @version 05/05/2019
  */
 
 import java.util.*;

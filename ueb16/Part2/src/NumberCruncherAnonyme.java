@@ -4,6 +4,8 @@ import java.util.Arrays;
 /**
  * NumberCruncherAnonyme class that extends the NumberCruncherSuperClass
  * Operations of the crunch-method are implemented with anonymous classes
+ * @author Quentin Duflot/ Marie-Lou Wechsler
+ * @version 05/05/2019
  */
 public class NumberCruncherAnonyme extends NumberCruncherSuperClass{
 

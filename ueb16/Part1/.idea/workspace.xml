@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f9424e6-b1ee-4db1-ad22-180c14dcd451" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/OberklasseQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/OberklasseQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/PersonQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueueDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StringQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/StringQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Part2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/Average.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Average.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/Divide.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Divide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncherAnonyme.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncherAnonyme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncherDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncherDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncherSuperClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncherSuperClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Part2/src/NumberCruncherTopLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/NumberCruncherTopLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Operation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/OperationSuperClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/OperationSuperClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/Substract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Substract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/Sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Sum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Part2/src/Swirl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Part2/src/Swirl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,43 +33,55 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OberklasseQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="-629">
+              <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Person.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PersonQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1598">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="85">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Queue.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/QueueDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="221" lean-forward="true" selection-start-line="221" selection-end-line="221" />
+            <state relative-caret-position="85">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QueueDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StringQueue.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -66,7 +92,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/OberklasseQueue.java" />
+        <option value="$PROJECT_DIR$/Person.java" />
         <option value="$PROJECT_DIR$/PersonQueue.java" />
+        <option value="$PROJECT_DIR$/Queue.java" />
+        <option value="$PROJECT_DIR$/QueueDialog.java" />
+        <option value="$PROJECT_DIR$/StringQueue.java" />
       </list>
     </option>
   </component>
@@ -171,31 +202,43 @@
     <entry file="file://$PROJECT_DIR$/../Java_Bsp (1)/DataStructure.java" />
     <entry file="file://$PROJECT_DIR$/OberklasseQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="-629">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Person.java">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PersonQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Queue.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StringQueue.java">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/QueueDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="221" lean-forward="true" selection-start-line="221" selection-end-line="221" />
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StringQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>

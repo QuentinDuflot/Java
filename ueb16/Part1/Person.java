@@ -2,8 +2,8 @@
 /**
  * Eine einfache Klasse Person
  *
- * @author Quentin/Raymonde/Arnold
- * @version 24.01.2019
+ * @author Quentin Duflot/ Marie-Lou Wechsler
+ * @version 05/05/2019
  */
 public class Person{
     //Attribute
