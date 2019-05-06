@@ -4,7 +4,6 @@ import java.util.Arrays;
  * NumberCruncherSuperClass that implements the NumberCruncher interface
  */
 public class NumberCruncherSuperClass implements NumberCruncher {
-
     //Attributes
     private int groesse;
     private float[] array;
@@ -13,8 +12,11 @@ public class NumberCruncherSuperClass implements NumberCruncher {
      * Constructor with 1 parameter
      * Array is set with random floats
      * @param groesse size of the array
+     * @throws SizeArrayNegative 
      */
-    public NumberCruncherSuperClass(int groesse) {
+    public NumberCruncherSuperClass(int groesse) throws SizeArrayNegative {
+    	SizeArrayNegative.cannotBeNegative(groesse);
+    	
         this.groesse = groesse;
         this.array = new float[groesse];
         for (int i = 0; i < groesse; i++) {
@@ -23,18 +25,16 @@ public class NumberCruncherSuperClass implements NumberCruncher {
     }
 
     /**
-     *Crunch-method
+     * Crunch-method
      * Do different operations on an array
      * @param operations array of String that contains the operations to do
      */
     @Override
     public void crunch(String[] operations) {
-
     }
 
     //Getters & Setters
     /**
-     *
      * @return size of the array
      */
     @Override
@@ -43,7 +43,6 @@ public class NumberCruncherSuperClass implements NumberCruncher {
     }
 
     /**
-     *
      * @return array of random float
      */
     @Override
@@ -52,7 +51,6 @@ public class NumberCruncherSuperClass implements NumberCruncher {
     }
 
     /**
-     *
      * @param groesse size of the array
      */
     @Override
@@ -61,7 +59,6 @@ public class NumberCruncherSuperClass implements NumberCruncher {
     }
 
     /**
-     *
      * @param array array of floats
      */
     @Override
@@ -70,7 +67,6 @@ public class NumberCruncherSuperClass implements NumberCruncher {
     }
 
     /**
-     *
      * @return array of floats in a String representation
      */
     @Override

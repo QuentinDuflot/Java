@@ -2,7 +2,7 @@
  * NumberCruncherTopLevel class that extends the NumberCruncherSuperClass
  * Operations of the crunch-method are implemented with top-level classes
  */
-public class NumberCruncherTopLevel extends NumberCruncherSuperClass{
+public class NumberCruncherTopLevel extends NumberCruncherSuperClass {
 
     //Attributes
     private Divide divide;
@@ -15,8 +15,9 @@ public class NumberCruncherTopLevel extends NumberCruncherSuperClass{
      *Constructor with 1 parameter
      * Initialise an array of random floats but also the different top-level classes needed
      * @param groesse size of the array
+     * @throws SizeArrayNegative 
      */
-    public NumberCruncherTopLevel(int groesse) {
+    public NumberCruncherTopLevel(int groesse) throws SizeArrayNegative {
         super(groesse);
         this.divide = new Divide(super.getArray(),super.getGroesse());
         this.swirl = new Swirl(super.getArray(),super.getGroesse());
@@ -56,8 +57,6 @@ public class NumberCruncherTopLevel extends NumberCruncherSuperClass{
                 default:
                     System.out.println("Falsche Operation: " + operations[counter]);
             }
-
         }
     }
-
 }

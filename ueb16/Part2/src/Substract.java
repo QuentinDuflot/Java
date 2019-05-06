@@ -1,9 +1,5 @@
-
-public class Substract extends OperationSuperClass{
-
-
-	public Substract(float[] array, int groesse){
-
+public class Substract extends OperationSuperClass {
+	public Substract(float[] array, int groesse) {
 		super(array,groesse);
 	}
 	

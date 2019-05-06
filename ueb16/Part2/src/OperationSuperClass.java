@@ -1,4 +1,4 @@
-public class OperationSuperClass implements Operation{
+public class OperationSuperClass implements Operation {
 
     private float[] array;
     private int groesse;
@@ -10,7 +10,6 @@ public class OperationSuperClass implements Operation{
 
     @Override
     public void doOperation() {
-
     }
 
     public float[] getArray() {

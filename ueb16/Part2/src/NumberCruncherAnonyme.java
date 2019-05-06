@@ -7,16 +7,15 @@ import java.util.Arrays;
  */
 public class NumberCruncherAnonyme extends NumberCruncherSuperClass{
 
-
     /**
      * Constructor with 1 parameter
      * Array is set with random floats
      * @param groesse size of the array
+     * @throws SizeArrayNegative 
      */
-    public NumberCruncherAnonyme(int groesse) {
+    public NumberCruncherAnonyme(int groesse) throws SizeArrayNegative {
         super(groesse);
     }
-
 
     /**
      * crunch method
@@ -96,7 +95,6 @@ public class NumberCruncherAnonyme extends NumberCruncherSuperClass{
                     default:
                         System.out.println("Falsche Operation: " + operations[counter]);
             }
-
         }
     }
 }

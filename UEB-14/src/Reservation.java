@@ -28,7 +28,6 @@ public class Reservation {
 		this.start = startG;
 		this.end = endG;
 		this.comment = commentG;
-
 	}
 	
 	/**
