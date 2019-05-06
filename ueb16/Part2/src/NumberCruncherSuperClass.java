@@ -16,7 +16,9 @@ public class NumberCruncherSuperClass implements NumberCruncher {
      * Array is set with random floats
      * @param groesse size of the array
      */
-    public NumberCruncherSuperClass(int groesse) {
+    public NumberCruncherSuperClass (int groesse) throws SizeArrayNegative {
+        SizeArrayNegative.cannotBeNegative(groesse);
+
         this.groesse = groesse;
         this.array = new float[groesse];
         for (int i = 0; i < groesse; i++) {

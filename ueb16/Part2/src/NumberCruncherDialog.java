@@ -1,6 +1,7 @@
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import javax.management.OperationsException;
 
 /**
  * NumberCruncherDialog is a dialog class that permits
@@ -49,7 +50,7 @@ public class NumberCruncherDialog {
      * @param typCruncher typ of cruncher (a == anonymous t == top-level)
      * @param groesse size of the array
      */
-    public NumberCruncherDialog(char typCruncher, int groesse) {
+    public NumberCruncherDialog(char typCruncher, int groesse)throws SizeArrayNegative{
 
         input = new Scanner(System.in);
 
@@ -135,11 +136,12 @@ public class NumberCruncherDialog {
      * main-method
      * @param args
      */
-    public static void main(String[] args)
-    {
-        char choice = ' ';
+    public static void main(String[] args)throws NumberOperationsNegative, SizeArrayNegative{
+
+    char choice = ' ';
         int nbOp = readlnInt(new Scanner(
                 System.in), NB_OP_TO_EX);
+        NumberOperationsNegative.cannotBeNegative(nbOp);
         while((choice != ANONYME_CRUNCHER) && (choice != TOP_LEVEL_CRUNCHER))
         {
             choice = readlnChar(new Scanner(

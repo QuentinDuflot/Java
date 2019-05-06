@@ -15,7 +15,7 @@ public class NumberCruncherAnonyme extends NumberCruncherSuperClass{
      * Array is set with random floats
      * @param groesse size of the array
      */
-    public NumberCruncherAnonyme(int groesse) {
+    public NumberCruncherAnonyme(int groesse) throws SizeArrayNegative {
         super(groesse);
     }
 

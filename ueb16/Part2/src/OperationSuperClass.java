@@ -26,7 +26,6 @@ public class OperationSuperClass implements Operation{
      */
     @Override
     public void doOperation() {
-
     }
 
     //Getters & Setters

@@ -18,7 +18,7 @@ public class NumberCruncherTopLevel extends NumberCruncherSuperClass{
      * Initialise an array of random floats but also the different top-level classes needed
      * @param groesse size of the array
      */
-    public NumberCruncherTopLevel(int groesse) {
+    public NumberCruncherTopLevel(int groesse) throws SizeArrayNegative{
         super(groesse);
         this.divide = new Divide(super.getArray(),super.getGroesse());
         this.swirl = new Swirl(super.getArray(),super.getGroesse());
