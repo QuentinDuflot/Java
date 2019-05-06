@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Swirl
+comment0.text=\r\n\ Swirl\ class\ that\ extends\ of\ OperationSuperClass\r\n\ Performs\ n\ random\ permutations\ of\ the\ data\ fields;\ n\ is\ equal\ to\ the\ length\ of\ the\r\n\ float\ arrays.\r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 05/05/2019\r\n
+comment1.params=array\ groesse
+comment1.target=Swirl(float[],\ int)
+comment1.text=\r\n\ Constructor\r\n\ @param\ array\ array\ of\ floats\r\n\ @param\ groesse\ size\ of\ the\ array\r\n
+comment2.params=
+comment2.target=void\ doOperation()
+comment2.text=\r\n\ Performs\ n\ random\ permutations\ of\ the\ data\ fields;\ n\ is\ equal\ to\ the\ length\ of\ the\r\n\ float\ arrays.\r\n
+numComments=3

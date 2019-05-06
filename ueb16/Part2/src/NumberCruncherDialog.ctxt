@@ -1,0 +1,28 @@
+#BlueJ class context
+comment0.target=NumberCruncherDialog
+comment0.text=\r\n\ NumberCruncherDialog\ is\ a\ dialog\ class\ that\ permits\r\n\ the\ tests\ of\ NumberCruncherAnonym\ and\ NumberCruncherTopLevel\r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 05/05/2019\r\n
+comment1.params=typCruncher\ groesse
+comment1.target=NumberCruncherDialog(char,\ int)
+comment1.text=\r\n\ Constructor\ of\ NumberCruncherDialog\r\n\r\n\ @param\ typCruncher\ typ\ of\ cruncher\ (a\ \=\=\ anonymous\ t\ \=\=\ top-level)\r\n\ @param\ groesse\ size\ of\ the\ array\r\n
+comment2.params=nbOp
+comment2.target=java.lang.String[]\ readOperations(int)
+comment2.text=\r\n\ read-method\ that\ reads\ the\ operations\ given\ by\ the\ user\r\n\ @param\ nbOp\ number\ of\ operation\ that\ must\ be\ executed\r\n\ @return\ String-array\ with\ all\ the\ operations\r\n
+comment3.params=operations
+comment3.target=void\ executeFunction(java.lang.String[])
+comment3.text=\r\n\ execute\ all\ the\ operations\r\n\ @param\ operations\ String-array\ with\ all\ the\ operations\r\n
+comment4.params=nbOP
+comment4.target=void\ start(int)
+comment4.text=\r\n\ start\ method\ with\ try-catch\r\n\ @param\ nbOP\ number\ of\ operations\r\n
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+comment5.text=\r\n\ main-method\r\n\ @param\ args\r\n
+comment6.params=in\ eingabeAufforderung
+comment6.target=java.lang.String\ readlnString(java.util.Scanner,\ java.lang.String)
+comment6.text=\r\n\ Read\ a\ String\r\n\ @param\ in\r\n\ @param\ eingabeAufforderung\r\n\ @return\ a\ String\ given\ by\ the\ user\r\n
+comment7.params=in\ eingabeAufforderung
+comment7.target=char\ readlnChar(java.util.Scanner,\ java.lang.String)
+comment7.text=\r\n\ read\ a\ character\r\n\ @param\ in\r\n\ @param\ eingabeAufforderung\r\n\ @return\ a\ char\ given\ by\ the\ user\r\n
+comment8.params=in\ eingabeAufforderung
+comment8.target=int\ readlnInt(java.util.Scanner,\ java.lang.String)
+comment8.text=\r\n\ read\ an\ integer\r\n\ @param\ in\r\n\ @param\ eingabeAufforderung\r\n\ @return\ an\ int\ given\ by\ the\ user\r\n
+numComments=9

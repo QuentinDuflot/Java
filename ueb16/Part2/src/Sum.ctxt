@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Sum
+comment0.text=\r\n\ Sum\ class\ that\ extends\ of\ OperationSuperClass\r\n\ Add\ the\ elements\ of\ the\ array\ in\ pairs\ from\ left\ to\ right\ and\ stores\r\n\ the\ new\ value\ in\ the\ right-hand\ data\ field.\r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 05/05/2019\r\n
+comment1.params=array\ groesse
+comment1.target=Sum(float[],\ int)
+comment1.text=\r\n\ Constructor\r\n\ @param\ array\ array\ of\ floats\r\n\ @param\ groesse\ size\ of\ the\ array\r\n
+comment2.params=
+comment2.target=void\ doOperation()
+comment2.text=\r\n\ Add\ the\ elements\ of\ the\ array\ in\ pairs\ from\ left\ to\ right\ and\ stores\r\n\ the\ new\ value\ in\ the\ right-hand\ data\ field.\r\n
+numComments=3

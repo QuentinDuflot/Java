@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Operation
+comment0.text=\r\n\ Basic\ Operation\ interface\ with\ one\ method\r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 05/05/2019\r\n
+comment1.params=
+comment1.target=void\ doOperation()
+comment1.text=\r\n\ doOperation\ method\r\n\ Method\ that\ do\ an\ operation\ on\ our\ array\r\n
+numComments=2

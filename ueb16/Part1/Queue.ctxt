@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Queue
-comment0.text=\r\n\ Eine\ Interface,\ die\ eine\ Queue\ beschreibt\r\n\r\n\ @author\ Quentin/Raymonde/Arnold\r\n\ @version\ 24.01.2019\r\n
+comment0.text=\r\n\ Eine\ Interface,\ die\ eine\ Queue\ beschreibt\r\n\r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 05/05/2019\r\n
 comment1.params=o
 comment1.target=void\ addLast(java.lang.Object)
 comment1.text=\r\n\ fuegt\ ein\ Objekt\ am\ Ende\r\n\ unsere\ Queue\r\n\ \r\n\ @param\ o\ Das\ Objekt,\ das\ man\ hinzufuegen\ moechtet\r\n

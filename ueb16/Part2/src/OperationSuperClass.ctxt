@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=OperationSuperClass
+comment0.text=\r\n\ OperationsSuperClass\ that\ implements\ the\ Operation\ interface\r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 05/05/2019\r\n
+comment1.params=array\ groesse
+comment1.target=OperationSuperClass(float[],\ int)
+comment1.text=\r\n\ Constructor\r\n\r\n\ @param\ array\ array\ of\ float\ on\ which\ the\ operation\ is\ done\r\n\ @param\ groesse\ size\ of\ the\ array\r\n
+comment2.params=
+comment2.target=void\ doOperation()
+comment2.text=\r\n\ doOperation\ method\r\n\ Method\ that\ do\ an\ operation\ on\ our\ array\r\n
+comment3.params=
+comment3.target=float[]\ getArray()
+comment3.text=\r\n\r\n\ @return\ an\ array\ of\ float\r\n
+comment4.params=
+comment4.target=int\ getGroesse()
+comment4.text=\r\n\r\n\ @return\ size\ of\ the\ array\r\n
+comment5.params=array
+comment5.target=void\ setArray(float[])
+comment5.text=\r\n\r\n\ @param\ array\ new\ array\ of\ float\r\n
+comment6.params=groesse
+comment6.target=void\ setGroesse(int)
+comment6.text=\r\n\r\n\ @param\ groesse\ new\ size\ of\ the\ array\r\n
+numComments=7
