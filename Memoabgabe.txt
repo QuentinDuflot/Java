@@ -24,3 +24,11 @@ grep Name…
 35 Pkt
 
 ** ÜBUNG 16
+
+- Iterator ist ganz gut. Man muss nicht 5x die Schleife wieder schreiben.
+- 3 Personen eingegeben, max Länge 20: null pointer Exception. => Nummer der eingegebenen Personen zählen, und Schleife durchlaufen lassen.
+- swirl: Variable super.getGroesse, mit temporären Variablen arbeiten.
+
+33 Pkt
+
+** ÜBUNG 17
