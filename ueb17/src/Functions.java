@@ -1,4 +1,10 @@
-
+import java.util.function.IntPredicate;
+/**
+ * 
+ * @author Quentin Duflot/ Marie-Lou Wechsler
+ * @version 10/05/2019
+ *
+ */
 public class Functions {
 	
 	public void applyAndPrint(MyFunction myFunction, int i, int j)
@@ -12,14 +18,14 @@ public class Functions {
 	public void run() {
 		//i.)
 		//Anonymous
-		MyFunction xCubeAnonymous = new MyFunction() {
+		MyFunction xSquareAnonymous = new MyFunction() {
 			public int apply(int x)
 			{
 				return x*x;
 			}
 		};
 		System.out.println("\n x^2 (Anonyme Klasse)");
-		applyAndPrint(xCubeAnonymous, 1, 5);
+		applyAndPrint(xSquareAnonymous, 1, 5);
 		
 		//ii.)
 		//Anonymous
@@ -69,8 +75,38 @@ public class Functions {
 			return fib;
 		};
 		System.out.println("\n fibonnacci(x) (Lambda)");
+		
 		applyAndPrint(fibonnacciLambda, 1, 5);
+		//1.D)
+		//odd
+		IntPredicate odd = new IntPredicate(){
+			
+			public boolean test (int value)
+			{
+				return value % 2 == 1;
+			}
+		};
+			
+		//1.E)
+		MyFunctionConditional  xSquare = x -> x*x;
+		MyFunctionConditional  xFactorial = x -> {
+									
+			int result = 1;
+
+			for ( int i = 2; i<=x; i++ )
+			{
+				result *= i;
+			}
+			return result;
+        };
+		System.out.println("\n Quadratzahlen für gerade Werte");
+		applyAndPrint(xSquare.conditionateInput(even), 1, 5);
+		System.out.println("\n Fakultät für ungerade Werte");
+		applyAndPrint(xFactorial.conditionateOutput(odd), 1, 5);
+		
+		
 	}
+	
 	
 	public static void main(String[] args)
 	{
