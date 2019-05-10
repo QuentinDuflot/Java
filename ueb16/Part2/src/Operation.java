@@ -5,6 +5,7 @@
  */
 public interface Operation {
 
+    
     /**
      * doOperation method
      * Method that do an operation on our array
