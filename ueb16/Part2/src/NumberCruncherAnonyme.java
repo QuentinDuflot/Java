@@ -37,6 +37,7 @@ public class NumberCruncherAnonyme extends NumberCruncherSuperClass{
                 			}
                 		}
                 	};
+                	sum.doOperation();
                     break;
                 case "swirl":
                 	Operation swirl = new Operation() {
@@ -49,6 +50,7 @@ public class NumberCruncherAnonyme extends NumberCruncherSuperClass{
                 			}
                 		}
                 	};
+                	swirl.doOperation();
                     break;
                 case "divide":
                 	Operation divide = new Operation() {
@@ -62,6 +64,7 @@ public class NumberCruncherAnonyme extends NumberCruncherSuperClass{
                             }
                         }
                     };
+                    divide.doOperation();
                     break;
                 case "subtract":
                     Operation sub = new Operation() {
@@ -73,6 +76,7 @@ public class NumberCruncherAnonyme extends NumberCruncherSuperClass{
                             }
                         }
                     };
+                    sub.doOperation();
                     break;
                 case "average":
                     Operation avg = new Operation() {
@@ -93,10 +97,16 @@ public class NumberCruncherAnonyme extends NumberCruncherSuperClass{
                             NumberCruncherAnonyme.super.getArray()[position] = average;
                         }
                     };
+                    avg.doOperation();
                     break;
                     default:
                         System.out.println("Falsche Operation: " + operations[counter]);
             }
+<<<<<<< HEAD
+=======
+            
+
+>>>>>>> 18412a3c7217cb5107c3fcaff3b7446b93a1a52e
         }
     }
 }

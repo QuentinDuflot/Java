@@ -1,18 +1,10 @@
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
-<<<<<<< HEAD
 import javax.management.OperationsException;
 
-=======
-/**
- * NumberCruncherDialog is a dialog class that permits
- * the tests of NumberCruncherAnonym and NumberCruncherTopLevel
- * @author Quentin Duflot/ Marie-Lou Wechsler
- * @version 05/05/2019
- */
->>>>>>> 24773169211f54dc5e92b9e189e4aa6157d55cd8
+import javax.management.OperationsException;
+
 public class NumberCruncherDialog {
 
     //Constants
@@ -57,7 +49,7 @@ public class NumberCruncherDialog {
      * @param typCruncher typ of cruncher (a == anonymous t == top-level)
      * @param groesse size of the array
      */
-    public NumberCruncherDialog(char typCruncher, int groesse) {
+    public NumberCruncherDialog(char typCruncher, int groesse)throws SizeArrayNegative{
 
 >>>>>>> 24773169211f54dc5e92b9e189e4aa6157d55cd8
         input = new Scanner(System.in);
@@ -71,16 +63,7 @@ public class NumberCruncherDialog {
         }
     }
 
-<<<<<<< HEAD
     private String[] readOperations(int nbOp) {
-=======
-    /**
-     * read-method that reads the operations given by the user
-     * @param nbOp number of operation that must be executed
-     * @return String-array with all the operations
-     */
-    private String[] readOperations(int nbOp){
->>>>>>> 24773169211f54dc5e92b9e189e4aa6157d55cd8
         String[] operations = new String[nbOp];
 
         System.out.print(
@@ -98,32 +81,14 @@ public class NumberCruncherDialog {
         return operations;
     }
 
-<<<<<<< HEAD
     private void executeFunction(String[] operations) {
-=======
-    /**
-     * execute all the operations
-     * @param operations String-array with all the operations
-     */
-    private void executeFunction(String[] operations){
-
->>>>>>> 24773169211f54dc5e92b9e189e4aa6157d55cd8
         numberCruncher.crunch(operations);
     }
 
-<<<<<<< HEAD
     public void start(int nbOP) {
-=======
-    /**
-     * start method with try-catch
-     * @param nbOP number of operations
-     */
-    public void start(int nbOP){
-
->>>>>>> 24773169211f54dc5e92b9e189e4aa6157d55cd8
         try {
             executeFunction(readOperations(nbOP));
-            
+
         } catch (IllegalArgumentException e) {
 	        System.out.println("Ausnahme gefangen: " + e);
 	        input.next();
@@ -150,14 +115,25 @@ public class NumberCruncherDialog {
      * main-method
      * @param args
      */
+<<<<<<< HEAD
     public static void main(String[] args)
     {
 >>>>>>> 24773169211f54dc5e92b9e189e4aa6157d55cd8
         char choice = ' ';
         int nbOp = readlnInt(new Scanner(System.in), NB_OP_TO_EX);
         NumberOperationsNegative.cannotBeNegative(nbOp);
-        
+
         while((choice != ANONYME_CRUNCHER) && (choice != TOP_LEVEL_CRUNCHER)) {
+=======
+    public static void main(String[] args)throws NumberOperationsNegative, SizeArrayNegative{
+
+    char choice = ' ';
+        int nbOp = readlnInt(new Scanner(
+                System.in), NB_OP_TO_EX);
+        NumberOperationsNegative.cannotBeNegative(nbOp);
+        while((choice != ANONYME_CRUNCHER) && (choice != TOP_LEVEL_CRUNCHER))
+        {
+>>>>>>> 18412a3c7217cb5107c3fcaff3b7446b93a1a52e
             choice = readlnChar(new Scanner(
                     System.in),"Welche Typ von NumberCruncher möchten Sie herstellen ?\n"
                     +"\t NumberCruncherAnonyme --> " + ANONYME_CRUNCHER +
@@ -171,56 +147,20 @@ public class NumberCruncherDialog {
         }
     }
 
-<<<<<<< HEAD
     public static String readlnString(Scanner in, String eingabeAufforderung) {
-=======
-    //Helpers
-
-    /**
-     * Read a String
-     * @param in
-     * @param eingabeAufforderung
-     * @return a String given by the user
-     */
-    public static String readlnString(Scanner in, String eingabeAufforderung)
-    {
->>>>>>> 24773169211f54dc5e92b9e189e4aa6157d55cd8
         System.out.print( eingabeAufforderung );
         String zeile = in.nextLine();
         return zeile;
     }
 
-<<<<<<< HEAD
     public static char readlnChar(Scanner in, String eingabeAufforderung) {
-=======
-    /**
-     * read a character
-     * @param in
-     * @param eingabeAufforderung
-     * @return a char given by the user
-     */
-    public static char readlnChar(Scanner in, String eingabeAufforderung)
-    {
->>>>>>> 24773169211f54dc5e92b9e189e4aa6157d55cd8
         System.out.print( eingabeAufforderung );
         String zeile = in.nextLine();
         char zeichen = zeile.toCharArray()[0];
         return zeichen;
     }
 
-<<<<<<< HEAD
     public static int readlnInt(Scanner in, String eingabeAufforderung) {
-=======
-
-    /**
-     * read an integer
-     * @param in
-     * @param eingabeAufforderung
-     * @return an int given by the user
-     */
-    public static int readlnInt(Scanner in, String eingabeAufforderung)
-    {
->>>>>>> 24773169211f54dc5e92b9e189e4aa6157d55cd8
         System.out.print( eingabeAufforderung );
         int integer = in.nextInt();
         return integer;

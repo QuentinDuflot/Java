@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=NumberCruncherTopLevel
+comment0.text=\r\n\ NumberCruncherTopLevel\ class\ that\ extends\ the\ NumberCruncherSuperClass\r\n\ Operations\ of\ the\ crunch-method\ are\ implemented\ with\ top-level\ classes\r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 05/05/2019\r\n
+comment1.params=groesse
+comment1.target=NumberCruncherTopLevel(int)
+comment1.text=\r\nConstructor\ with\ 1\ parameter\r\n\ Initialise\ an\ array\ of\ random\ floats\ but\ also\ the\ different\ top-level\ classes\ needed\r\n\ @param\ groesse\ size\ of\ the\ array\r\n
+comment2.params=operations
+comment2.target=void\ crunch(java.lang.String[])
+comment2.text=\r\n\ crunch\ method\r\n\ possible\ operations\ are\ sum,\ swirl,\ divide,\ subtract\ and\ average\r\n\ @param\ operations\ array\ of\ String\ that\ contains\ the\ operations\ to\ do\r\n
+numComments=3

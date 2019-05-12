@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Average
+comment0.text=\r\n\ Average\ class\ that\ extends\ OperationSuperClass\r\n\ Determines\ the\ average\ of\ all\ values\ in\ the\ array\ and\ stores\ the\ average\ value.\r\n\ in\ the\ data\ field\ with\ the\ largest\ value.\r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 05/05/2019\r\n
+comment1.params=array\ groesse
+comment1.target=Average(float[],\ int)
+comment1.text=\r\nConstructor\r\n\ @param\ array\ array\ of\ floats\r\n\ @param\ groesse\ size\ of\ the\ array\r\n
+comment2.params=
+comment2.target=void\ doOperation()
+comment2.text=\r\n\ Determines\ the\ average\ of\ all\ values\ in\ the\ array\ and\ stores\ the\ average\ value.\r\n\ in\ the\ data\ field\ with\ the\ largest\ value.\r\n
+comment3.params=array
+comment3.target=int\ searchBiggestValueIndex(float[])
+comment3.text=\r\nSearch\ for\ the\ index\ of\ the\ biggest\ value\ in\ a\ float\ array\r\n\ @param\ array\ array\ of\ floats\r\n\ @return\ the\ index\ of\ the\ biggest\ value\r\n
+numComments=4

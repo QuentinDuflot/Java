@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=NumberCruncher
+comment0.text=\r\n\ NumberCruncher\ interface\r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 05/05/2019\r\n
+comment1.params=operations
+comment1.target=void\ crunch(java.lang.String[])
+comment1.text=\r\nCrunch-method\r\n\ Do\ different\ operations\ on\ an\ array\r\n\ @param\ operations\ array\ of\ String\ that\ contains\ the\ operations\ to\ do\r\n
+comment2.params=
+comment2.target=int\ getGroesse()
+comment2.text=\r\n\r\n\ @return\ size\ of\ the\ array\r\n
+comment3.params=
+comment3.target=float[]\ getArray()
+comment3.text=\r\n\r\n\ @return\ array\ of\ random\ float\r\n
+comment4.params=groesse
+comment4.target=void\ setGroesse(int)
+comment4.text=\r\n\r\n\ @param\ groesse\ size\ of\ the\ array\r\n
+comment5.params=array
+comment5.target=void\ setArray(float[])
+comment5.text=\r\n\r\n\ @param\ array\ array\ of\ floats\r\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=NumberCruncherAnonyme
+comment0.text=\r\n\ NumberCruncherAnonyme\ class\ that\ extends\ the\ NumberCruncherSuperClass\r\n\ Operations\ of\ the\ crunch-method\ are\ implemented\ with\ anonymous\ classes\r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 05/05/2019\r\n
+comment1.params=groesse
+comment1.target=NumberCruncherAnonyme(int)
+comment1.text=\r\n\ Constructor\ with\ 1\ parameter\r\n\ Array\ is\ set\ with\ random\ floats\r\n\ @param\ groesse\ size\ of\ the\ array\r\n
+comment2.params=operations
+comment2.target=void\ crunch(java.lang.String[])
+comment2.text=\r\n\ crunch\ method\r\n\ possible\ operations\ are\ sum,\ swirl,\ divide,\ subtract\ and\ average\r\n\ @param\ operations\ array\ of\ String\ that\ contains\ the\ operations\ to\ do\r\n
+comment3.params=
+comment3.target=void\ doOperation()
+comment4.params=
+comment4.target=void\ doOperation()
+comment5.params=
+comment5.target=void\ doOperation()
+comment6.params=
+comment6.target=void\ doOperation()
+comment7.params=
+comment7.target=void\ doOperation()
+numComments=8

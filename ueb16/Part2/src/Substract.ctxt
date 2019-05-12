@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Substract
+comment0.text=\r\n\ Subtract\ class\ that\ extends\ of\ OperationSuperClass\r\n\ Substitutes\ the\ elements\ of\ the\ array\ in\ pairs\ from\ left\ to\ right\ and\ saves\ them\ as\r\n\ the\ new\ value\ in\ the\ right-hand\ data\ field.\r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 05/05/2019\r\n
+comment1.params=array\ groesse
+comment1.target=Substract(float[],\ int)
+comment1.text=\r\n\ Constructor\r\n\ @param\ array\ array\ of\ floats\r\n\ @param\ groesse\ size\ of\ the\ array\r\n
+comment2.params=
+comment2.target=void\ doOperation()
+comment2.text=\r\n\ Substitutes\ the\ elements\ of\ the\ array\ in\ pairs\ from\ left\ to\ right\ and\ saves\ them\ as\r\n\ the\ new\ value\ in\ the\ right-hand\ data\ field.\r\n
+numComments=3
