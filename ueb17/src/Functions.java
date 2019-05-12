@@ -6,21 +6,26 @@ import java.util.function.IntPredicate;
  *
  */
 public class Functions {
-	
-	public void applyAndPrint(MyFunction myFunction, int i, int j)
-    {
-     for ( int lauf = i; lauf <= j; lauf++ )
-       {
+	//1.A)
+	public void applyAndPrint(MyFunction myFunction, int i, int j) {
+     for ( int lauf = i; lauf <= j; lauf++ ) {
         System.out.println( lauf + " -> " + myFunction.apply(lauf) );
        }
     }
 	
 	public void run() {
+		//1.B)
 		//i.)
+		//Lambda
+		MyFunction xSquareLambda = x -> {
+			return x*x;
+		};
+		System.out.println(" x^2 (Lambda Ausdruck)");
+		applyAndPrint(xSquareLambda, 1, 5);
+		
 		//Anonymous
 		MyFunction xSquareAnonymous = new MyFunction() {
-			public int apply(int x)
-			{
+			public int apply(int x) {
 				return x*x;
 			}
 		};
@@ -28,13 +33,22 @@ public class Functions {
 		applyAndPrint(xSquareAnonymous, 1, 5);
 		
 		//ii.)
+		//Lambda
+		MyFunction xFactorialLambda = x -> {
+			int result = 1;
+			for (int i = 1; i <= x; i++) {
+				result *= i;
+			}
+			return result;
+		};
+		System.out.println("\n x! (Lambda Ausdruck)");
+		applyAndPrint(xFactorialLambda, 1, 5);
+		
 		//Anonymous
 		MyFunction xFactorialAnonymous = new MyFunction() {
-			public int apply(int x)
-			{
+			public int apply(int x) {
 				int result = 1;
-				for(int i = 0; i <=x; i++)
-				{
+				for(int i = 1; i <=x; i++) {
 					result *= i;
 				}
 				return result;
@@ -46,21 +60,32 @@ public class Functions {
 		//iii.)
 		//Lambda
 		MyFunction xPowerxPlus1 = x -> {
-			
 			int result = x;
-			for(int i = 2; i <= x+1; i++)
-			{
+			for(int i = 2; i <= x+1; i++) {
 				result *=x;
 			}
 			return result;
 		
 		};
-		System.out.println("\n x^(x+1) (Lamda-Ausdruck");
+		System.out.println("\n x^(x+1) (Lamda Ausdruck)");
 		applyAndPrint(xPowerxPlus1, 1, 5);
+		
+		//Anonymous
+		MyFunction xPowerxPlus1Anonymous = new MyFunction() {
+			public int apply(int x) {
+				int result = x;
+				for(int i = 1; i < x + 1; i++) {
+					result *= x;
+				}
+				return result;
+			}
+		};
+		System.out.println("\n x^(x+1) (Anonyme Klasse)");
+		applyAndPrint(xPowerxPlus1Anonymous, 1, 5);
 		
 		//iv.)
 		//Lambda
-		MyFunction fibonnacciLambda = x -> {
+		MyFunction fibonacciLambda = x -> {
 			if(x <= 1) {
 				return x;
 			}
@@ -74,42 +99,66 @@ public class Functions {
 			}
 			return fib;
 		};
-		System.out.println("\n fibonnacci(x) (Lambda)");
+		System.out.println("\n fibonnacci(x) (Lambda Ausdruck)");
+		applyAndPrint(fibonacciLambda, 1, 5);
 		
-		applyAndPrint(fibonnacciLambda, 1, 5);
+		//Anonymous
+		MyFunction fibonacciAnonymous = new MyFunction() {
+			public int apply(int x) {
+				if(x <= 1) {
+					return x;
+				}
+				int fib = 1;
+				int prevFib = 1;
+				
+				for(int i = 2; i < x; i++) {
+					int temp = fib;
+					fib += prevFib;
+					prevFib = temp;
+				}
+				return fib;
+			}
+		};
+		System.out.println("\n fibonnacci(x) (Anonyme Klasse)");
+		applyAndPrint(fibonacciAnonymous, 1, 5);
+		
 		//1.D)
 		//odd
-		IntPredicate odd = new IntPredicate(){
-			
-			public boolean test (int value)
-			{
+		IntPredicate odd = new IntPredicate() {
+			public boolean test (int value) {
 				return value % 2 == 1;
 			}
 		};
+		System.out.println("\n Praedikat odd");
+		System.out.println("Is 2 odd? "+ odd.test(2));
+		System.out.println("Is 3 odd? "+ odd.test(3));
+		
+		//even
+		IntPredicate even = new IntPredicate() {
+			public boolean test (int value) {
+				return value % 2 == 0;
+			}
+		};
+		System.out.println("\n Praedikat even");
+		System.out.println("Is 4 even? "+ even.test(4));
+		System.out.println("Is 5 even? "+ even.test(5));
 			
 		//1.E)
 		MyFunctionConditional  xSquare = x -> x*x;
-		MyFunctionConditional  xFactorial = x -> {
-									
+		MyFunctionConditional  xFactorial = x -> {				
 			int result = 1;
-
-			for ( int i = 2; i<=x; i++ )
-			{
+			for ( int i = 2; i<=x; i++ ) {
 				result *= i;
 			}
 			return result;
         };
-		System.out.println("\n Quadratzahlen für gerade Werte");
-		applyAndPrint(xSquare.conditionateInput(even), 1, 5);
-		System.out.println("\n Fakultät für ungerade Werte");
-		applyAndPrint(xFactorial.conditionateOutput(odd), 1, 5);
-		
-		
+		System.out.println("\n Quadratzahlen fuer gerade Werte");
+//		applyAndPrint(xSquare.conditionateInput(even), 1, 5);
+		System.out.println("\n Fakultaet fuer ungerade Werte");
+//		applyAndPrint(xFactorial.conditionateOutput(odd), 1, 5);
 	}
 	
-	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		Functions test = new Functions();
 		test.run();
 	}

@@ -16,9 +16,15 @@ public class NumberCruncherSuperClass implements NumberCruncher {
      * @param groesse size of the array
      * @throws SizeArrayNegative 
      */
+<<<<<<< HEAD
     public NumberCruncherSuperClass(int groesse) throws SizeArrayNegative {
     	SizeArrayNegative.cannotBeNegative(groesse);
     	
+=======
+    public NumberCruncherSuperClass (int groesse) throws SizeArrayNegative {
+        SizeArrayNegative.cannotBeNegative(groesse);
+
+>>>>>>> 18412a3c7217cb5107c3fcaff3b7446b93a1a52e
         this.groesse = groesse;
         this.array = new float[groesse];
         for (int i = 0; i < groesse; i++) {
