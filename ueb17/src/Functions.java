@@ -49,7 +49,7 @@ public class Functions {
 		MyFunction xFactorialAnonymous = new MyFunction() {
 			public int apply(int x) {
 				int result = 1;
-				for(int i = 1; i <=x; i++) {
+				for(int i = 2; i <=x; i++) {
 					result *= i;
 				}
 				return result;
@@ -62,6 +62,25 @@ public class Functions {
 		FactorialTop factorialTop = new FactorialTop();
 		System.out.println("\n Top Level Klasse\n"
 				+ factorialTop.apply(5));
+		
+		//Static Nested Class
+		public static class FactorialStaticNested
+		{
+			public static int calculate(int x) 
+			{
+				int result = 1;
+				for(int i = 2; i <=x; i++) 
+				{
+					result *= i;
+				}
+				return result;
+			}
+		}
+		
+		System.out.println("\n Top Level Klasse\n"
+				+ FactorialStaticNested.calculate(5));
+		
+		
 		
 		//iii.)
 		//Lambda

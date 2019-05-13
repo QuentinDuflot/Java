@@ -4,7 +4,7 @@
  * @version 10/05/2019
  *
  */
-public class FactorialTop {
+public class FactorialTop implements MyFunction {
 	//1.B)
 	//ii.)
 	public int apply(int x) {
