@@ -22,6 +22,7 @@ public class Functions {
 		};
 		System.out.println(" x^2 (Lambda Ausdruck)");
 		applyAndPrint(xSquareLambda, 1, 5);
+		//OR applyAndPrint(x -> x*x, 1, 5);
 		
 		//Anonymous
 		MyFunction xSquareAnonymous = new MyFunction() {
@@ -56,6 +57,11 @@ public class Functions {
 		};
 		System.out.println("\n x! (Anonyme Klasse)");
 		applyAndPrint(xFactorialAnonymous,1,5);
+		
+		//Top Level Class
+		FactorialTop factorialTop = new FactorialTop();
+		System.out.println("\n Top Level Klasse\n"
+				+ factorialTop.apply(5));
 		
 		//iii.)
 		//Lambda
