@@ -145,6 +145,10 @@ public class Functions {
 			
 		//1.E)
 		MyFunctionConditional  xSquare = x -> x*x;
+		System.out.println("\n Quadratzahlen fuer gerade Werte");
+		applyAndPrint(xSquare.conditionateInput(even), 1, 10);
+		
+		//1.F)
 		MyFunctionConditional  xFactorial = x -> {				
 			int result = 1;
 			for ( int i = 2; i<=x; i++ ) {
@@ -152,10 +156,10 @@ public class Functions {
 			}
 			return result;
         };
-		System.out.println("\n Quadratzahlen fuer gerade Werte");
-//		applyAndPrint(xSquare.conditionateInput(even), 1, 5);
-		System.out.println("\n Fakultaet fuer ungerade Werte");
-//		applyAndPrint(xFactorial.conditionateOutput(odd), 1, 5);
+		System.out.println("\n Fakultaet ungerade Werte");
+		applyAndPrint(xFactorial.conditionateOutput(odd), 1, 10);
+		System.out.println("\n Fakultaet gerade Werte");
+		applyAndPrint(xFactorial.conditionateOutput(even), 1, 10);
 	}
 	
 	public static void main(String[] args) {
