@@ -13,7 +13,7 @@ public class Functions {
         }
     }
     //Static Nested Class
-    public static class FactorialStaticNested
+    public static class FactorialStaticNested 
     {
         public static int calculate(int x) 
         {
