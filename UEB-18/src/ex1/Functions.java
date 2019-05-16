@@ -1,5 +1,7 @@
+package ex1;
 /**
  * @author Marie-Lou Wechsler / Quentin Duflot
+ * @version 16/05/2019
  */
 public class Functions {
 	
