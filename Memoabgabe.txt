@@ -32,3 +32,6 @@ grep Name…
 33 Pkt
 
 ** ÜBUNG 17
+
+- Statische Methode anstatt alles 2 Mal zu schreiben bei Lambda + Anonyme Klasse.
+- Optionals
