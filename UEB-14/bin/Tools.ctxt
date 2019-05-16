@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Tools
+comment0.text=\r\n\ Tools\ Class\ methods\ that\ can\ be\ useful\r\n\ @author\ marie-louwechsler/\ Quentin\ Duflot\r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=Tools()
+comment2.params=in\ instruction
+comment2.target=boolean\ yesOrNo(java.util.Scanner,\ java.lang.String)
+comment2.text=\r\n\ @param\ in\ Scanner\ that\ reads\ input\r\n\ @param\ instruction\ String\r\n\ @return\ true\ if\ Y,\ false\ if\ N\r\n
+numComments=3

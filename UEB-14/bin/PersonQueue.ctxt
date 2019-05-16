@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=PersonQueue
+comment0.text=\r\n\ implementierung\ eine\ PersonQueue\ durch\ unsere\ OberklasseQueue\r\n\r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 05/05/2019\r\n
+comment1.params=o
+comment1.target=void\ addLast(java.lang.Object)
+comment1.text=\r\n\ fuegt\ ein\ Objekt\ am\ Ende\r\n\ unsere\ Queue\r\n\ \r\n\ Array\ ist\ nicht\ komplett\r\n\ \r\n\ @param\ o\ Das\ Objekt,\ das\ man\ hinzufuegen\ moechtet\r\n
+comment2.params=
+comment2.target=Person\ removeFirst()
+comment2.text=\r\n\ entferne\ das\ erste\ Element\ und\ gebe\ eine\r\n\ Referenz\ darauf\ zurueck\r\n\ \r\n\ Array\ ist\ nicht\ leer\r\n\ \r\n\ @return\ gibt\ das\ entfernte\ Element\ zuruck\r\n
+comment3.params=i
+comment3.target=Person\ get(int)
+comment3.text=\r\n\ Das\ i-te\ Element\ zurueckgeben\r\n\ \r\n\ Array\ ist\ nicht\ leer\r\n\ \r\n\ @param\ i\ Index\ des\ Objekts\r\n\ @return\ i-te\ Element\ des\ Queues\r\n
+comment4.params=
+comment4.target=void\ print()
+comment5.params=
+comment5.target=java.lang.String\ smallest()
+numComments=6

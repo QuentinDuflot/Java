@@ -1,0 +1,29 @@
+#BlueJ class context
+comment0.target=QueueDialog
+comment1.params=typQueue
+comment1.target=QueueDialog(char)
+comment1.text=\r\n\ Standard-Konstruktor\ des\ Dialogs\r\n
+comment2.params=
+comment2.target=void\ start()
+comment2.text=\r\n\ Hauptschleife\ des\ Testprogramms\r\n
+comment3.params=
+comment3.target=int\ einlesenFunktion()
+comment3.text=\r\n\ Menue\ ausgeben\ und\ Funktion\ einlesen\r\n\ \r\n\ @return\ eingelesene\ Funktion\ als\ ganzzahliger\ Wert\r\n
+comment4.params=funktion
+comment4.target=void\ ausfuehrenFunktion(int)
+comment4.text=\r\n\ Ausfuehren\ der\ ausgewaehlten\ Funktion\r\n\ \r\n\ @param\ die\ auszufuehrende\ Funktion\ als\ ganze\ Zahl\r\n
+comment5.params=q
+comment5.target=void\ print(Queue)
+comment5.text=\r\n\ Methode\ um\ alle\ Elementen\ einer\ Queue\ zu\ schreiben\r\n
+comment6.params=
+comment6.target=java.lang.Object\ elementLesen()
+comment6.text=\r\n\ Eine\ Methode,\ um\ entweder\ einen\ String\ oder\ einen\ Personn\ zu\ lesen\r\n\ \r\n\ @return\ typ\ ein\ Objekt\ vom\ Typ\ String\ oder\ Person\r\n
+comment7.params=in\ eingabeAufforderung
+comment7.target=java.lang.String\ readlnString(java.util.Scanner,\ java.lang.String)
+comment7.text=\r\n\ gibt\ eine\ Eingabeaufforderungs-Text\ aus\ und\r\n\ liest\ aus\ einem\ Eingabestrom\ die\ ganze\ Zeile\ als\ Zeichenkette\ (\ String\ )\r\n\ \ bis\ zum\ Zeilenende\r\n\r\n\ \ @param\ \ in\ der\ zu\ lesende\ Eingabestrom\r\n\ \ @param\ \ eingabeAufforderung\ der\ Eingabe-Aufforderungs-Text\r\n\ \ @return\ den\ eingegebenen\ String\ \=\=\ ganze\ Zeile\r\n
+comment8.params=in\ eingabeAufforderung
+comment8.target=char\ readlnChar(java.util.Scanner,\ java.lang.String)
+comment8.text=\r\n\ gibt\ eine\ Eingabeaufforderungs-Text\ aus\ und\r\n\ liest\ aus\ einem\ Eingabestrom\ genau\ das\ erste\ Zeichen\ (\ Char\ )\r\n\ und\ ueberliest\ bis\ zum\ Zeilenende\ alle\ weiteren\ Zeichen\r\n\r\n\ \ @param\ \ in\ der\ zu\ lesende\ Eingabestrom\r\n\ \ @param\ \ eingabeAufforderung\ der\ Eingabe-Aufforderungs-Text\r\n\ \ @return\ das\ eingegebene\ Zeichen\ (\ char\ )\r\n
+comment9.params=args
+comment9.target=void\ main(java.lang.String[])
+numComments=10

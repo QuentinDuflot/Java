@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Functions
+comment0.text=\r\n\ \r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 10/05/2019\r\n\r\n
+comment1.params=myFunction\ i\ j
+comment1.target=void\ applyAndPrint(MyFunction,\ int,\ int)
+comment2.params=
+comment2.target=void\ run()
+comment3.params=x
+comment3.target=int\ apply(int)
+comment4.params=x
+comment4.target=int\ apply(int)
+comment5.params=x
+comment5.target=int\ apply(int)
+comment6.params=x
+comment6.target=int\ apply(int)
+comment7.params=value
+comment7.target=boolean\ test(int)
+comment8.params=value
+comment8.target=boolean\ test(int)
+comment9.params=args
+comment9.target=void\ main(java.lang.String[])
+numComments=10

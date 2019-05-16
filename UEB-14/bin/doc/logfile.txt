@@ -1,0 +1,41 @@
+Class documentation
+<---- javadoc command: ---->
+/usr/local/jdk1.8.0_181/bin/javadoc
+-author
+-version
+-nodeprecated
+-package
+-Xdoclint:none
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+/opt/bluej/lib/bluejcore.jar:/opt/bluej/lib/junit-4.11.jar:/opt/bluej/lib/hamcrest-core-1.3.jar:/opt/bluej/lib/lang-stride.jar:/opt/bluej/lib/userlib/pi4j-core.jar:/opt/bluej/lib/userlib/pi4j-device.jar:/opt/bluej/lib/userlib/pi4j-gpio-extension.jar:/opt/bluej/lib/userlib/pi4j-service.jar:/export/home_18/qduflot/PRG-SPR/ueb09
+-d
+/export/home_18/qduflot/PRG-SPR/ueb09/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+/export/home_18/qduflot/PRG-SPR/ueb09/CD.java
+<---- end of javadoc command ---->
+Loading source file /export/home_18/qduflot/PRG-SPR/ueb09/CD.java...
+Constructing Javadoc information...
+Standard Doclet version 1.8.0_181
+Building tree for all the packages and classes...
+Generating /export/home_18/qduflot/PRG-SPR/ueb09/doc/CD.html...
+/export/home_18/qduflot/PRG-SPR/ueb09/CD.java:93: warning - @param argument "interpret" is not a parameter name.
+/export/home_18/qduflot/PRG-SPR/ueb09/CD.java:81: warning - @param argument "titel" is not a parameter name.
+/export/home_18/qduflot/PRG-SPR/ueb09/CD.java:105: warning - @param argument "trackcount" is not a parameter name.
+Generating /export/home_18/qduflot/PRG-SPR/ueb09/doc/package-frame.html...
+Generating /export/home_18/qduflot/PRG-SPR/ueb09/doc/package-summary.html...
+Generating /export/home_18/qduflot/PRG-SPR/ueb09/doc/constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating /export/home_18/qduflot/PRG-SPR/ueb09/doc/allclasses-frame.html...
+Generating /export/home_18/qduflot/PRG-SPR/ueb09/doc/allclasses-noframe.html...
+Generating /export/home_18/qduflot/PRG-SPR/ueb09/doc/index.html...
+3 warnings

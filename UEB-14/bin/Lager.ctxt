@@ -1,0 +1,41 @@
+#BlueJ class context
+comment0.target=Lager
+comment1.params=dimMax
+comment1.target=Lager(int)
+comment1.text=\r\n\ Konstruktor\ max\ Anzahl\ von\ Plaetzen\r\n\ @param\ (int)\ dimMax\ \=\ Anzahl\ von\ maximal\ Plaetze\r\n
+comment10.params=index
+comment10.target=Artikel\ getArtikel(int)
+comment10.text=\r\n\ get-Methode\ zu\ ein\ Artikel\ des\ Lagers\r\n\ @param\ (int)\ index\ \:\ index\ des\ Artikels\r\n\ @return\ der\ Artikel,\ der\ an\ diese\ Index\ steht\r\n
+comment11.params=
+comment11.target=java.lang.String\ bestandsListeAusgeben()
+comment11.text=\r\n\ erzeugt\ einen\ Zeichenkette,\ um\ eine\ Bestandsliste\ auszugeben\r\n\ \r\n\ @return\ eine\ String-Repraesentgation\ des\ Lagers\r\n
+comment12.params=
+comment12.target=java.lang.String\ toString()
+comment12.text=\r\n\ Eine\ toString\ Methode\r\n\ @return\ eine\ Repraesentation\ des\ Lagers\r\n
+comment13.params=bedingung\ msg
+comment13.target=void\ check(boolean,\ java.lang.String)
+comment2.params=
+comment2.target=Lager()
+comment2.text=\r\n\ Konstruktor\ zur\ Standard-Initialisierung\r\n
+comment3.params=artikel
+comment3.target=void\ anlegen(Artikel)
+comment3.text=\r\n\ Anlegen\ eines\ Artikel\ und\ ins\ Lager\ einordnen\r\n\ \r\n\ @param\ artikel\ \:\ der\ neue\ Artikel\r\n
+comment4.params=loeschArtikelNr
+comment4.target=void\ loeschen(int)
+comment4.text=\r\n\ loescht\ ein\ Artikel\ anhand\ seiner\ Nummer\ \r\n\ \r\n\ @param\ (int)\ loeschArtikelNr\r\n
+comment5.params=artikelNr\ erhoehung
+comment5.target=void\ bucheZugang(int,\ int)
+comment5.text=\r\n\ \ bucht\ einen\ Zugang\ von\ Artikeln\r\n\ \ \r\n\ \ @param\ (int)\ artikelNr\r\n\ \ @param\ (int)\ erhoehung\r\n
+comment6.params=artikelNr\ verminderung
+comment6.target=void\ bucheAbgang(int,\ int)
+comment6.text=\r\n\ \ bucht\ einen\ Zugang\ von\ Artikeln\r\n\ \ \r\n\ \ @param\ (int)\ artikelNr\r\n\ \ @param\ (int)\ verminderung\r\n
+comment7.params=prozent
+comment7.target=void\ preisaenderung(double)
+comment7.text=\r\n\ erhoehung\ oder\ verminderung\ des\ preises\ aller\ artikeln\r\n\ @param\ (double)prozent\ negtaiv\ \=\=\ -,\ positiv\ \=\=\ +\r\n
+comment8.params=suchNummer
+comment8.target=int\ sucheArtikel(int)
+comment8.text=\r\n\ suche\ ein\ Artikel\ anhand\ sein\ Nummer\r\n\ @param\ (int)suchNummer\r\n\ @return\ Index\ des\ Artikels\ oder\ -1,\ falls\ dieses\ nicht\ existiert\r\n
+comment9.params=
+comment9.target=int\ getLagerDim()
+comment9.text=\r\n\ get-Methode\ zu\ die\ Groesse\ des\ Lagers\r\n
+numComments=14

@@ -1,0 +1,44 @@
+#BlueJ class context
+comment0.target=Artikel
+comment0.text=\r\n\ eine\ Klasse\ Artikel\ f\u00FCr\ eine\ einfache\ Bestandsf\u00FChrung\ \r\n\r\n\ @author\ Quentin\ Duflot/Arnold\ Tegninko\r\n\ @version\ 30.11\r\n
+comment1.params=artikelnummer\ artikelbezeichnung\ artikelbestand\ preis
+comment1.target=Artikel(int,\ java.lang.String,\ int,\ double)
+comment1.text=\r\n\ Konstruktor\ einen\ Artikel-Objekt\ mit\ 4\ Parameter\r\n\ @param1\ (int)\ ein\ 4-stellig\ Artikelnummer\ \r\n\ @param2\ (String)\ ein\ Artikelbezeichnung\ \!\=\ null\r\n\ @param3\ (int)\ ein\ Artikelbestand\ >\=\ 0\r\n\ @param4\ (double)\ ein\ Preis\ >\=0\ \r\n
+comment10.params=verminderung
+comment10.target=void\ bucheAbgang(int)
+comment10.text=\r\n\ Eine\ Methode,\ die\ den\ neuen\ Bestand\ nach\ einen\ Abgang\ rechnet\r\n\ @param\ (int)\ verminderung\ \r\n
+comment11.params=prozent
+comment11.target=void\ aenderePreis(double)
+comment11.text=\r\n\ Methode,\ um\ den\ Preis\ eines\ Artikels\ zu\ aendern\r\n\ \r\n\ @param\ (double)\ prozent\ \r\n\ (negativ\ \=\=\ Preisverminderung;\ positiv\ \=\=\ Preiserhoehung)\r\n
+comment12.params=
+comment12.target=java.lang.String\ toString()
+comment12.text=\r\n\ Eine\ toString-Methode,\ um\ ein\ Artikel-Objekt\ als\ Zeichenkette\ aufbereiten\ zu\ k\u00F6nnen\r\n\ @return\ Eine\ Zeichenkette\ (String)\r\n
+comment13.params=
+comment13.target=java.lang.String\ getBeschreibung()
+comment14.params=bedingung\ msg
+comment14.target=void\ check(boolean,\ java.lang.String)
+comment2.params=artikelnummer\ artikelbezeichnung
+comment2.target=Artikel(int,\ java.lang.String)
+comment2.text=\r\n\ Konstruktor\ einen\ Artikel-Objekt\ mit\ 2\ Parameter\r\n\ @param1\ (int)\ ein\ Artikelnummer\ >\ \ 0\r\n\ @param2\ (String)\ ein\ Artikelbezeichnung\ \!\=\ null\r\n
+comment3.params=
+comment3.target=int\ getArtikelnummer()
+comment3.text=\r\n\ Eine\ get-Methode\ zum\ Artikelnummer\r\n\ @return\ den\ Artikelnummer\ (int)\r\n
+comment4.params=
+comment4.target=java.lang.String\ getBezeichnung()
+comment4.text=\r\n\ Eine\ get-Methode\ zur\ Artikelbezeichnung\r\n\ @return\ die\ Artikelbezeichnung\ (String)\r\n
+comment5.params=
+comment5.target=int\ getBestand()
+comment5.text=\r\n\ Eine\ get-Methode\ zum\ Artikelbestand\r\n\ @return\ das\ Bestand\ (int)\r\n
+comment6.params=
+comment6.target=double\ getArtikelPreis()
+comment6.text=\r\n\ Eine\ get-Methode\ zum\ Preis\r\n\ @return\ Artikel-Preis\r\n
+comment7.params=neuerPreis
+comment7.target=void\ setPreis(double)
+comment7.text=\r\n\ Eine\ set-Methode\ des\ Preises\r\n\ @param\ (double)\ neuer\ Preis\ \=>\ 0\r\n
+comment8.params=artikelbezeichnung
+comment8.target=void\ setArtikelbezeichnung(java.lang.String)
+comment8.text=\r\n\ Eine\ set-Methode\ der\ Artikelbezeichnung\r\n\ @param\ (String)\ eine\ Artikelbezeichnung\r\n
+comment9.params=erhoehung
+comment9.target=void\ bucheZugang(int)
+comment9.text=\r\n\ Eine\ Methode,\ die\ den\ neuen\ Bestand\ nach\ einen\ Zugang\ rechnet\r\n\ @param\ (int)\ erhoehung\r\n
+numComments=15

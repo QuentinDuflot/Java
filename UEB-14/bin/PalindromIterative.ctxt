@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=PalindromIterative
+comment0.text=\r\n\ PalindromIterative\ class\ to\ test\ palindroms\ in\ an\ iterative\ way\r\n\ @author\ marie-louwechsler/\ Quentin\ Duflot\r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=PalindromIterative()
+comment2.params=testValue
+comment2.target=boolean\ isPalindrom(java.lang.String)
+comment2.text=\r\n\ Method\ that\ tells\ if\ a\ string\ is\ a\ palindrom\ or\ not\r\n\ The\ test\ is\ done\ on\ an\ iterativ\ way\r\n\r\n\ @param\ String\ string\ that\ must\ be\ test\r\n\ @return\ boolean,\ true\ \=\ is\ palindrom,\ false\ \=\ is\ not\ a\ palindrom\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

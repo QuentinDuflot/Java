@@ -1,0 +1,31 @@
+#BlueJ class context
+comment0.target=OberklasseQueue
+comment1.params=
+comment1.target=OberklasseQueue()
+comment1.text=\r\n\ erzeugt\ ein\ Queue-Objekt\ mit\ eine\ Standard\ maximal\ Laenge\r\n\ und\ eine\ Initial-Laenge\ von\ 0\r\n
+comment10.params=
+comment10.target=void\ print()
+comment2.params=o
+comment2.target=void\ addLast(java.lang.Object)
+comment2.text=\r\n\ fuegt\ ein\ Objekt\ am\ Ende\r\n\ unsere\ Queue\r\n\ \r\n\ Array\ ist\ nicht\ komplett\r\n\ \r\n\ @param\ o\ Das\ Objekt,\ das\ man\ hinzufuegen\ moechtet\r\n
+comment3.params=
+comment3.target=java.lang.Object\ removeFirst()
+comment3.text=\r\n\ entferne\ das\ erste\ Element\ und\ gebe\ eine\r\n\ Referenz\ darauf\ zurueck\r\n\ \r\n\ Array\ ist\ nicht\ leer\r\n\ \r\n\ @return\ gibt\ das\ entfernte\ Element\ zuruck\r\n
+comment4.params=i
+comment4.target=java.lang.Object\ get(int)
+comment4.text=\r\n\ Das\ i-te\ Element\ zurueckgeben\r\n\ \r\n\ Array\ ist\ nicht\ leer\r\n\ \r\n\ @param\ i\ Index\ des\ Objekts\r\n\ @return\ i-te\ Element\ des\ Queues\r\n
+comment5.params=
+comment5.target=boolean\ full()
+comment5.text=\r\n\ Testen,\ ob\ schon\ Elemente\ eingefuegt\ wurden\r\n\ \r\n\ @return\ true\ wenn\ es\ leer\ ist,\ sonst\ false\r\n
+comment6.params=
+comment6.target=boolean\ empty()
+comment6.text=\r\n\ Testen,\ ob\ noch\ Elemente\ einfuegbar\ sind,\r\n\ d.\ h.\ ob\ das\ letzte\ Element\ schon\ einen\ Wert\ \!\=\ null\ hat\r\n\ \r\n\ @return\ true\ wenn\ es\ voll\ ist,\ sonst\ false\r\n
+comment7.params=
+comment7.target=int\ size()
+comment7.text=\r\n\ Anzahl\ eingefuegter\ Elemente\r\n\ \r\n\ @return\ Anzahl\ der\ Elemente\ in\ unsere\ Queue\r\n
+comment8.params=
+comment8.target=int\ getStandardLaenge()
+comment9.params=
+comment9.target=java.lang.String\ toString()
+comment9.text=\r\n\ Eine\ toString-Methode\ fuer\ unsere\ Queue-Objekt\r\n
+numComments=11

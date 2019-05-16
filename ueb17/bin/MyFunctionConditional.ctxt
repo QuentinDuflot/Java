@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=MyFunctionConditional
+comment0.text=\r\n\ \r\n\ @author\ Quentin\ Duflot/\ Marie-Lou\ Wechsler\r\n\ @version\ 10/05/2019\r\n\r\n
+comment1.params=intPredicate
+comment1.target=MyFunctionConditional\ conditionateInput(java.util.function.IntPredicate)
+comment2.params=intPredicate
+comment2.target=MyFunctionConditional\ conditionateOutput(java.util.function.IntPredicate)
+numComments=3

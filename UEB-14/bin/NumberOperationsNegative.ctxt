@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=NumberOperationsNegative
+comment1.params=
+comment1.target=NumberOperationsNegative()
+comment2.params=message
+comment2.target=NumberOperationsNegative(java.lang.String)
+comment2.text=\r\n\ @param\ message\r\n
+comment3.params=nbrOperations
+comment3.target=void\ cannotBeNegative(int)
+comment3.text=\r\n\ @param\ nbrOperations\r\n\ @throws\ NumberOperationsNegative\r\n
+numComments=4

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=SizeArrayNegative
+comment1.params=
+comment1.target=SizeArrayNegative()
+comment2.params=message
+comment2.target=SizeArrayNegative(java.lang.String)
+comment2.text=\r\n\ @param\ message\r\n
+comment3.params=groesse
+comment3.target=void\ cannotBeNegative(int)
+comment3.text=\r\n\ @param\ array\r\n\ @throws\ SizeArrayNegative\r\n
+numComments=4
