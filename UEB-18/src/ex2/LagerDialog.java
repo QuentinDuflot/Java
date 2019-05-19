@@ -1,17 +1,9 @@
 package ex2;
 
-/**
- * Einfache Lager-Dialog Klasse
- *
- * @author Quentin/Raymonde/Arnold
- * @version 20.01.2019
- */
-
 import java.util.Scanner;
 import java.util.*;
 
-public class LagerDialog
-{
+public class LagerDialog {
 
     //Klassenkonstanten
     private static final int ERZEUGE_STANDARD_LAGER = 1;
@@ -40,8 +32,7 @@ public class LagerDialog
     /**
      * Standard-Konstruktor des Dialogs
      */
-    public LagerDialog()
-    {
+    public LagerDialog() {
         lager1 = null;
         input = new Scanner(System.in);
 
@@ -57,10 +48,9 @@ public class LagerDialog
     /**
      * Hauptschleife des Testprogramms
      */
-    public void start(){
+    public void start() {
         int funktion = -1;
-        while(funktion != ENDE)
-        {
+        while(funktion != ENDE) {
             try{
                 funktion = einlesenFunktion();
                 ausfuehrenFunktion(funktion);
@@ -74,12 +64,10 @@ public class LagerDialog
                 e.printStackTrace(System.out);
             }
         }
-        if(lager1 != null)
-        {
-            {
-                System.out.println("Der aktuelle Bestand : \n " +
-                    lager1 + " \n "); 
-            }
+        
+        if(lager1 != null) {
+            System.out.println("Der aktuelle Bestand : \n " +
+                lager1 + " \n "); 
         }
     }
 
@@ -88,7 +76,7 @@ public class LagerDialog
      * 
      * @return eingelesene Funktion als ganzzahliger Wert
      */
-    private int einlesenFunktion(){
+    private int einlesenFunktion() {
         int funktion;
 
         System.out.print(
@@ -120,7 +108,6 @@ public class LagerDialog
         funktion = input.nextInt();
         input.nextLine();
         return funktion;
-
     }
 
     /**
@@ -128,11 +115,11 @@ public class LagerDialog
      * 
      * @param die auszufuehrende Funktion als ganze Zahl
      */
-    private void ausfuehrenFunktion(int funktion){
+    private void ausfuehrenFunktion(int funktion) {
         int lagerGroesse;
         int artikelNr;
-        switch(funktion)
-        {
+        
+        switch(funktion) {
             case ERZEUGE_STANDARD_LAGER :
             existiertLager( false );
             lager1 = new Lager();
@@ -206,7 +193,6 @@ public class LagerDialog
             default :
             System.out.println(MENUE_FEHLER);
             break;
-
         }
     }
 
@@ -214,8 +200,7 @@ public class LagerDialog
      *  Fragt den Benutzer die Daten fuer einen Artikel
      *  und steckt den Artikel in dem Lager
      */
-    private void erzeugeLagerPosition()
-    {
+    private void erzeugeLagerPosition() {
         auswahl typ = null;
         int typEingabe = -1;
 
@@ -238,12 +223,10 @@ public class LagerDialog
         int erscheinungsjahr;
 
         //Was soll erzeugt werden
-        while( (typEingabe < 0) || (typEingabe > auswahl.values().length) )
-        {
+        while( (typEingabe < 0) || (typEingabe > auswahl.values().length) ) {
             typEingabe = readlnInt(input, auswahlString.toString() );
 
-            if(typEingabe >= 0 && typEingabe < auswahl.values().length)
-            {
+            if(typEingabe >= 0 && typEingabe < auswahl.values().length) {
                 typ = auswahl.values()[typEingabe];
             }
         }
@@ -254,55 +237,48 @@ public class LagerDialog
         artikelBestand = readlnInt(input, "\n Geben Sie den Artikel-Bestand ein : ");
         artikelPreis = readlnDouble(input, "\n Geben Sie den Artikel-Preis ein : ");
 
-        switch ( typ )
-        {
-            case ARTIKEL :
-            lager1.anlegen( new Artikel(artikelNr, artikelBezeichnung,
-                    artikelBestand, artikelPreis));
-            break;
-
-            case BUCH :
-            autor = readlnString(input, "\n Geben Sie den Autor  ein : ");
-            titel = readlnString(input, "\n Geben Sie den Titel ein : ");
-            verlag = readlnString(input, "\n Geben Sie den Verlag ein : ");
-            lager1.anlegen( new Buch( 
-                    artikelNr, 
-                    artikelBezeichnung,
-                    artikelBestand,
-                    artikelPreis, autor,
-                    titel, verlag));
-            break;
-
-            case CD :
-            interpret =readlnString(input, "\n Geben Sie den Interpret  ein : ");
-            titel = readlnString(input, "\n Geben Sie den Titel ein : ");
-            trackcount =readlnInt(input, "\n Geben Sie den Trackcount ein : ");
-
-            lager1.anlegen( new CD( 
-                    artikelNr, 
-                    artikelBezeichnung,
-                    artikelBestand,
-                    artikelPreis, interpret,
-                    titel, trackcount));
-            break;
-
-            case DVD :
-            titel =readlnString(input, "\n Geben Sie den Titel ein : ");
-            spieldauer =readlnFloat(input, "\n Geben Sie die Spieldauer ein : ");
-            erscheinungsjahr =readlnInt(input, "\n  Geben Sie das Erscheinugnsjahr ein : ");
-
-            lager1.anlegen( new DVD( 
-                    artikelNr, 
-                    artikelBezeichnung,
-                    artikelBestand,
-                    artikelPreis, titel,
-                    spieldauer, erscheinungsjahr));
-            break;
-            
+        switch (typ) {
+            case ARTIKEL:
+	            lager1.anlegen( new Artikel(artikelNr, artikelBezeichnung,
+	                    artikelBestand, artikelPreis));
+	            break;
+            case BUCH:
+	            autor = readlnString(input, "\n Geben Sie den Autor  ein : ");
+	            titel = readlnString(input, "\n Geben Sie den Titel ein : ");
+	            verlag = readlnString(input, "\n Geben Sie den Verlag ein : ");
+	            lager1.anlegen( new Buch( 
+	                    artikelNr, 
+	                    artikelBezeichnung,
+	                    artikelBestand,
+	                    artikelPreis, autor,
+	                    titel, verlag));
+	            break;
+            case CD:
+	            interpret =readlnString(input, "\n Geben Sie den Interpret  ein : ");
+	            titel = readlnString(input, "\n Geben Sie den Titel ein : ");
+	            trackcount =readlnInt(input, "\n Geben Sie den Trackcount ein : ");
+	
+	            lager1.anlegen( new CD( 
+	                    artikelNr, 
+	                    artikelBezeichnung,
+	                    artikelBestand,
+	                    artikelPreis, interpret,
+	                    titel, trackcount));
+	            break;
+            case DVD:
+	            titel =readlnString(input, "\n Geben Sie den Titel ein : ");
+	            spieldauer =readlnFloat(input, "\n Geben Sie die Spieldauer ein : ");
+	            erscheinungsjahr =readlnInt(input, "\n  Geben Sie das Erscheinugnsjahr ein : ");
+	
+	            lager1.anlegen( new DVD( 
+	                    artikelNr, 
+	                    artikelBezeichnung,
+	                    artikelBestand,
+	                    artikelPreis, titel,
+	                    spieldauer, erscheinungsjahr));
+	            break;
             default:
-            
-            throw new RuntimeException("Falschen Auswahl !");
-
+            	throw new RuntimeException("Falschen Auswahl !");
         }
     } 
 
@@ -311,8 +287,7 @@ public class LagerDialog
      * 
      * @return die Erhoehung-Zahl
      */
-    private int frageZugang()
-    {
+    private int frageZugang() {
         System.out.println("Geben Sie die Erhoehung-Zahl ein : ");
         return input.nextInt();
     }
@@ -322,8 +297,7 @@ public class LagerDialog
      * 
      * @return die Verminderung-Zahl
      */
-    private int frageAbgang()
-    {
+    private int frageAbgang() {
         System.out.println("Geben Sie die Verminderung-Zahl ein : ");
         return input.nextInt();
     }
@@ -333,19 +307,13 @@ public class LagerDialog
      * 
      * @param (boolean)bedingung
      */
-    private void existiertLager(boolean bedingung)
-    {
-        if (bedingung)
-        {
-            if(lager1 == null)
-            {
+    private void existiertLager(boolean bedingung) {
+        if (bedingung) {
+            if(lager1 == null) {
                 throw new RuntimeException("Lager existiert noch nicht!");
             }
-        }
-        else
-        {
-            if(lager1 != null)
-            {
+        } else {
+            if(lager1 != null) {
                 throw new RuntimeException("Lager exisiert schon !");
             }
         }
@@ -360,8 +328,7 @@ public class LagerDialog
      *  @param  eingabeAufforderung der Eingabe-Aufforderungs-Text
      *  @return die eingegebene Integer-Zahl
      */
-    public int readlnInt(Scanner in, String eingabeAufforderung)
-    {
+    public int readlnInt(Scanner in, String eingabeAufforderung) {
         System.out.print( eingabeAufforderung );
         int zahl = in.nextInt();
         in.nextLine();
@@ -377,8 +344,7 @@ public class LagerDialog
      *  @param  eingabeAufforderung der Eingabe-Aufforderungs-Text
      *  @return die eingegebene Double-Zahl
      */
-    public static double readlnDouble(Scanner in, String eingabeAufforderung)
-    {
+    public static double readlnDouble(Scanner in, String eingabeAufforderung) {
         System.out.print( eingabeAufforderung );
         double zahl = in.nextDouble();
         in.nextLine();
@@ -394,8 +360,7 @@ public class LagerDialog
      *  @param  eingabeAufforderung der Eingabe-Aufforderungs-Text
      *  @return die eingegebene Float-Zahl
      */
-    public static float readlnFloat(Scanner in, String eingabeAufforderung)
-    {
+    public static float readlnFloat(Scanner in, String eingabeAufforderung) {
         System.out.print( eingabeAufforderung );
         float zahl = in.nextFloat();
         in.nextLine();
@@ -405,24 +370,20 @@ public class LagerDialog
     /**
      * gibt eine Eingabeaufforderungs-Text aus und
      * liest aus einem Eingabestrom die ganze Zeile als Zeichenkette ( String )
-     *  bis zum Zeilenende
+     * bis zum Zeilenende
      *
      *  @param  in der zu lesende Eingabestrom
      *  @param  eingabeAufforderung der Eingabe-Aufforderungs-Text
      *  @return den eingegebenen String == ganze Zeile
      */
-    public static String readlnString(Scanner in, String eingabeAufforderung)
-    {
+    public static String readlnString(Scanner in, String eingabeAufforderung) {
         System.out.print( eingabeAufforderung );
         String zeile = in.nextLine();
         return zeile;
     }
-    public static void main(String[] args)
-    {
+    
+    public static void main(String[] args) {
     	LagerDialog dialog = new LagerDialog();
     	dialog.start();
     }
 }
-
-
-

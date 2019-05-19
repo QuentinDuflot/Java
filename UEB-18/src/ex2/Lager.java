@@ -2,17 +2,15 @@ package ex2;
 
 import java.util.Formatter;
 import java.util.Locale;
+import java.util.function.BiPredicate;
 
 /**
  * Einfache Klasse Lager
- *
- * @author Duflot/Tegninko
+ * @author Duflot / Wechsler
  * @version 30.11.2018
  */
 
-
-public class Lager
-{
+public class Lager {
     //Konstanten
     public static int STANDARD_DIM = 10;
     public static final String STANDARD_ORT =
@@ -45,35 +43,28 @@ public class Lager
      * Konstruktor max Anzahl von Plaetzen
      * @param (int) dimMax = Anzahl von maximal Plaetze
      */
-    public Lager (int dimMax)
-    {
+    public Lager (int dimMax) {
         check(dimMax > 0,UNGUELTIGE_DIM);
         lager = new Artikel[dimMax];
         letzterIndexBesetzt = -1;
-        for(int i = 0; i < dimMax; i++)
-        {
+        for(int i = 0; i < dimMax; i++) {
             lager[i] = null;
         }
-
     }
 
     /**
      * Konstruktor zur Standard-Initialisierung
      */
-    public Lager ()
-    {
+    public Lager () {
         this(STANDARD_DIM);
     }
 
     //Artikel anlegen
     /**
      * Anlegen eines Artikel und ins Lager einordnen
-     * 
      * @param artikel : der neue Artikel
      */
-
-    public void anlegen (Artikel artikel)
-    {
+    public void anlegen (Artikel artikel) {
         check((sucheArtikel(artikel.getArtikelnummer())==-1),
             ARTIKEL_SCHON_IN_LAGER);
         check( (letzterIndexBesetzt < lager.length - 1),
@@ -85,11 +76,9 @@ public class Lager
     //Artikel loeschen
     /**
      * loescht ein Artikel anhand seiner Nummer 
-     * 
      * @param (int) loeschArtikelNr
      */
-    public void loeschen (int loeschArtikelNr)
-    {
+    public void loeschen (int loeschArtikelNr) {
         int stelle, schieber;
 
         stelle = sucheArtikel(loeschArtikelNr);
@@ -99,12 +88,10 @@ public class Lager
         lager[stelle]=null;
         letzterIndexBesetzt--;
 
-        for(schieber = stelle; schieber <= letzterIndexBesetzt; schieber++)
-        {
+        for(schieber = stelle; schieber <= letzterIndexBesetzt; schieber++) {
             lager[schieber] = lager[schieber+1];
         }
-        if(schieber + 1 < lager.length)
-        {
+        if(schieber + 1 < lager.length) {
             lager[schieber + 1] = null;
         }
     }
@@ -112,12 +99,10 @@ public class Lager
     //zugang buchen
     /**
      *  bucht einen Zugang von Artikeln
-     *  
      *  @param (int) artikelNr
      *  @param (int) erhoehung
      */
-    public void bucheZugang(int artikelNr, int erhoehung)
-    {
+    public void bucheZugang(int artikelNr, int erhoehung) {
         int index = sucheArtikel(artikelNr);
         check((index != 1), ARTIKEL_NICHT_IN_LAGER);
         lager[index].bucheZugang(erhoehung);
@@ -126,12 +111,10 @@ public class Lager
     //abgang buchen
     /**
      *  bucht einen Zugang von Artikeln
-     *  
      *  @param (int) artikelNr
      *  @param (int) verminderung
      */
-    public void bucheAbgang(int artikelNr, int verminderung)
-    {
+    public void bucheAbgang(int artikelNr, int verminderung) {
         int index = sucheArtikel(artikelNr);
         check((index != 1), ARTIKEL_NICHT_IN_LAGER);
         lager[index].bucheAbgang(verminderung);
@@ -142,10 +125,8 @@ public class Lager
      * erhoehung oder verminderung des preises aller artikeln
      * @param (double)prozent negtaiv == -, positiv == +
      */
-    public void preisaenderung(double prozent)
-    {
-        for( int i = 0; i <= letzterIndexBesetzt; i++)
-        {
+    public void preisaenderung(double prozent) {
+        for( int i = 0; i <= letzterIndexBesetzt; i++) {
             lager[i].aenderePreis(prozent);
         }
     }
@@ -156,26 +137,20 @@ public class Lager
      * @param (int)suchNummer
      * @return Index des Artikels oder -1, falls dieses nicht existiert
      */
-    public int sucheArtikel(int suchNummer)
-    {
+    public int sucheArtikel(int suchNummer) {
         int i, gefunden;
-        for(i=0, gefunden =-1;
-            ((i <= letzterIndexBesetzt) && (gefunden == -1));
-            i++)
-            {
-                if(lager[i].getArtikelnummer() == suchNummer)
-                {
-                    gefunden = i;
-                }
+        for(i=0, gefunden =-1; ((i <= letzterIndexBesetzt) && (gefunden == -1)); i++) {
+            if(lager[i].getArtikelnummer() == suchNummer) {
+                gefunden = i;
             }
-            return gefunden;
+        }
+        return gefunden;
     }
     
     /**
      * get-Methode zu die Groesse des Lagers
      */
-    public int getLagerDim()
-    {
+    public int getLagerDim() {
         return lager.length;
     }
     
@@ -184,21 +159,17 @@ public class Lager
      * @param (int) index : index des Artikels
      * @return der Artikel, der an diese Index steht
      */
-    public Artikel getArtikel(int index)
-    {
+    public Artikel getArtikel(int index) {
         check((index < getLagerDim() && index >= 0),
             INDEX_MELDUNG);
         return lager[index];
-            
     }
     
     /**
      * erzeugt einen Zeichenkette, um eine Bestandsliste auszugeben
-     * 
      * @return eine String-Repraesentgation des Lagers
      */
-    public String bestandsListeAusgeben()
-    {
+    public String bestandsListeAusgeben() {
         double zeilenWert, wert = 0;
         
         StringBuilder liste = new StringBuilder();
@@ -208,8 +179,7 @@ public class Lager
                     "\n\n %6s %6s \t\t%6s " +
                     "\t\t%6s \t\t%6s","Artikelnummer","Beschreibung","Preis", "Bestand","Gesamt");
                     
-        for(int i = 0; i <= letzterIndexBesetzt; i++)
-        {
+        for(int i = 0; i <= letzterIndexBesetzt; i++) {
             zeilenWert = lager[i].getArtikelPreis() * lager[i].getBestand();
             wert += zeilenWert;
             
@@ -223,7 +193,12 @@ public class Lager
         format1.format("\n\n\t GesamtWert: \t\t %.2f", wert);
         
         return liste.toString();
-        
+    }
+    
+    public Artikel[] getSorted(BiPredicate<Artikel, Artikel> sortierKriterium) {
+    	Artikel[] sortierteListe = lager.clone();
+    	
+    	return sortierteListe;
     }
     
     //toString
@@ -231,24 +206,18 @@ public class Lager
      * Eine toString Methode
      * @return eine Repraesentation des Lagers
      */
-    public String toString()
-    {
+    public String toString() {
         String lagerString = new String("Im Lager sind von "+getLagerDim()+
                                         " Plaetze "+ (letzterIndexBesetzt + 1) +
                                         " belegt, mit folgenden Artikeln :\n");
-        for(int i = 0; i <= letzterIndexBesetzt; i++)
-        {
+        for(int i = 0; i <= letzterIndexBesetzt; i++) {
             lagerString += "\n\t"+ i + "\t -> " + lager[i];
         }
-        return lagerString;
-                                        
+        return lagerString;                                   
     }
-    
-    
     
     public static void check(boolean bedingung, String msg) {
         if (!bedingung)
             throw new IllegalArgumentException(msg);
     }    
 }
-
