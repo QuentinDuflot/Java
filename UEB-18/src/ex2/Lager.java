@@ -197,11 +197,33 @@ public class Lager {
     
     public Artikel[] getSorted(BiPredicate<Artikel, Artikel> sortierKriterium) {
     	Artikel[] sortierteListe = lager.clone();
-    	
+    	sort(sortierKriterium, sortierteListe);
     	return sortierteListe;
     }
     
-    //toString
+    
+    private void sort(BiPredicate<Artikel, Artikel> sortKrit, Artikel[] art)
+    {
+    	int laenge = art.length;
+      for (int i= 0 ; i < laenge ; i++)
+         {
+          for (int j = 1 ; j < laenge - i ; j++)
+	     {
+              if (sortKrit.test(art[j - 1] , art[j]))
+	        {
+                 tausch(j - 1 , j , art);
+                } 
+             }
+         }
+    }
+
+    private void tausch(int i, int j, Artikel[] art)
+    {
+      Artikel aux = art[i];
+      art[i] = art[j];
+      art[j] = aux;		
+    }
+	//toString
     /**
      * Eine toString Methode
      * @return eine Repraesentation des Lagers
