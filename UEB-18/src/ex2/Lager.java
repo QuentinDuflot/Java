@@ -1,8 +1,11 @@
 package ex2;
 
+import java.util.ArrayList;
 import java.util.Formatter;
+import java.util.List;
 import java.util.Locale;
 import java.util.function.BiPredicate;
+import java.util.function.Predicate;
 
 /**
  * Einfache Klasse Lager
@@ -195,13 +198,26 @@ public class Lager {
         return liste.toString();
     }
     
+    //Sortierung
+    
+    /**
+     * Sortiert Artikeln des Lagers nach einer übergegebene Sortierkriterium
+     * 
+     * @param sortierKriterium Prädikat, das Sortierkriterium implementiert
+     * @return eine sortierte Liste den Artikeln im Lager
+     */
     public Artikel[] getSorted(BiPredicate<Artikel, Artikel> sortierKriterium) {
     	Artikel[] sortierteListe = lager.clone();
     	sort(sortierKriterium, sortierteListe);
     	return sortierteListe;
     }
     
-    
+    /**
+     * Hilfsmethode, um ein Array zu sortieren (Bubblesort)
+     * 
+     * @param sortKrit Prädikat, das Sortierkriterium implementiert
+     * @param art Array von Artikeln, den man sortieren muss
+     */
     private void sort(BiPredicate<Artikel, Artikel> sortKrit, Artikel[] art)
     {
     	int laenge = art.length;
@@ -217,12 +233,43 @@ public class Lager {
          }
     }
 
+    /**
+     * Vertauscht zwei Elementen eines Arrays
+     * 
+     * @param i Index des ersten Elements
+     * @param j Index des zweiten Elements
+     * @param art Array für die Vertauschung
+     */
     private void tausch(int i, int j, Artikel[] art)
     {
       Artikel aux = art[i];
       art[i] = art[j];
       art[j] = aux;		
     }
+    
+    //Filter
+    /**
+     * Filtert Artikeln des Lagers nach einer übergegebene Filterkriterium
+     * 
+     * @param filterKriterium Prädikat, das Filterkriterium implementiert
+     * @return eine Liste, die nur die Artikel, die das Filterkriterium erfüllen, enthält.
+     */
+    public List<Artikel> filter(Predicate<Artikel> filterKriterium)
+    {
+    	List<Artikel> gefilterteListe = new ArrayList<Artikel>();
+    	
+    	int laenge = lager.length;
+    	
+    	for(int i = 0; i < laenge; i++)
+    	{
+    		if( filterKriterium.test(lager[i]) )
+    		{
+    			gefilterteListe.add(lager[i]);
+    		}
+    	}
+    	return gefilterteListe;
+    }
+    
 	//toString
     /**
      * Eine toString Methode
