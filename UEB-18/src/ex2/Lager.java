@@ -5,6 +5,7 @@ import java.util.Formatter;
 import java.util.List;
 import java.util.Locale;
 import java.util.function.BiPredicate;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 /**
@@ -269,6 +270,23 @@ public class Lager {
     	}
     	return gefilterteListe;
     }
+    
+    //applyToArticle
+    /**
+     * wendet eine Operation auf alle Artikel des Lagers an
+     * 
+     * @param consumer Ein Consumer
+     */
+    public void applyToArticles(Consumer<Artikel> consumer)
+    {
+    	int laenge = lager.length;
+    	
+    	for (int i = 0; i < laenge; i++)
+    	{
+    		consumer.accept(lager[i]);
+    	}
+    }
+    
     
 	//toString
     /**
