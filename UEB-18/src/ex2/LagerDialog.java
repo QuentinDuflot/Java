@@ -3,6 +3,7 @@ package ex2;
 import java.util.Scanner;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
+import java.util.function.Consumer;
 import java.util.*;
 
 public class LagerDialog {
@@ -21,6 +22,9 @@ public class LagerDialog {
     private static final int ENDE = 0;
     private static final int ERSTELLE_ZUFALLS_LAGER = 11;
     private static final int SORTIERT_LAGER = 12;
+    private static final int ZEHN_PROZENT_REDUKTION = 13;
+    private static final int SONDERANGEBOT = 14;
+    private static final int ZEHN_PROZENT_SONDERANGEBOT = 15;
     
     private static final String MENUE_FEHLER = "Falsche Funktion \n";
 	
@@ -112,6 +116,13 @@ public class LagerDialog {
             ERSTELLE_ZUFALLS_LAGER + ": Erstelle ein Testlager mit zufällige Werte \n" +
             
             SORTIERT_LAGER + ": Sortiert den Lager nach Kategorie, dann nach Bestand und danach nach Preis \n" +
+            
+            ZEHN_PROZENT_REDUKTION + ": Reduziert alle Preise um 10% \n" +
+            
+            SONDERANGEBOT + ": Spezifiert ein Sonderangebot auf alle Artikel \n" +
+            
+            ZEHN_PROZENT_SONDERANGEBOT + ": Reduziert alle Preise um 10% und Spezifiert"
+            		+ " ein Sonderangebot auf alle Artikel \n" +
 
             ENDE + ": Ende des Programms \n");
 
@@ -205,6 +216,21 @@ public class LagerDialog {
             	testSortiertLager();
             	break;
 
+            case ZEHN_PROZENT_REDUKTION:
+            	existiertLager(true);
+            	reduzierePreise10Proz();
+            	break;
+            	
+            case SONDERANGEBOT:
+            	existiertLager(true);
+            	sonderAngebot();
+            	break;
+            	
+            case ZEHN_PROZENT_SONDERANGEBOT:
+            	existiertLager(true);
+            	zehnProzentSonderangebot();
+            	break;
+            	
             case ENDE :
             System.out.println("Programmende\n");
             break;
@@ -340,6 +366,23 @@ public class LagerDialog {
         }
     }
     
+    private void reduzierePreise10Proz()
+    {
+    	lager1.applyToArticles(a -> a.setPreis( a.getArtikelPreis() - a.getArtikelPreis()*0.1 ) );
+    }
+    
+    private void sonderAngebot()
+    {
+    	lager1.applyToArticles(a -> a.setArtikelbezeichnung(a.getBezeichnung() + " Sonderangebot"));
+    }
+    
+    private void zehnProzentSonderangebot()
+    {
+    	Consumer<Artikel> minus10Prozent = a -> a.setPreis( a.getArtikelPreis() - a.getArtikelPreis()*0.1 );
+    	Consumer<Artikel> sonderangebot = a -> a.setArtikelbezeichnung(a.getBezeichnung() + " Sonderangebot");
+    	
+    	lager1.applyToArticles(minus10Prozent.andThen(sonderangebot));
+    }
     private void testSortiertLager() {
 		
     	BiPredicate<Artikel, Artikel> sortiertKriterium = (Artikel artikel1, Artikel artikel2) ->
