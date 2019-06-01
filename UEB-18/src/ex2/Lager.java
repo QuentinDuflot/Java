@@ -202,9 +202,9 @@ public class Lager {
     //Sortierung
     
     /**
-     * Sortiert Artikeln des Lagers nach einer übergegebene Sortierkriterium
+     * Sortiert Artikeln des Lagers nach einer uebergegebene Sortierkriterium
      * 
-     * @param sortierKriterium Prädikat, das Sortierkriterium implementiert
+     * @param sortierKriterium Praedikat, das Sortierkriterium implementiert
      * @return eine sortierte Liste den Artikeln im Lager
      */
     public Artikel[] getSorted(BiPredicate<Artikel, Artikel> sortierKriterium) {
@@ -216,22 +216,18 @@ public class Lager {
     /**
      * Hilfsmethode, um ein Array zu sortieren (Bubblesort)
      * 
-     * @param sortKrit Prädikat, das Sortierkriterium implementiert
+     * @param sortKrit Praedikat, das Sortierkriterium implementiert
      * @param art Array von Artikeln, den man sortieren muss
      */
-    private void sort(BiPredicate<Artikel, Artikel> sortKrit, Artikel[] art)
-    {
+    private void sort(BiPredicate<Artikel, Artikel> sortKrit, Artikel[] art) {
     	int laenge = art.length;
-      for (int i= 0 ; i < laenge ; i++)
-         {
-          for (int j = 1 ; j < laenge - i ; j++)
-	     {
-              if (sortKrit.test(art[j - 1] , art[j]))
-	        {
-                 tausch(j - 1 , j , art);
-                } 
-             }
-         }
+    	for (int i= 0 ; i < laenge ; i++) {
+    		for (int j = 1 ; j < laenge - i ; j++) {
+    			if (sortKrit.test(art[j - 1] , art[j])) {
+    				tausch(j - 1 , j , art);
+                }
+    		}
+    	}
     }
 
     /**
@@ -239,10 +235,9 @@ public class Lager {
      * 
      * @param i Index des ersten Elements
      * @param j Index des zweiten Elements
-     * @param art Array für die Vertauschung
+     * @param art Array fuer die Vertauschung
      */
-    private void tausch(int i, int j, Artikel[] art)
-    {
+    private void tausch(int i, int j, Artikel[] art) {
       Artikel aux = art[i];
       art[i] = art[j];
       art[j] = aux;		
@@ -250,43 +245,61 @@ public class Lager {
     
     //Filter
     /**
-     * Filtert Artikeln des Lagers nach einer übergegebene Filterkriterium
+     * Filtert Artikeln des Lagers nach einem uebergegebenen Filterkriterium
      * 
-     * @param filterKriterium Prädikat, das Filterkriterium implementiert
-     * @return eine Liste, die nur die Artikel, die das Filterkriterium erfüllen, enthält.
+     * @param filterKriterium Praedikat, das Filterkriterium implementiert
+     * @return eine Liste, die nur die Artikel, die das Filterkriterium erfuellen, enthaelt.
      */
-    public List<Artikel> filter(Predicate<Artikel> filterKriterium)
-    {
+    public List<Artikel> filter(Predicate<Artikel> filterKriterium) {
     	List<Artikel> gefilterteListe = new ArrayList<Artikel>();
     	
     	int laenge = lager.length;
     	
-    	for(int i = 0; i < laenge; i++)
-    	{
-    		if( filterKriterium.test(lager[i]) )
-    		{
+    	for(int i = 0; i < laenge; i++) {
+    		if( filterKriterium.test(lager[i]) ) {
     			gefilterteListe.add(lager[i]);
     		}
     	}
     	return gefilterteListe;
     }
     
-    //applyToArticle
+    //applyToArticles
     /**
      * wendet eine Operation auf alle Artikel des Lagers an
-     * 
      * @param consumer Ein Consumer
      */
-    public void applyToArticles(Consumer<Artikel> consumer)
-    {
+    public void applyToArticles(Consumer<Artikel> consumer) {
     	int laenge = lager.length;
     	
-    	for (int i = 0; i < laenge; i++)
-    	{
+    	for (int i = 0; i < laenge; i++) {
     		consumer.accept(lager[i]);
     	}
     }
     
+    // e)
+    /**
+     * @param filterKriterium
+     * @param operation
+     */
+    public void applyToSomeArticles(Predicate<Artikel> filterKriterium, Consumer<Artikel> operation) {
+    	for(Artikel article : filter(filterKriterium)) {
+    		operation.accept(article);
+    	}
+    }
+    
+    // f)
+    /**
+     * @param suchKriterium
+     * @param sortierKriterium
+     * @return
+     */
+    public Artikel[] getArticles(Predicate<Artikel> suchKriterium, BiPredicate<Artikel, Artikel> sortierKriterium) {
+    	List<Artikel> getArticlesList = new ArrayList<Artikel>();
+    	getArticlesList = filter(suchKriterium);
+    	Artikel[] ergebnis = getArticlesList.toArray(new Artikel[getArticlesList.size()]);
+    	sort(sortierKriterium, ergebnis);
+    	return ergebnis;
+    }
     
 	//toString
     /**

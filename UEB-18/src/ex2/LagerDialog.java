@@ -27,8 +27,6 @@ public class LagerDialog {
     private static final int ZEHN_PROZENT_SONDERANGEBOT = 15;
     
     private static final String MENUE_FEHLER = "Falsche Funktion \n";
-	
-	
 
     private enum auswahl { ARTIKEL, CD, DVD, BUCH };
 
@@ -83,7 +81,6 @@ public class LagerDialog {
 
     /**
      * Menue ausgeben und Funktion einlesen
-     * 
      * @return eingelesene Funktion als ganzzahliger Wert
      */
     private int einlesenFunktion() {
@@ -113,7 +110,7 @@ public class LagerDialog {
 
             ZEIGE_LAGER + ": Inhalt des Lager anzeigen \n" +
             
-            ERSTELLE_ZUFALLS_LAGER + ": Erstelle ein Testlager mit zufällige Werte \n" +
+            ERSTELLE_ZUFALLS_LAGER + ": Erstelle ein Testlager mit zufï¿½llige Werte \n" +
             
             SORTIERT_LAGER + ": Sortiert den Lager nach Kategorie, dann nach Bestand und danach nach Preis \n" +
             
@@ -133,7 +130,6 @@ public class LagerDialog {
 
     /**
      * Ausfuehren der ausgewaehlten Funktion
-     * 
      * @param die auszufuehrende Funktion als ganze Zahl
      */
     private void ausfuehrenFunktion(int funktion) {
@@ -240,8 +236,6 @@ public class LagerDialog {
             break;
         }
     }
-
-
 
 	/**
      *  Fragt den Benutzer die Daten fuer einen Artikel
@@ -366,38 +360,32 @@ public class LagerDialog {
         }
     }
     
-    private void reduzierePreise10Proz()
-    {
+    private void reduzierePreise10Proz() {
     	lager1.applyToArticles(a -> a.setPreis( a.getArtikelPreis() - a.getArtikelPreis()*0.1 ) );
     }
     
-    private void sonderAngebot()
-    {
+    private void sonderAngebot() {
     	lager1.applyToArticles(a -> a.setArtikelbezeichnung(a.getBezeichnung() + " Sonderangebot"));
     }
     
-    private void zehnProzentSonderangebot()
-    {
+    private void zehnProzentSonderangebot() {
     	Consumer<Artikel> minus10Prozent = a -> a.setPreis( a.getArtikelPreis() - a.getArtikelPreis()*0.1 );
     	Consumer<Artikel> sonderangebot = a -> a.setArtikelbezeichnung(a.getBezeichnung() + " Sonderangebot");
     	
     	lager1.applyToArticles(minus10Prozent.andThen(sonderangebot));
     }
+    
     private void testSortiertLager() {
 		
-    	BiPredicate<Artikel, Artikel> sortiertKriterium = (Artikel artikel1, Artikel artikel2) ->
-    	{
+    	BiPredicate<Artikel, Artikel> sortiertKriterium = (Artikel artikel1, Artikel artikel2) -> {
     		//Sortierung nach Kategorien
- 		   BiFunction<Artikel, Artikel, Integer> kritKat = (Artikel artikelA, Artikel artikelB) -> 
- 		   {
- 			   if (artikelA instanceof Buch) 
- 			   {
+ 		   BiFunction<Artikel, Artikel, Integer> kritKat = (Artikel artikelA, Artikel artikelB) -> {
+ 			   if (artikelA instanceof Buch) {
  				   if(artikelB instanceof Buch)
  					   return 0;
  				   else return -1;
  			   }
- 			   else if(artikelA instanceof CD)
- 			   {
+ 			   else if(artikelA instanceof CD) {
  				   if(artikelB instanceof CD)
  					   return 0;
  				   else if(artikelB instanceof Buch)
@@ -405,8 +393,7 @@ public class LagerDialog {
  				   else
  					   return -1;
  			   }
- 			   else if(artikelA instanceof DVD)
- 			   {
+ 			   else if(artikelA instanceof DVD) {
  				   if(artikelB instanceof DVD)
  					   return 0;
  				   else return 1;
@@ -416,33 +403,26 @@ public class LagerDialog {
  		   
 			
 			//Sortierung nach Bestand
-			BiFunction<Artikel, Artikel, Integer> kritBest = (Artikel artikelA, Artikel artikelB) ->
-			{
+			BiFunction<Artikel, Artikel, Integer> kritBest = (Artikel artikelA, Artikel artikelB) -> {
 				return artikelA.getBestand() - artikelB.getBestand();
 			};
 			
 			//Sortierung nach Preis
-			BiFunction<Artikel, Artikel, Integer> kritPreis = (Artikel artikelA, Artikel artikelB) ->
-			{
-				if(artikelA.getArtikelPreis() - artikelB.getArtikelPreis() > 0)
-				{
+			BiFunction<Artikel, Artikel, Integer> kritPreis = (Artikel artikelA, Artikel artikelB) -> {
+				if(artikelA.getArtikelPreis() - artikelB.getArtikelPreis() > 0) {
 					return 1;
 				}
-				else 
-				{
+				else {
 					return 0;
 				}
-				
 			};
 			
 			int krit1 = kritKat.apply(artikel1,artikel2);
 			
-			if(krit1 != 0)
-			{
+			if(krit1 != 0) {
 				return krit1 > 0 ? true : false;
 			}
-			else
-			{
+			else {
 				int krit2 = kritBest.apply(artikel1, artikel2);
 				
 				if(krit2 != 0)
@@ -460,14 +440,12 @@ public class LagerDialog {
     	
     	Artikel[] sortierteListe = lager1.getSorted(sortiertKriterium);
     	int laenge = sortierteListe.length;
-    	for(int i = 0; i < laenge ; i++)
-    	{
+    	for(int i = 0; i < laenge ; i++) {
     		System.out.println(sortierteListe[i]);
     	}
 	}
     
-	private void erstelleRandomLager()
-    {
+	private void erstelleRandomLager() {
   	  Random ran = new Random();
   	  int anzahlBuecher = ran.nextInt(10);
   	  int anzahlDvds = ran.nextInt(10);
