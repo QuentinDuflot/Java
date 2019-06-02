@@ -9,22 +9,23 @@ import java.util.*;
 public class LagerDialog {
 
     //Klassenkonstanten
-    private static final int ERZEUGE_STANDARD_LAGER = 1;
-    private static final int ERZEUGE_LAGER = 2;
-    private static final int LOESE_LAGER_AUF = 3;
-    private static final int ZUGANG = 4;
-    private static final int ABGANG = 5;
-    private static final int LOESCHE_ARTIKEL = 6;
-    private static final int ARTIKEL_EINFUEGEN = 7;
-    private static final int PREIS_AENDERN = 8;
-    private static final int ZEIGE_BESTANDS_LISTE = 9;
-    private static final int ZEIGE_LAGER = 10;
-    private static final int ENDE = 0;
-    private static final int ERSTELLE_ZUFALLS_LAGER = 11;
-    private static final int SORTIERT_LAGER = 12;
-    private static final int ZEHN_PROZENT_REDUKTION = 13;
-    private static final int SONDERANGEBOT = 14;
-    private static final int ZEHN_PROZENT_SONDERANGEBOT = 15;
+    private static final int ENDE =							0;
+    private static final int ERZEUGE_STANDARD_LAGER =		1;
+    private static final int ERZEUGE_LAGER =				2;
+    private static final int LOESE_LAGER_AUF =				3;
+    private static final int ZUGANG =						4;
+    private static final int ABGANG =						5;
+    private static final int LOESCHE_ARTIKEL =				6;
+    private static final int ARTIKEL_EINFUEGEN =			7;
+    private static final int PREIS_AENDERN =				8;
+    private static final int ZEIGE_BESTANDS_LISTE =			9;
+    private static final int ZEIGE_LAGER =					10;
+    private static final int ERSTELLE_ZUFALLS_LAGER =		11;
+    private static final int SORTIERT_LAGER =				12;
+    private static final int ZEHN_PROZENT_REDUKTION =		13;
+    private static final int SONDERANGEBOT =				14;
+    private static final int ZEHN_PROZENT_SONDERANGEBOT =	15;
+    private static final int APPLY_TO_SOME_ARTICLES =		16;
     
     private static final String MENUE_FEHLER = "Falsche Funktion \n";
 
@@ -45,8 +46,7 @@ public class LagerDialog {
         input = new Scanner(System.in);
 
         auswahlString = new StringBuffer (" Welchen Typ von ARtikel wollen Sie aufnehmen ? \n");
-        for (auswahl a : auswahl.values())
-        {
+        for (auswahl a : auswahl.values()) {
             auswahlString.append(a).append("\t Dann geben Sie --> ")
             .append(a.ordinal()).append("\n ");
         }
@@ -59,7 +59,7 @@ public class LagerDialog {
     public void start() {
         int funktion = -1;
         while(funktion != ENDE) {
-            try{
+            try {
                 funktion = einlesenFunktion();
                 ausfuehrenFunktion(funktion);
             } catch (IllegalArgumentException e) {
@@ -88,40 +88,42 @@ public class LagerDialog {
 
         System.out.print(
             ERZEUGE_STANDARD_LAGER + 
-            ": standard Lager erzeugen \n"+
+            ":\tStandard Lager erzeugen \n"+
 
             ERZEUGE_LAGER +
-            ": Lager mit Parametern erzeugen \n"+
+            ":\tLager mit Parametern erzeugen \n"+
 
-            LOESE_LAGER_AUF +": Lager aufloesen \n"+
+            LOESE_LAGER_AUF +":\tLager aufloesen \n"+
 
-            ZUGANG + ": ein Zugang buchen \n"+
+            ZUGANG + ":\tEin Zugang buchen \n"+
 
-            ABGANG + " : ein Abgang buchen \n" +
+            ABGANG + ":\tEin Abgang buchen \n" +
 
             LOESCHE_ARTIKEL + 
-            " : ein Artikel loeschen \n"+
+            ":\tEin Artikel loeschen \n"+
 
-            ARTIKEL_EINFUEGEN + ": ein Artikel ins Lager einfuegen\n" +
+            ARTIKEL_EINFUEGEN + ":\tEin Artikel ins Lager einfuegen\n" +
 
-            PREIS_AENDERN + ": die Preise aller Artikeln aendern\n"+
+            PREIS_AENDERN + ":\tDie Preise aller Artikeln aendern\n"+
 
-            ZEIGE_BESTANDS_LISTE + ": die Bestandsliste anzeigen \n" +
+            ZEIGE_BESTANDS_LISTE + ":\tDie Bestandsliste anzeigen \n" +
 
-            ZEIGE_LAGER + ": Inhalt des Lager anzeigen \n" +
+            ZEIGE_LAGER + ":\tInhalt des Lager anzeigen \n" +
             
-            ERSTELLE_ZUFALLS_LAGER + ": Erstelle ein Testlager mit zuf�llige Werte \n" +
+            ERSTELLE_ZUFALLS_LAGER + ":\tErstelle ein Testlager mit zufaellige Werte \n" +
             
-            SORTIERT_LAGER + ": Sortiert den Lager nach Kategorie, dann nach Bestand und danach nach Preis \n" +
+            SORTIERT_LAGER + ":\tSortiert den Lager nach Kategorie, dann nach Bestand und danach nach Preis \n" +
             
-            ZEHN_PROZENT_REDUKTION + ": Reduziert alle Preise um 10% \n" +
+            ZEHN_PROZENT_REDUKTION + ":\tReduziert alle Preise um 10% \n" +
             
-            SONDERANGEBOT + ": Spezifiert ein Sonderangebot auf alle Artikel \n" +
+            SONDERANGEBOT + ":\tSpezifiert ein Sonderangebot auf alle Artikel \n" +
             
-            ZEHN_PROZENT_SONDERANGEBOT + ": Reduziert alle Preise um 10% und Spezifiert"
+            ZEHN_PROZENT_SONDERANGEBOT + ":\tReduziert alle Preise um 10% und Spezifiert"
             		+ " ein Sonderangebot auf alle Artikel \n" +
+            
+            APPLY_TO_SOME_ARTICLES + ":\tReduziert die Preise der Artikeln dessen Preis <= 20\n"+
 
-            ENDE + ": Ende des Programms \n");
+            ENDE + ":\tEnde des Programms \n");
 
         funktion = input.nextInt();
         input.nextLine();
@@ -225,6 +227,11 @@ public class LagerDialog {
             case ZEHN_PROZENT_SONDERANGEBOT:
             	existiertLager(true);
             	zehnProzentSonderangebot();
+            	break;
+            
+            case APPLY_TO_SOME_ARTICLES:
+            	existiertLager(true);
+            	testApplyToSomeArticles();
             	break;
             	
             case ENDE :
@@ -373,6 +380,13 @@ public class LagerDialog {
     	Consumer<Artikel> sonderangebot = a -> a.setArtikelbezeichnung(a.getBezeichnung() + " Sonderangebot");
     	
     	lager1.applyToArticles(minus10Prozent.andThen(sonderangebot));
+    }
+    
+    private void testApplyToSomeArticles() {
+    	lager1.applyToSomeArticles(
+    			a -> a.getArtikelPreis() <= 20,
+    			a -> a.setPreis(a.getArtikelPreis() * 0.8)
+		);
     }
     
     private void testSortiertLager() {
