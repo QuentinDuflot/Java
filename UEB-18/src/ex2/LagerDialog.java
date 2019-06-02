@@ -26,6 +26,7 @@ public class LagerDialog {
     private static final int SONDERANGEBOT =				14;
     private static final int ZEHN_PROZENT_SONDERANGEBOT =	15;
     private static final int APPLY_TO_SOME_ARTICLES =		16;
+    private static final int GET_ARTICLES =					17;
     
     private static final String MENUE_FEHLER = "Falsche Funktion \n";
 
@@ -122,6 +123,8 @@ public class LagerDialog {
             		+ " ein Sonderangebot auf alle Artikel \n" +
             
             APPLY_TO_SOME_ARTICLES + ":\tReduziert die Preise der Artikeln dessen Preis <= 20\n"+
+            
+            GET_ARTICLES + ":\tZeigt bestimmte Artikeln an\n"+
 
             ENDE + ":\tEnde des Programms \n");
 
@@ -140,70 +143,70 @@ public class LagerDialog {
         
         switch(funktion) {
             case ERZEUGE_STANDARD_LAGER :
-            existiertLager( false );
-            lager1 = new Lager();
-            break; 
+	            existiertLager( false );
+	            lager1 = new Lager();
+	            break; 
 
             case ERZEUGE_LAGER :
-            existiertLager( false );
-            System.out.println("Geben sie die Groesse des Lagers an : ");
-            lagerGroesse = input.nextInt();
-            lager1 = new Lager(lagerGroesse );
-            break; 
+	            existiertLager( false );
+	            System.out.println("Geben sie die Groesse des Lagers an : ");
+	            lagerGroesse = input.nextInt();
+	            lager1 = new Lager(lagerGroesse );
+	            break; 
 
             case LOESE_LAGER_AUF :
-            existiertLager( true );
-            lager1 = null;
-            break; 
+	            existiertLager( true );
+	            lager1 = null;
+	            break; 
 
             case ARTIKEL_EINFUEGEN:
-            existiertLager( true );
-            erzeugeLagerPosition();
-            break;
+	            existiertLager( true );
+	            erzeugeLagerPosition();
+	            break;
 
             case LOESCHE_ARTIKEL:
-            existiertLager( true );
-            System.out.println("Geben Sie die Artikel-Nummer " +
-                " des zu loeschen Artikels ein : ");
-            artikelNr =  input.nextInt();
-            lager1.loeschen( artikelNr);
-            break;
+	            existiertLager( true );
+	            System.out.println("Geben Sie die Artikel-Nummer " +
+	                " des zu loeschen Artikels ein : ");
+	            artikelNr =  input.nextInt();
+	            lager1.loeschen( artikelNr);
+	            break;
 
             case ZUGANG:
-            existiertLager( true );
-            System.out.println("Geben Sie die Artikelnummer " +
-                " des zu buchenden Artikels ein : ");
-            artikelNr =  input.nextInt();
-            lager1.bucheZugang( artikelNr, frageZugang() );
-            break;
+	            existiertLager( true );
+	            System.out.println("Geben Sie die Artikelnummer " +
+	                " des zu buchenden Artikels ein : ");
+	            artikelNr =  input.nextInt();
+	            lager1.bucheZugang( artikelNr, frageZugang() );
+	            break;
 
             case ABGANG :
-            existiertLager( true );
-            System.out.println("Geben Sie die Artikelnummer " +
-                " des zu buchenden Artikels ein : ");
-            artikelNr =  input.nextInt();
-            lager1.bucheAbgang( artikelNr, frageAbgang() );
-            break;
+	            existiertLager( true );
+	            System.out.println("Geben Sie die Artikelnummer " +
+	                " des zu buchenden Artikels ein : ");
+	            artikelNr =  input.nextInt();
+	            lager1.bucheAbgang( artikelNr, frageAbgang() );
+	            break;
 
             case PREIS_AENDERN :
-            existiertLager( true );
-            double prozent;
-            System.out.println("Geben Sie Prozentzahl ein : " +
-                "\n --> positive Zahl == Preiserhoehung," +
-                "\n --> negative Zahl == Preisverminderung");
-            prozent = input.nextDouble();
-            lager1.preisaenderung( prozent );
-            break;
+	            existiertLager( true );
+	            double prozent;
+	            System.out.println("Geben Sie Prozentzahl ein : " +
+	                "\n --> positive Zahl == Preiserhoehung," +
+	                "\n --> negative Zahl == Preisverminderung");
+	            prozent = input.nextDouble();
+	            lager1.preisaenderung( prozent );
+	            break;
 
             case ZEIGE_BESTANDS_LISTE :
-            existiertLager(true);
-            System.out.println( lager1.bestandsListeAusgeben() );
-            break;
+	            existiertLager(true);
+	            System.out.println( lager1.bestandsListeAusgeben() );
+	            break;
 
             case ZEIGE_LAGER :
-            existiertLager(true);
-            System.out.println( lager1 );
-            break;
+	            existiertLager(true);
+	            System.out.println( lager1 );
+	            break;
             
             case ERSTELLE_ZUFALLS_LAGER:
             	erstelleRandomLager();
@@ -234,13 +237,18 @@ public class LagerDialog {
             	testApplyToSomeArticles();
             	break;
             	
+            case GET_ARTICLES:
+            	existiertLager(true);
+            	testGetArticles();
+            	break;
+            	
             case ENDE :
-            System.out.println("Programmende\n");
-            break;
+	            System.out.println("Programmende\n");
+	            break;
 
             default :
-            System.out.println(MENUE_FEHLER);
-            break;
+	            System.out.println(MENUE_FEHLER);
+	            break;
         }
     }
 
@@ -387,6 +395,13 @@ public class LagerDialog {
     			a -> a.getArtikelPreis() <= 20,
     			a -> a.setPreis(a.getArtikelPreis() * 0.8)
 		);
+    }
+    
+    private void testGetArticles() {
+    	lager1.getArticles(
+    			a -> a.getBestand() <= 50,
+    			(a, b) -> ()
+    	);
     }
     
     private void testSortiertLager() {
