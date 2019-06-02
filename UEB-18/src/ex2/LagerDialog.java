@@ -391,17 +391,17 @@ public class LagerDialog {
     }
     
     private void testApplyToSomeArticles() {
-    	lager1.applyToSomeArticles(
-    			a -> a.getArtikelPreis() <= 20,
-    			a -> a.setPreis(a.getArtikelPreis() * 0.8)
-		);
+//    	lager1.applyToSomeArticles(
+//    			a -> a.getArtikelPreis() <= 20,
+//    			a -> a.setPreis(a.getArtikelPreis() * 0.8)
+//		);
     }
     
     private void testGetArticles() {
-    	lager1.getArticles(
-    			a -> a.getBestand() <= 50,
-    			(a, b) -> ()
-    	);
+//    	lager1.getArticles(
+//    			a -> a.getBestand() <= 50,
+//    			(a, b) -> ()
+//    	);
     }
     
     private void testSortiertLager() {
