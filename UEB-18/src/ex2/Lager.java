@@ -301,6 +301,27 @@ public class Lager {
     	return ergebnis;
     }
     
+	public List<Artikel> filterAll(Predicate<Artikel>... filterKriterium){
+		List<Artikel> gefilterteListe = new ArrayList<Artikel>();
+    	int laenge = lager.length;
+    	int i;
+    	boolean valid;
+    	for(i = 0; i < laenge; i++) {
+    		valid = true;
+    		for(Predicate<Artikel> j : filterKriterium) {
+    			if( !j.test(lager[i]))
+    			{
+    				valid = false;
+    				break;
+    			}
+    		}
+    		if(valid)
+    		{
+    			gefilterteListe.add(lager[i]);
+    		}
+    	}
+    	return gefilterteListe;
+    }
 	//toString
     /**
      * Eine toString Methode
