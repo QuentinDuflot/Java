@@ -11,7 +11,7 @@ import java.util.function.Predicate;
 /**
  * Einfache Klasse Lager
  * @author Duflot / Wechsler
- * @version 30.11.2018
+ * @version 03/06/2019
  */
 
 public class Lager {
@@ -135,7 +135,7 @@ public class Lager {
         }
     }
     
-    //andere Methoden
+    //Hilfsmethoden
     /**
      * suche ein Artikel anhand sein Nummer
      * @param (int)suchNummer
@@ -266,7 +266,7 @@ public class Lager {
     //applyToArticles
     /**
      * wendet eine Operation auf alle Artikel des Lagers an
-     * @param consumer Ein Consumer
+     * @param consumer Ein Consumer für die Operation
      */
     public void applyToArticles(Consumer<Artikel> consumer) {
     	int laenge = lager.length;
@@ -276,10 +276,12 @@ public class Lager {
     	}
     }
     
-    // e)
+    //applyToSomeArticles
     /**
-     * @param filterKriterium
-     * @param operation
+     * Wendet eine Operation auf die Artikel an, welche ein bestimmtes Kriterium erfüllen
+     * 
+     * @param filterKriterium Praedikat, das Filterkriterium implementiert
+     * @param operation Ein Consumer für die Operation
      */
     public void applyToSomeArticles(Predicate<Artikel> filterKriterium, Consumer<Artikel> operation) {
     	for(Artikel article : filter(filterKriterium)) {
@@ -287,11 +289,13 @@ public class Lager {
     	}
     }
     
-    // f)
+    //getArticles
     /**
-     * @param suchKriterium
-     * @param sortierKriterium
-     * @return
+     * Gibt eine sortierte Liste der Artikel zurück,  welche ein bestimmtes Suchkriterium erfüllen
+     * 
+     * @param suchKriterium Praedikat, das Filterkriterium implementiert
+     * @param sortierKriterium Praedikat, das Sortierkriterium implementiert
+     * @return Eine Liste dieser Artikeln
      */
     public Artikel[] getArticles(Predicate<Artikel> suchKriterium, BiPredicate<Artikel, Artikel> sortierKriterium) {
     	List<Artikel> getArticlesList = new ArrayList<Artikel>();
@@ -301,6 +305,14 @@ public class Lager {
     	return ergebnis;
     }
     
+    //filterAll
+    /**
+     * Nimmt eine beliebige Menge an Filterkriterien als Parameter entgegennimmt 
+     * und gibt die Artikel des Lagers zurück , die alle Filterkriterien erfüllen
+     * 
+     * @param filterKriterium Praedikat, das Filterkriterium implementiert
+     * @return
+     */
 	public List<Artikel> filterAll(Predicate<Artikel>... filterKriterium){
 		List<Artikel> gefilterteListe = new ArrayList<Artikel>();
     	int laenge = lager.length;

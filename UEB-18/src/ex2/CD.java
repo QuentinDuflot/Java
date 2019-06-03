@@ -6,8 +6,8 @@ package ex2;
  *realisiert eine CD-klasse 
  *erbt von Artikel.java
  *
- *@version 19/01/2019
- *@author Quentin/Raymonde/Arnold
+ *@version 03/06/2019
+ *@author Duflot / Wechsler
  */
 public class CD extends Artikel
 {

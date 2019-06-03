@@ -4,8 +4,8 @@ package ex2;
 /**
  * eine Klasse Artikel für eine einfache Bestandsführung 
  *
- * @author Quentin Duflot/Arnold Tegninko
- * @version 30.11
+ * @author Duflot / Wechsler
+ * @version 03/06/2019
  */
 
 public class Artikel
@@ -197,20 +197,37 @@ public class Artikel
     }
 
 
+    /**
+     * 
+     * @return Beschreibung des Artikels
+     */
     public String getBeschreibung()
     {
         return String.format(" %10s ", this.artikelbezeichnung);
     }
 
+    /**
+     * 
+     * @param bedingung Bedigung, die man überprüfen muss
+     * @param msg Fehlermessage
+     */
     public static void check(boolean bedingung, String msg) {
         if (!bedingung)
             throw new IllegalArgumentException(msg);
     }
 
+    /**
+     * 
+     * @return Const MIN_ABGANG
+     */
 	public static int getMinAbgang() {
 		return MIN_ABGANG;
 	}
 
+	/**
+	 * 
+	 * @return Const MIN_BESTAND
+	 */
 	public static int getMinBestand() {
 		return MIN_BESTAND;
 	}

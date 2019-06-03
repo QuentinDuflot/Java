@@ -2,14 +2,14 @@ package ex2;
 
 
 /**
- *Klasse DVD.java
- *realisiert eine DVD-klasse 
+ *Klasse Video.java
+ *realisiert eine Video-klasse 
  *erbt von Artikel.java
  *
- *@version 20/01/2019
- *@author Quentin/Raymonde/Arnold
+ *@version 03/06/2019
+ *@author Duflot / Wechsler
  */
-public class DVD extends Artikel
+public class Video extends Artikel
 {
   //Konstanten
   public static final int MIN_ERSCHEINUNGSJAHR = 1950;
@@ -31,15 +31,15 @@ public class DVD extends Artikel
     /**
      * Ein Voll-Init Konstruktor
      * 
-     * @param artikelNr DVD-ArtikelNr
-     * @param bezeichnung DVD-Bezeichnung
-     * @param bestand DVD-Bestand
-     * @param preis DVD-Preis
-     * @param titel DVD-Titel
-     * @param spieldauer DVD-Spieldauer
-     * @param erscheinungsjahr DVD-Erscheinungsjahr
+     * @param artikelNr Video-ArtikelNr
+     * @param bezeichnung Video-Bezeichnung
+     * @param bestand Video-Bestand
+     * @param preis Video-Preis
+     * @param titel Video-Titel
+     * @param spieldauer Video-Spieldauer
+     * @param erscheinungsjahr Video-Erscheinungsjahr
      */
-    public DVD(int artikelNr, String bezeichnung, int bestand,
+    public Video(int artikelNr, String bezeichnung, int bestand,
         double preis, String titel, float spieldauer, int erscheinungsjahr)
     {
         super(artikelNr, bezeichnung, bestand, preis);
@@ -50,7 +50,7 @@ public class DVD extends Artikel
     /**
      * gibt titel zuruck
      * 
-     * @return DVD-Titel
+     * @return Video-Titel
      */
     public String getTitel()
     {
@@ -60,7 +60,7 @@ public class DVD extends Artikel
     /**
      * gibt spieldauer zuruck
      * 
-     * @return DVD-Spieldauer
+     * @return Video-Spieldauer
      */
     public float getSpieldauer()
     {
@@ -70,7 +70,7 @@ public class DVD extends Artikel
     /**
      * gibt erscheinungsjahr zuruck
      * 
-     * @return DVD-Erscheinungsjahr
+     * @return Video-Erscheinungsjahr
      */
     public int getErscheinungsjahr()
     {
@@ -113,7 +113,7 @@ public class DVD extends Artikel
     }
     
      /**
-     * eine set-Methode, um alle DVD-Attribute zu setzen
+     * eine set-Methode, um alle Video-Attribute zu setzen
      * 
      * @param titel neuer Titel
      * @param spieldauer neue Spieldauer
@@ -128,9 +128,9 @@ public class DVD extends Artikel
     
     //sonstige Methoden
     /**
-     * gibt eine Beschreibung der DVD als Zeichenkette
+     * gibt eine Beschreibung der Video als Zeichenkette
      * 
-     * @return eine Beschreibung der DVD
+     * @return eine Beschreibung der Video
      */
     public String getBeschreibung()
     {
@@ -140,7 +140,7 @@ public class DVD extends Artikel
     /**
      * toString-Methode
      * 
-     * @return die DVD als Zeichenkette
+     * @return die Video als Zeichenkette
      */
     public String toString()
     {

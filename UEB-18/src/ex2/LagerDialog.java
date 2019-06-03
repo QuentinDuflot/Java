@@ -5,6 +5,11 @@ import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.*;
+/**
+ * Einfache Klasse Lager
+ * @author Duflot / Wechsler
+ * @version 03/06/2019
+ */
 
 public class LagerDialog {
 
@@ -34,7 +39,7 @@ public class LagerDialog {
 
     private static final String MENUE_FEHLER = "Falsche Funktion \n";
 
-    private enum auswahl { ARTIKEL, CD, DVD, BUCH };
+    private enum auswahl { ARTIKEL, CD, VIDEO, BUCH };
 
     private StringBuffer auswahlString;
 
@@ -308,7 +313,7 @@ public class LagerDialog {
         String interpret;
         int trackcount;
 
-        //Attribute DVD
+        //Attribute Video
         //Titel schon deklariert
         float spieldauer;
         int erscheinungsjahr;
@@ -356,13 +361,13 @@ public class LagerDialog {
 	                    artikelPreis, interpret,
 	                    titel, trackcount));
 	            break;
-            case DVD:
+            case VIDEO:
 	            titel =readlnString(input, "\n Geben Sie den Titel ein : ");
 	            spieldauer =readlnFloat(input, "\n Geben Sie die Spieldauer ein : ");
 	            erscheinungsjahr =readlnInt(input, "\n  Geben Sie das Erscheinugnsjahr ein : ");
-
-	            lager1.anlegen( new DVD(
-	                    artikelNr,
+	
+	            lager1.anlegen( new Video( 
+	                    artikelNr, 
 	                    artikelBezeichnung,
 	                    artikelBestand,
 	                    artikelPreis, titel,
@@ -410,14 +415,24 @@ public class LagerDialog {
         }
     }
 
+    //Aufgabe KW23
+    /**
+     * Reduziert alle Preise, um 10 Prozent
+     */
     private void reduzierePreise10Proz() {
     	lager1.applyToArticles(a -> a.setPreis( a.getArtikelPreis() - a.getArtikelPreis()*0.1 ) );
     }
 
+    /**
+     * Apply eine Sonderangebot auf alle Arikel
+     */
     private void sonderAngebot() {
     	lager1.applyToArticles(a -> a.setArtikelbezeichnung(a.getBezeichnung() + " Sonderangebot"));
     }
 
+    /**
+     * Reduziert alle Preise, um 10 Prozent und apply eine Sonderangebot auf alle Arikel
+     */
     private void zehnProzentSonderangebot() {
     	Consumer<Artikel> minus10Prozent = a -> a.setPreis( a.getArtikelPreis() - a.getArtikelPreis()*0.1 );
     	Consumer<Artikel> sonderangebot = a -> a.setArtikelbezeichnung(a.getBezeichnung() + " Sonderangebot");
@@ -425,18 +440,27 @@ public class LagerDialog {
     	lager1.applyToArticles(minus10Prozent.andThen(sonderangebot));
     }
 
+    /**
+     * Erhöht die Preiser aller CD's um 10 Prozent
+     */
 	private void zehnProzentErhoehungCD() {
 
 		lager1.applyToSomeArticles(a -> a instanceof CD,
 				a -> a.setPreis(a.getArtikelPreis() + a.getArtikelPreis()*0.1));
 	}
 
+	/**
+	 * Reduziert die Preise von alle Artikel mit nur 2 Examplare um 5 Prozent
+	 */
 	private void funfProzentReduktionArtikelMitZweiEx() {
 
 		lager1.applyToSomeArticles(a -> a.getBestand() == 2,
 				a -> a.setPreis(a.getArtikelPreis() - a.getArtikelPreis()*0.05));
 	}
 
+	/**
+	 * Reduziert die Preise der Bücher eines bestimmtes Autor um 5 Prozent
+	 */
 	private void funfProzentReduktionBestimmtesAuthor() {
 		String author = "author0";
 		Predicate<Artikel> filterAuthor =
@@ -451,6 +475,10 @@ public class LagerDialog {
 		lager1.applyToSomeArticles(filterAuthor, a -> a.setPreis(a.getArtikelPreis() - a.getArtikelPreis()*0.05));
 	}
 
+	/**
+	 * Erhöht die Preiser aller CD's um 10 Prozent und 
+	 * reduziert die Preise von alle Artikel mit nur 2 Examplare um 5 Prozent
+	 */
 	private void zehnProzentErhoehungCDUndFunfProzentReduktionArtikelMitZweiEx() {
 
 		lager1.applyToSomeArticles(a -> a instanceof CD,
@@ -460,6 +488,9 @@ public class LagerDialog {
 
 	}
 
+	/**
+	 * Gibt eine Liste der Buecher sortiert nach Autor
+	 */
 	private void gebeListeBuecherSortiertNachAutor() {
 
 		Artikel[] result = lager1.getArticles(a -> a instanceof Buch,
@@ -473,6 +504,10 @@ public class LagerDialog {
 		}
 	}
 
+	/**
+	 * Filtert die Buecher, die weniger als 50 euros kosten 
+	 * und mehr als 1 Exemplar haben
+	 */
 	private void testedFilterAll() {
 
 		Predicate<Artikel> filterBuch = a -> {
@@ -510,6 +545,12 @@ public class LagerDialog {
 
 	}
 
+	/**
+	 * Sortiert die Artikel im Lager nach folgen-den Kategorien sortiert:
+	 * (a)  Unterkategorie (alphabetisch)
+	 * (b)  Bestand
+	 * (c)  Preis
+	 */
     private void testSortiertLager() {
 
     	BiPredicate<Artikel, Artikel> sortiertKriterium = (Artikel artikel1, Artikel artikel2) -> {
@@ -528,8 +569,8 @@ public class LagerDialog {
  				   else
  					   return -1;
  			   }
- 			   else if(artikelA instanceof DVD) {
- 				   if(artikelB instanceof DVD)
+ 			   else if(artikelA instanceof Video) {
+ 				   if(artikelB instanceof Video)
  					   return 0;
  				   else return 1;
  			   }
@@ -580,20 +621,23 @@ public class LagerDialog {
     	}
 	}
 
+    /**
+     * Erstellt ein Lager mit zufälligen Werten
+     */
 	private void erstelleRandomLager() {
   	  Random ran = new Random();
   	  int anzahlBuecher = ran.nextInt(10);
-  	  int anzahlDvds = ran.nextInt(10);
+  	  int anzahlVideos = ran.nextInt(10);
   	  int anzahlCds = ran.nextInt(10);
-  	  int lagerGroesse = 3 + anzahlBuecher + anzahlCds + anzahlDvds;
+  	  int lagerGroesse = 3 + anzahlBuecher + anzahlCds + anzahlVideos;
   	  lager1 = new Lager(lagerGroesse);
 
-  	  lager1.anlegen(new Buch(ran.nextInt(9000)+1000, "buch"+ran.nextInt(10000), ran.nextInt(5), ran.nextDouble() * 100, "author0", "titel"+ran.nextInt(100), "verlag"+ran.nextInt(100)));
-  	  lager1.anlegen(new DVD(ran.nextInt(9000)+1000, "dvd"+ran.nextInt(10000), ran.nextInt(100), ran.nextDouble() * 100, "titel0", ran.nextFloat() * 100, 2000));
+  	  lager1.anlegen(new Buch(ran.nextInt(9000)+1000, "buch"+ran.nextInt(10000), ran.nextInt(5), ran.nextDouble() * 100, "autor0", "titel"+ran.nextInt(100), "verlag"+ran.nextInt(100)));
+  	  lager1.anlegen(new Video(ran.nextInt(9000)+1000, "video"+ran.nextInt(10000), ran.nextInt(100), ran.nextDouble() * 100, "titel0", ran.nextFloat() * 100, 2000));
   	  lager1.anlegen(new CD(ran.nextInt(9000)+1000, "cd"+ran.nextInt(10000), 2, ran.nextDouble() * 100, "interpret0", "titel"+ran.nextInt(100), ran.nextInt(19)+1 ));
-
-  	  for(int i=0; i<anzahlDvds; i++)
-  		  lager1.anlegen(new DVD(ran.nextInt(9000)+1000, "dvd"+ran.nextInt(10000), ran.nextInt(100), ran.nextDouble() * 100, "titel"+ran.nextInt(100), ran.nextFloat() * 100, 2000));
+  	  
+  	  for(int i=0; i<anzahlVideos; i++)
+  		  lager1.anlegen(new Video(ran.nextInt(9000)+1000, "video"+ran.nextInt(10000), ran.nextInt(100), ran.nextDouble() * 100, "titel"+ran.nextInt(100), ran.nextFloat() * 100, 2000));
   	  for(int i=0; i<anzahlCds; i++)
   		  lager1.anlegen(new CD(ran.nextInt(9000)+1000, "cd"+ran.nextInt(10000), ran.nextInt(50), ran.nextDouble() * 100, "interpret"+ran.nextInt(100), "titel"+ran.nextInt(100), ran.nextInt(19)+1 ));
   	  for(int i=0; i<anzahlBuecher; i++)
