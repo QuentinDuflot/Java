@@ -122,9 +122,9 @@ public class LagerDialog {
             ZEHN_PROZENT_SONDERANGEBOT + ":\tReduziert alle Preise um 10% und Spezifiert"
             		+ " ein Sonderangebot auf alle Artikel \n" +
             
-            APPLY_TO_SOME_ARTICLES + ":\tReduziert die Preise der Artikeln dessen Preis <= 20\n"+
+            APPLY_TO_SOME_ARTICLES + ":\tReduziert die Preise der Artikeln dessen Autor Goethe ist um 5%\n"+
             
-            GET_ARTICLES + ":\tZeigt bestimmte Artikeln an\n"+
+            GET_ARTICLES + ":\tListe der Bücher sortiert nach Autor\n"+
 
             ENDE + ":\tEnde des Programms \n");
 
@@ -234,12 +234,12 @@ public class LagerDialog {
             
             case APPLY_TO_SOME_ARTICLES:
             	existiertLager(true);
-            	testApplyToSomeArticles();
+            	testHiv();
             	break;
             	
             case GET_ARTICLES:
             	existiertLager(true);
-            	testGetArticles();
+            	testHv();
             	break;
             	
             case ENDE :
@@ -390,18 +390,43 @@ public class LagerDialog {
     	lager1.applyToArticles(minus10Prozent.andThen(sonderangebot));
     }
     
-    private void testApplyToSomeArticles() {
-//    	lager1.applyToSomeArticles(
-//    			a -> a.getArtikelPreis() <= 20,
-//    			a -> a.setPreis(a.getArtikelPreis() * 0.8)
-//		);
+    private void testHi() {
+    	lager1.applyToSomeArticles(
+    			a -> a instanceof CD,
+    			a -> a.setPreis(a.getArtikelPreis()*1.1));
+    	
     }
     
-    private void testGetArticles() {
-//    	lager1.getArticles(
-//    			a -> a.getBestand() <= 50,
-//    			(a, b) -> ()
-//    	);
+    private void testHii() {
+    	lager1.applyToSomeArticles(
+    			a -> a.getBestand() <= 2, 
+    			a -> a.setPreis(a.getArtikelPreis()*0.95));
+    }
+    
+    private void testHiii() {
+    	
+    }
+    
+    private void testHiv() {
+    	lager1.applyToSomeArticles(
+    			a -> a.getArtikelPreis() <= 20,
+    			a -> a.setPreis(a.getArtikelPreis() * 0.8)
+		);
+    }
+    
+    private void testHv() {
+    	Artikel[] ergebnis = lager1.getArticles(
+    			a -> a instanceof Buch,
+    			(a, b) -> ((Buch)a).getAutor().compareTo(((Buch)b).getAutor()) >= 0 ? true : false
+    	);
+    	
+    	for (int i = 0; i < ergebnis.length; i++) {
+    		System.out.println(ergebnis[i]);
+    	}
+    }
+    
+    private void testHvi() {
+    	
     }
     
     private void testSortiertLager() {
