@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=RoomException
+comment0.text=\n\ Class\ RoomException\n\ @author\ marie-louwechsler/Quentin\ Duflot\n\ @version\ 1.1\n
+comment1.params=
+comment1.target=RoomException()
+comment2.params=message
+comment2.target=RoomException(java.lang.String)
+comment2.text=\n\ @param\ message\ error\n
+comment3.params=buildingG
+comment3.target=void\ negativeBuildingNumber(int)
+comment3.text=\n\ @param\ buildingG\ building\ number\n\ @throws\ RoomException\ when\ building\ is\ negative\n
+comment4.params=floorG
+comment4.target=void\ negativeFloorNumber(int)
+comment4.text=\n\ @param\ floorG\ floor\ number\n\ @throws\ RoomException\ when\ floor\ is\ negative\n
+comment5.params=roomG
+comment5.target=void\ negativeRoomNumber(int)
+comment5.text=\n\ @param\ roomG\ room\ number\n\ @throws\ RoomException\ when\ room\ is\ negative\n
+comment6.params=nbRes\ maxRes
+comment6.target=void\ arrayFull(int,\ int)
+comment6.text=\n\n\ @param\ nbRes\ actual\ number\ of\ reservations\n\ @param\ maxRes\ max\ number\ of\ reservations\n\ @throws\ RoomException\ when\ nbRes\ \=\=\ maxRes-1\ (to\ avoid\ going\ out\ of\ bounds\n
+numComments=7
