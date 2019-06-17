@@ -220,8 +220,18 @@ public class MinHeap<E extends Comparable<E>> implements java.util.Queue<E> {
 		}
 	}
 	
+	/**
+	 * Show heap content
+	 * @return
+	 */
 	public String showContent() {
+		System.out.println("Inhalt des MinHeaps: ");
 		
+		String result = "";
+		for(int i = 0; i < getLength(); i++) {
+			result += heap[i] +" - ";
+		}
+		return result;
 	}
 
 	@Override
