@@ -35,3 +35,7 @@ grep Name…
 
 - Statische Methode anstatt alles 2 Mal zu schreiben bei Lambda + Anonyme Klasse.
 - Optionals
+
+** ÜBUNG 18
+
+59 Pkt
