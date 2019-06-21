@@ -1,4 +1,7 @@
+package ex1;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
 import java.util.TreeMap;
 
 /**
@@ -7,26 +10,18 @@ import java.util.TreeMap;
  */
 public class Consumer {
 	TreeMap<Integer, LinkedList<Long>> map;
-	int digitSum, number;
-	long timestamp;
 	
 	public Consumer() {
 		map = new TreeMap<>();
 	}
-	
-//	public Consumer(int number, int digitSum, long timestamp) {
-//		this.number = number;
-//		this.digitSum = digitSum;
-//		this.timestamp = timestamp;
-//	}
 	
 	/**
 	 * consume() berechnet die Quersumme einer Zahl u. dessen Zeistempel
 	 * @param int number
 	 */
 	public void consume(int number) {
-		this.digitSum = calculateDigitSum(number);
-		this.timestamp = System.currentTimeMillis();
+		int digitSum = calculateDigitSum(number);
+		long timestamp = System.currentTimeMillis();
 		
 		/* Falls die gegebene Quersumme noch nicht berechnet wurde,
 		 * Erzeut man eine neue LinkedList, indem man die ≠ Zeitstempel lagert */
@@ -38,7 +33,11 @@ public class Consumer {
 			map.get(digitSum).add(timestamp);
 		}
 		
-		System.out.println(toString());
+		System.out.println("Eingebene Zahl:\t\t"+ number +"\n"
+				+ "Dessen Quersumme:\t"+ digitSum +"\n"
+				+ "Zeitstempel:\t\t"+ timestamp +" ms\n"
+				+ "Die Map:\t\t"+ map +"\n"
+		);
 	}
 	
 	/**
@@ -64,31 +63,48 @@ public class Consumer {
 	}
 	
 	/**
-	 * numberOfOccurences()
+	 * numberOfOccurences() zaehlt wie viel Mal eine Quersumme berechnet wurde
 	 * @return
 	 */
-	public int numberOfOccurences() {
+	public int numberOfOccurences(int number) {
+		if(map.containsKey(number)) {
+			return map.get(number).size();
+		}
 		return 0;
+	}
+	
+	/**
+	 * getCrossTotalAscending() zeigt die Quersummen in aufsteigender Reihenfolge
+	 * @return 
+	 */
+	public Set<Integer> getCrossTotalAscending() {
+		return map.keySet();
+	}
+	
+	/**
+	 * getCrossTotalDescending() zeigt die Quersummen in absteigender Reihenfolge
+	 * @return
+	 */
+	public Set<Integer> getCrossTotalDescending() {
+		return map.descendingKeySet();
+	}
+	
+	/* Richtiger Datenformat? */
+	/**
+	 * getTimestampsForResult() zeigt die gegebene Zeitstempel fuer eine gegebene Quersumme 
+	 * @param int number
+	 * @return
+	 */
+	public List<Long> getTimestampsForResult(int number) {
+		if(map.containsKey(number)) {
+			return map.get(number);
+		}
+		return null;
 	}
 	
 	/**
 	 * toString()
 	 * return String str
 	 */
-	public String toString() {
-		String str = "Eingebene Zahl:\t\t"+ number +"\n"
-				+ "Dessen Quersumme:\t"+ digitSum +"\n"
-				+ "Zeitstempel:\t\t"+ timestamp +" ms\n"
-				+ "Die Map:\t\t"+ map +"\n";
-		return str;
-	}
-	
-	public static void main(String[] args) {
-		Consumer consumer = new Consumer();
-		consumer.consume(321);
-		consumer.consume(21);
-		consumer.consume(321);
-		consumer.consume(153527);
-		System.out.println("Anzahl der verschiedenen berechneten Quersummmen: "+ consumer.numberOfDifferentResults());
-	}
+//	public String toString() {}
 }
