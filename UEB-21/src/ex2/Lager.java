@@ -2,8 +2,10 @@ package ex2;
 
 import java.util.ArrayList;
 import java.util.Formatter;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
@@ -37,7 +39,7 @@ public class Lager {
         "Der Index ist entweder zu gross oder zu klein !";
 
     //Attribute
-    private Artikel[] lager;
+    private  Map<Integer, Artikel> lager;
     private int letzterIndexBesetzt;
 	private Formatter format1;
 
@@ -49,11 +51,8 @@ public class Lager {
      */
     public Lager (int dimMax) {
         check(dimMax > 0,UNGUELTIGE_DIM);
-        lager = new Artikel[dimMax];
+        lager = new LinkedHashMap<Integer, Artikel>(dimMax);
         letzterIndexBesetzt = -1;
-        for(int i = 0; i < dimMax; i++) {
-            lager[i] = null;
-        }
     }
 
     /**
@@ -69,12 +68,12 @@ public class Lager {
      * @param artikel : der neue Artikel
      */
     public void anlegen (Artikel artikel) {
-        check((sucheArtikel(artikel.getArtikelnummer())==-1),
+        check((lager.containsKey(artikel.getArtikelnummer() )),
             ARTIKEL_SCHON_IN_LAGER);
-        check( (letzterIndexBesetzt < lager.length - 1),
+        check( (letzterIndexBesetzt < lager.size() - 1),
             LAGER_KOMPLETT);
 
-        lager[++letzterIndexBesetzt] = artikel;
+        lager.put(artikel.getArtikelnummer(), artikel);
     }
 
     //Artikel loeschen
