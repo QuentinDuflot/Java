@@ -5,6 +5,10 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Random;
 
+/**
+ * @author Quentin Duflot / Marie-Lou Wechsler
+ * @version 21/06/2019
+ */
 public class Tester {
 	Queue<Integer> queue;
 	Consumer consumer;
