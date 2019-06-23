@@ -71,7 +71,7 @@ public class Lager {
      * @param artikel : der neue Artikel
      */
     public void anlegen (Artikel artikel) {
-        check((lager.containsKey(artikel.getArtikelnummer() )),
+        check(!(lager.containsKey(artikel.getArtikelnummer() )),
             ARTIKEL_SCHON_IN_LAGER);
 
         lager.put(artikel.getArtikelnummer(), artikel);
@@ -168,7 +168,7 @@ public class Lager {
     /**
      * Filtert Artikeln des Lagers nach einem uebergegebenen Filterkriterium
      * 
-     * @param filterKriterium Praedikat, das Filterkriterium implementiert
+     * @param filter Praedikat, das Filterkriterium implementiert
      * @return eine Liste, die nur die Artikel, die das Filterkriterium erfuellen, enthaelt.
      */
     public List<Artikel> filter(Predicate<Artikel> filter)
@@ -190,8 +190,8 @@ public class Lager {
     /**
      * Wendet eine Operation auf die Artikel an, welche ein bestimmtes Kriterium erfüllen
      * 
-     * @param filterKriterium Praedikat, das Filterkriterium implementiert
-     * @param operation Ein Consumer für die Operation
+     * @param filter Praedikat, das Filterkriterium implementiert
+     * @param consumer Ein Consumer für die Operation
      */
     public void applyToSomeArticles(Predicate<Artikel> filter, Consumer<Artikel> consumer)
 	{
@@ -202,8 +202,8 @@ public class Lager {
     /**
      * Gibt eine sortierte Liste der Artikel zurück,  welche ein bestimmtes Suchkriterium erfüllen
      * 
-     * @param suchKriterium Praedikat, das Filterkriterium implementiert
-     * @param sortierKriterium Praedikat, das Sortierkriterium implementiert
+     * @param filter Praedikat, das Filterkriterium implementiert
+     * @param comparator Praedikat, das Sortierkriterium implementiert
      * @return Eine Liste dieser Artikeln
      */
     public List<Artikel> getArticles(Predicate<Artikel> filter, Comparator<Artikel> comparator)
@@ -223,7 +223,7 @@ public class Lager {
 	public List<Artikel> filterAll(Predicate<Artikel>... filterKriterium){
 		
 		for(Predicate<Artikel> j : filterKriterium) {
-			lager.values().stream().filter(j);
+			lager.values().stream().filter(j).collect(Collectors.toList());
 		}
 		return lager.values().stream().collect(Collectors.toList());
     }
