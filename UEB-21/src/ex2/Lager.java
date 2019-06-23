@@ -1,7 +1,9 @@
 package ex2;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Formatter;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
@@ -9,11 +11,12 @@ import java.util.Map;
 import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /**
  * Einfache Klasse Lager
  * @author Duflot / Wechsler
- * @version 03/06/2019
+ * @version 23/06/2019
  */
 
 public class Lager {
@@ -82,21 +85,7 @@ public class Lager {
      * @param (int) loeschArtikelNr
      */
     public void loeschen (int loeschArtikelNr) {
-        int stelle, schieber;
-
-        stelle = sucheArtikel(loeschArtikelNr);
-
-        check( (stelle != -1),ARTIKEL_NICHT_IN_LAGER);
-
-        lager[stelle]=null;
-        letzterIndexBesetzt--;
-
-        for(schieber = stelle; schieber <= letzterIndexBesetzt; schieber++) {
-            lager[schieber] = lager[schieber+1];
-        }
-        if(schieber + 1 < lager.length) {
-            lager[schieber + 1] = null;
-        }
+    	lager.remove(loeschArtikelNr);
     }
 
     //zugang buchen
@@ -106,9 +95,8 @@ public class Lager {
      *  @param (int) erhoehung
      */
     public void bucheZugang(int artikelNr, int erhoehung) {
-        int index = sucheArtikel(artikelNr);
-        check((index != 1), ARTIKEL_NICHT_IN_LAGER);
-        lager[index].bucheZugang(erhoehung);
+        check(!lager.containsKey(artikelNr), ARTIKEL_NICHT_IN_LAGER);
+        lager.get(artikelNr).bucheZugang( erhoehung );;
     }
 
     //abgang buchen
@@ -118,9 +106,8 @@ public class Lager {
      *  @param (int) verminderung
      */
     public void bucheAbgang(int artikelNr, int verminderung) {
-        int index = sucheArtikel(artikelNr);
-        check((index != 1), ARTIKEL_NICHT_IN_LAGER);
-        lager[index].bucheAbgang(verminderung);
+        check(!lager.containsKey(artikelNr), ARTIKEL_NICHT_IN_LAGER);
+        lager.get(artikelNr).bucheAbgang( verminderung );
     }
     
     //Preis aendern
@@ -129,43 +116,7 @@ public class Lager {
      * @param (double)prozent negtaiv == -, positiv == +
      */
     public void preisaenderung(double prozent) {
-        for( int i = 0; i <= letzterIndexBesetzt; i++) {
-            lager[i].aenderePreis(prozent);
-        }
-    }
-    
-    //Hilfsmethoden
-    /**
-     * suche ein Artikel anhand sein Nummer
-     * @param (int)suchNummer
-     * @return Index des Artikels oder -1, falls dieses nicht existiert
-     */
-    public int sucheArtikel(int suchNummer) {
-        int i, gefunden;
-        for(i=0, gefunden =-1; ((i <= letzterIndexBesetzt) && (gefunden == -1)); i++) {
-            if(lager[i].getArtikelnummer() == suchNummer) {
-                gefunden = i;
-            }
-        }
-        return gefunden;
-    }
-    
-    /**
-     * get-Methode zu die Groesse des Lagers
-     */
-    public int getLagerDim() {
-        return lager.length;
-    }
-    
-    /**
-     * get-Methode zu ein Artikel des Lagers
-     * @param (int) index : index des Artikels
-     * @return der Artikel, der an diese Index steht
-     */
-    public Artikel getArtikel(int index) {
-        check((index < getLagerDim() && index >= 0),
-            INDEX_MELDUNG);
-        return lager[index];
+    	lager.values().stream().forEach((Artikel a) -> a.aenderePreis( prozent ));
     }
     
     /**
@@ -182,20 +133,25 @@ public class Lager {
                     "\n\n %6s %6s \t\t%6s " +
                     "\t\t%6s \t\t%6s","Artikelnummer","Beschreibung","Preis", "Bestand","Gesamt");
                     
-        for(int i = 0; i <= letzterIndexBesetzt; i++) {
-            zeilenWert = lager[i].getArtikelPreis() * lager[i].getBestand();
-            wert += zeilenWert;
-            
-            format1.format(" \n %6d %6s \t\t%6.2f \t\t%6d \t\t%6.2f ",
-                            lager[i].getArtikelnummer(),
-                            lager[i].getBeschreibung(),
-                            lager[i].getArtikelPreis(),
-                            lager[i].getBestand(),
-                            zeilenWert);
-        }
+        Iterator<Artikel> iter = lager.values().iterator();               
+        Artikel next;                                                     
+        while(iter.hasNext()){                                            
+        	next = iter.next();                                          
+     
+            zeilenWert = next.getArtikelPreis() * next.getBestand();             
+            wert += zeilenWert;                                     
+
+            format1.format( "\n %6d   %45s %10.2f %10d %10.2f ",
+                                next.getArtikelnummer(),                      
+                                next.getBeschreibung(),                   
+                                next.getArtikelPreis(),                         
+                                next.getBestand(),                                      
+                                zeilenWert
+                              );
         format1.format("\n\n\t GesamtWert: \t\t %.2f", wert);
-        
+        }
         return liste.toString();
+        
     }
     
     //Sortierung
@@ -206,42 +162,10 @@ public class Lager {
      * @param sortierKriterium Praedikat, das Sortierkriterium implementiert
      * @return eine sortierte Liste den Artikeln im Lager
      */
-    public Artikel[] getSorted(BiPredicate<Artikel, Artikel> sortierKriterium) {
-    	Artikel[] sortierteListe = lager.clone();
-    	sort(sortierKriterium, sortierteListe);
-    	return sortierteListe;
-    }
-    
-    /**
-     * Hilfsmethode, um ein Array zu sortieren (Bubblesort)
-     * 
-     * @param sortKrit Praedikat, das Sortierkriterium implementiert
-     * @param art Array von Artikeln, den man sortieren muss
-     */
-    private void sort(BiPredicate<Artikel, Artikel> sortKrit, Artikel[] art) {
-    	int laenge = art.length;
-    	for (int i= 0 ; i < laenge ; i++) {
-    		for (int j = 1 ; j < laenge - i ; j++) {
-    			if (sortKrit.test(art[j - 1] , art[j])) {
-    				tausch(j - 1 , j , art);
-                }
-    		}
-    	}
-    }
-
-    /**
-     * Vertauscht zwei Elementen eines Arrays
-     * 
-     * @param i Index des ersten Elements
-     * @param j Index des zweiten Elements
-     * @param art Array fuer die Vertauschung
-     */
-    private void tausch(int i, int j, Artikel[] art) {
-      Artikel aux = art[i];
-      art[i] = art[j];
-      art[j] = aux;		
-    }
-    
+    public List<Artikel> getSorted(Comparator<Artikel> comparator){
+		return lager.values().stream().sorted(comparator).collect(Collectors.toList());
+	}
+       
     //Filter
     /**
      * Filtert Artikeln des Lagers nach einem uebergegebenen Filterkriterium
@@ -249,31 +173,20 @@ public class Lager {
      * @param filterKriterium Praedikat, das Filterkriterium implementiert
      * @return eine Liste, die nur die Artikel, die das Filterkriterium erfuellen, enthaelt.
      */
-    public List<Artikel> filter(Predicate<Artikel> filterKriterium) {
-    	List<Artikel> gefilterteListe = new ArrayList<Artikel>();
-    	
-    	int laenge = lager.length;
-    	
-    	for(int i = 0; i < laenge; i++) {
-    		if( filterKriterium.test(lager[i]) ) {
-    			gefilterteListe.add(lager[i]);
-    		}
-    	}
-    	return gefilterteListe;
-    }
+    public List<Artikel> filter(Predicate<Artikel> filter)
+	{
+		return lager.values().stream().filter(filter).collect(Collectors.toList());
+	}
     
     //applyToArticles
     /**
      * wendet eine Operation auf alle Artikel des Lagers an
      * @param consumer Ein Consumer für die Operation
      */
-    public void applyToArticles(Consumer<Artikel> consumer) {
-    	int laenge = lager.length;
-    	
-    	for (int i = 0; i < laenge; i++) {
-    		consumer.accept(lager[i]);
-    	}
-    }
+    public void applyToArticles(Consumer<Artikel> consumer)
+	{
+		lager.values().stream().forEach(consumer);
+	}
     
     //applyToSomeArticles
     /**
@@ -282,11 +195,10 @@ public class Lager {
      * @param filterKriterium Praedikat, das Filterkriterium implementiert
      * @param operation Ein Consumer für die Operation
      */
-    public void applyToSomeArticles(Predicate<Artikel> filterKriterium, Consumer<Artikel> operation) {
-    	for(Artikel article : filter(filterKriterium)) {
-    		operation.accept(article);
-    	}
-    }
+    public void applyToSomeArticles(Predicate<Artikel> filter, Consumer<Artikel> consumer)
+	{
+		lager.values().stream().filter(filter).forEach(consumer);                           
+	}
     
     //getArticles
     /**
@@ -296,13 +208,10 @@ public class Lager {
      * @param sortierKriterium Praedikat, das Sortierkriterium implementiert
      * @return Eine Liste dieser Artikeln
      */
-    public Artikel[] getArticles(Predicate<Artikel> suchKriterium, BiPredicate<Artikel, Artikel> sortierKriterium) {
-    	List<Artikel> getArticlesList = new ArrayList<Artikel>();
-    	getArticlesList = filter(suchKriterium);
-    	Artikel[] ergebnis = getArticlesList.toArray(new Artikel[getArticlesList.size()]);
-    	sort(sortierKriterium, ergebnis);
-    	return ergebnis;
-    }
+    public List<Artikel> getArticles(Predicate<Artikel> filter, Comparator<Artikel> comparator)
+	{
+		return lager.values().stream().filter(filter).sorted(comparator).collect(Collectors.toList()); 
+	}
     
     //filterAll
     /**
@@ -313,43 +222,46 @@ public class Lager {
      * @return
      */
 	public List<Artikel> filterAll(Predicate<Artikel>... filterKriterium){
-		List<Artikel> gefilterteListe = new ArrayList<Artikel>();
-    	int laenge = lager.length;
-    	int i;
-    	boolean valid;
-    	for(i = 0; i < laenge; i++) {
-    		valid = true;
-    		for(Predicate<Artikel> j : filterKriterium) {
-    			if( !j.test(lager[i]))
-    			{
-    				valid = false;
-    				break;
-    			}
-    		}
-    		if(valid)
-    		{
-    			gefilterteListe.add(lager[i]);
-    		}
-    	}
-    	return gefilterteListe;
+		
+		for(Predicate<Artikel> j : filterKriterium) {
+			lager.values().stream().filter(j);
+		}
+		return lager.values().stream().collect(Collectors.toList());
     }
+	
+	 /**
+     * 
+     * @param bedingung Bedigung, die man überprüfen muss
+     * @param msg Fehlermessage
+     */
+    public static void check(boolean bedingung, String msg) {
+        if (!bedingung)
+            throw new IllegalArgumentException(msg);
+    }
+	
 	//toString
     /**
      * Eine toString Methode
      * @return eine Repraesentation des Lagers
      */
     public String toString() {
-        String lagerString = new String("Im Lager sind von "+getLagerDim()+
-                                        " Plaetze "+ (letzterIndexBesetzt + 1) +
-                                        " belegt, mit folgenden Artikeln :\n");
-        for(int i = 0; i <= letzterIndexBesetzt; i++) {
-            lagerString += "\n\t"+ i + "\t -> " + lager[i];
-        }
-        return lagerString;                                   
+
+        StringBuffer lagerString = new StringBuffer(
+                                   String.format( "\n\nIm Lager sind von %5d Lagerplaetzen %5d ",
+                                                 lager.size(), (letzterIndexBesetzt + 1)  
+                                   )
+                     );
+                                   
+        lagerString.append( " belegt, mit folgenden Artikeln : \n");
+        Iterator<Artikel> iter = lager.values().iterator();                            
+        int i=0;                                                                       
+        while ( iter.hasNext() )                                                       
+          {
+        	i++;                                                                      
+            lagerString.append( String.format( "\n\t %3d \t-> %s", i, iter.next()) );  
+          }
+     
+
+       return lagerString.toString(); 
     }
-    
-    public static void check(boolean bedingung, String msg) {
-        if (!bedingung)
-            throw new IllegalArgumentException(msg);
-    }    
 }

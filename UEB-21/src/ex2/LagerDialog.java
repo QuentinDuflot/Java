@@ -8,7 +8,7 @@ import java.util.*;
 /**
  * Einfache Klasse Lager
  * @author Duflot / Wechsler
- * @version 03/06/2019
+ * @version 23/06/2019
  */
 
 public class LagerDialog {
@@ -228,7 +228,7 @@ public class LagerDialog {
             break;
 
             case ERSTELLE_ZUFALLS_LAGER:
-            	erstelleRandomLager();
+            	erstelleTestLager();
             	break;
 
             case SORTIERT_LAGER:
@@ -493,14 +493,11 @@ public class LagerDialog {
 	 */
 	private void gebeListeBuecherSortiertNachAutor() {
 
-		Artikel[] result = lager1.getArticles(a -> a instanceof Buch,
-				(a,b) -> ((Buch)a).getAutor().compareTo(((Buch)b).getAutor()) >= 0 ? true : false);
+		List<Artikel> result = lager1.getArticles(a -> a instanceof Buch,
+				(a,b) -> ((Buch)a).getAutor().compareTo(((Buch)b).getAutor()));
 
-		int laenge = result.length;
-		int i;
-
-		for(i = 0; i < laenge; i++) {
-			System.out.println(result[i]);
+		for(int i=0;i<result.size();i++) {
+			   System.out.println(result.get(i));
 		}
 	}
 
@@ -614,34 +611,33 @@ public class LagerDialog {
 			}
     	};
 
-    	Artikel[] sortierteListe = lager1.getSorted(sortiertKriterium);
-    	int laenge = sortierteListe.length;
-    	for(int i = 0; i < laenge ; i++) {
-    		System.out.println(sortierteListe[i]);
-    	}
+    Comparator<Artikel> comp = (a,b) -> sortiertKriterium.test(a, b) ? 1 : -1; 
+ 	   List<Artikel> sorted = lager1.getSorted(comp);
+ 	   for(int i=0; i<sorted.size();i++) {
+ 		   System.out.println(sorted.get(i));
+ 	   }
 	}
 
     /**
      * Erstellt ein Lager mit zufälligen Werten
      */
-	private void erstelleRandomLager() {
+    private void erstelleTestLager()
+    {
   	  Random ran = new Random();
   	  int anzahlBuecher = ran.nextInt(10);
-  	  int anzahlVideos = ran.nextInt(10);
+  	  int anzahlDvds = ran.nextInt(10);
   	  int anzahlCds = ran.nextInt(10);
-  	  int lagerGroesse = 3 + anzahlBuecher + anzahlCds + anzahlVideos;
+  	  int lagerGroesse = 2 + anzahlBuecher + anzahlCds + anzahlDvds;
   	  lager1 = new Lager(lagerGroesse);
-
-  	  lager1.anlegen(new Buch(ran.nextInt(9000)+1000, "buch"+ran.nextInt(10000), ran.nextInt(5), ran.nextDouble() * 100, "autor0", "titel"+ran.nextInt(100), "verlag"+ran.nextInt(100)));
-  	  lager1.anlegen(new Video(ran.nextInt(9000)+1000, "video"+ran.nextInt(10000), ran.nextInt(100), ran.nextDouble() * 100, "titel0", ran.nextFloat() * 100, 2000));
-  	  lager1.anlegen(new CD(ran.nextInt(9000)+1000, "cd"+ran.nextInt(10000), 2, ran.nextDouble() * 100, "interpret0", "titel"+ran.nextInt(100), ran.nextInt(19)+1 ));
   	  
-  	  for(int i=0; i<anzahlVideos; i++)
-  		  lager1.anlegen(new Video(ran.nextInt(9000)+1000, "video"+ran.nextInt(10000), ran.nextInt(100), ran.nextDouble() * 100, "titel"+ran.nextInt(100), ran.nextFloat() * 100, 2000));
+  	  lager1.anlegen(new Buch(1111, "buch"+ran.nextInt(10000), ran.nextInt(5), ran.nextDouble() * 100, "author0", "titel"+ran.nextInt(100), "verlag"+ran.nextInt(100)));
+  	  lager1.anlegen(new Buch(2222, "buch"+ran.nextInt(10000), ran.nextInt(5), ran.nextDouble() * 100, "author0", "titel"+ran.nextInt(100), "verlag"+ran.nextInt(100)));  
+  	  for(int i=0; i<anzahlDvds; i++)
+  		lager1.anlegen(new Video(ran.nextInt(9000)+1000, "video"+ran.nextInt(10000), ran.nextInt(100), ran.nextDouble() * 100, "titel"+ran.nextInt(100), ran.nextFloat() * 100, 2000));
   	  for(int i=0; i<anzahlCds; i++)
-  		  lager1.anlegen(new CD(ran.nextInt(9000)+1000, "cd"+ran.nextInt(10000), ran.nextInt(50), ran.nextDouble() * 100, "interpret"+ran.nextInt(100), "titel"+ran.nextInt(100), ran.nextInt(19)+1 ));
+  		lager1.anlegen(new CD(ran.nextInt(9000)+1000, "cd"+ran.nextInt(10000), ran.nextInt(50), ran.nextDouble() * 100, "interpret"+ran.nextInt(100), "titel"+ran.nextInt(100), ran.nextInt(19)+1 ));
   	  for(int i=0; i<anzahlBuecher; i++)
-  		  lager1.anlegen(new Buch(ran.nextInt(9000)+1000, "buch"+ran.nextInt(10000), ran.nextInt(5), ran.nextDouble() * 100, "autor"+ran.nextInt(100), "titel"+ran.nextInt(100), "verlag"+ran.nextInt(100)));
+  		lager1.anlegen(new Buch(ran.nextInt(9000)+1000, "buch"+ran.nextInt(10000), ran.nextInt(5), ran.nextDouble() * 100, "autor"+ran.nextInt(100), "titel"+ran.nextInt(100), "verlag"+ran.nextInt(100)));
     }
 
     /**
