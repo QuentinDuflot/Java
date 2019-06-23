@@ -73,8 +73,6 @@ public class Lager {
     public void anlegen (Artikel artikel) {
         check((lager.containsKey(artikel.getArtikelnummer() )),
             ARTIKEL_SCHON_IN_LAGER);
-        check( (letzterIndexBesetzt < lager.size() - 1),
-            LAGER_KOMPLETT);
 
         lager.put(artikel.getArtikelnummer(), artikel);
     }
@@ -95,7 +93,7 @@ public class Lager {
      *  @param (int) erhoehung
      */
     public void bucheZugang(int artikelNr, int erhoehung) {
-        check(!lager.containsKey(artikelNr), ARTIKEL_NICHT_IN_LAGER);
+        check(lager.containsKey(artikelNr), ARTIKEL_NICHT_IN_LAGER);
         lager.get(artikelNr).bucheZugang( erhoehung );;
     }
 
@@ -106,7 +104,7 @@ public class Lager {
      *  @param (int) verminderung
      */
     public void bucheAbgang(int artikelNr, int verminderung) {
-        check(!lager.containsKey(artikelNr), ARTIKEL_NICHT_IN_LAGER);
+        check(lager.containsKey(artikelNr), ARTIKEL_NICHT_IN_LAGER);
         lager.get(artikelNr).bucheAbgang( verminderung );
     }
     
@@ -221,6 +219,7 @@ public class Lager {
      * @param filterKriterium Praedikat, das Filterkriterium implementiert
      * @return
      */
+    //TODO: Resolve bug => does not apply any filter
 	public List<Artikel> filterAll(Predicate<Artikel>... filterKriterium){
 		
 		for(Predicate<Artikel> j : filterKriterium) {
