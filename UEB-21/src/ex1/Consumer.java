@@ -33,11 +33,11 @@ public class Consumer {
 			map.get(digitSum).add(timestamp);
 		}
 		
-		System.out.println("Eingebene Zahl:\t\t"+ number +"\n"
-				+ "Dessen Quersumme:\t"+ digitSum +"\n"
-				+ "Zeitstempel:\t\t"+ timestamp +" ms\n"
-				+ "Die Map:\t\t"+ map +"\n"
-		);
+//		System.out.println("Eingebene Zahl:\t\t"+ number +"\n"
+//				+ "Dessen Quersumme:\t"+ digitSum +"\n"
+//				+ "Zeitstempel:\t\t"+ timestamp +" ms\n"
+//				+ "Die Map:\t\t"+ map +"\n"
+//		);
 	}
 	
 	/**
@@ -106,5 +106,7 @@ public class Consumer {
 	 * toString()
 	 * return String str
 	 */
-//	public String toString() {}
+	public String toString() {
+		return "Consumer Klasse\n";
+	}
 }
