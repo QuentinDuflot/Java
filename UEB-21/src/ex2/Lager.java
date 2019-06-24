@@ -1,6 +1,7 @@
 package ex2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Formatter;
 import java.util.Iterator;
@@ -12,6 +13,7 @@ import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Einfache Klasse Lager
@@ -217,15 +219,16 @@ public class Lager {
      * und gibt die Artikel des Lagers zurück , die alle Filterkriterien erfüllen
      * 
      * @param filterKriterium Praedikat, das Filterkriterium implementiert
-     * @return
+     * @return liste mit gefilterte Elemente
      */
-    //TODO: Resolve bug => does not apply any filter
 	public List<Artikel> filterAll(Predicate<Artikel>... filterKriterium){
+		Artikel[] result;
+		List<Artikel> list = lager.values().stream().collect(Collectors.toList());
 		
 		for(Predicate<Artikel> j : filterKriterium) {
-			lager.values().stream().filter(j).collect(Collectors.toList());
+			list = list.stream().filter(j).collect(Collectors.toList());
 		}
-		return lager.values().stream().collect(Collectors.toList());
+		return list;
     }
 	
 	 /**
