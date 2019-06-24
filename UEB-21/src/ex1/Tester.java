@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * @author Quentin Duflot / Marie-Lou Wechsler
@@ -17,6 +18,7 @@ public class Tester {
 	Random random;
 
 	public Tester(String choice) {
+		
 		if(choice.equals("fifo")) {
 			
 			queue = new ArrayDeque<Integer>();
@@ -27,7 +29,6 @@ public class Tester {
 			
 		}else {
 			System.out.println("Bitte wählen sie zwischen fifo und priority");
-			System.exit(1);
 		}
 		
 		consumer =  new Consumer();
@@ -60,7 +61,11 @@ public class Tester {
 	}
 
 	public static void main(String[] args) {
-		Tester tester = new Tester();
-		tester.start();
+			System.out.println("Wählen Sie zwischen fifo und priority");
+			String choice = new Scanner(System.in).nextLine();
+			Tester tester = new Tester(choice);
+			tester.start();
+			
+		
 	}
 }
