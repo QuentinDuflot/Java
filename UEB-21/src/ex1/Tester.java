@@ -1,5 +1,6 @@
 package ex1;
 
+import java.util.ArrayDeque;
 import java.util.NoSuchElementException;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -14,10 +15,22 @@ public class Tester {
 	Consumer consumer;
 	Producer producer;
 	Random random;
-	
-	public Tester() {
-		queue = new PriorityQueue<Integer>();
-		consumer = new Consumer();
+
+	public Tester(String choice) {
+		if(choice.equals("fifo")) {
+			
+			queue = new ArrayDeque<Integer>();
+			
+		}else if(choice.equals("priority")) {
+			
+			queue = new PriorityQueue<Integer>();
+			
+		}else {
+			System.out.println("Bitte wählen sie zwischen fifo und priority");
+			System.exit(1);
+		}
+		
+		consumer =  new Consumer();
 		producer = new Producer();
 		random = new Random();
 	}
