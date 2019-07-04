@@ -1,7 +1,6 @@
 #include <stdio.h>
 #define MWST 0.2
 #define SKONTO 0.02
-#define SMALLER_THAN_0(x) ((x) <= 0)
 #define EXIT 0
 #define BETRAG 1
 #define FIBO 2
@@ -28,12 +27,12 @@ double readBetrag()
 	double netto;
 	while(loop == 0)
 	{
-		printf("\nGeben Sie bitte den Netto-Betrag.");
+		printf("\nGeben Sie bitte den Netto-Betrag.\n");
 		scanf("%lf",&netto);
 		
-		if(SMALLER_THAN_0(netto)
+		if(netto <= 0)
 		{
-			printf("\nFehler: %lf ist kleiner als 0!",netto);
+			printf("\nFehler: %lf ist kleiner als 0!\n",netto);
 		}
 		else
 		{
@@ -56,7 +55,7 @@ void printRechnungBetrag()
 	printf("\nBruttopreis          Euro %lf",brutto);
 	printf("\n- 2% Skonto          Euro %lf",skonto);
 	printf("\n============================");
-	printf("\nRechnungsbetrag      Euro %lf",rechnungBetrag);
+	printf("\nRechnungsbetrag      Euro %lf\n",rechnungBetrag);
 }
 /*--------------------------AUFGABE 2---------------------------------------------------------------*/
 
@@ -66,12 +65,12 @@ int readInt()
 	int nummer;
 	while(loop == 0)
 	{
-		printf("\nGeben Sie bitte ein Integer.");
+		printf("\nGeben Sie bitte ein Integer.\n");
 		scanf("%d",&nummer);
 		
-		if(SMALLER_THAN_0(nummer)
+		if(nummer <= 0)
 		{
-			printf("\nFehler: %d ist kleiner als 0!",nummer);
+			printf("\nFehler: %d ist kleiner als 0!\n",nummer);
 		}
 		else
 		{
@@ -102,7 +101,7 @@ void printFib()
 	int n = readInt();
 	for(i = 0; i <= n; i++) 
 	{
-		printf("\nFibonnacci(%d): %d",i,berechneFibStelleN(i));
+		printf("\nFibonnacci(%d): %d\n",i,berechneFibStelleN(i));
 	}
 }
 
@@ -113,13 +112,14 @@ int main()
 	int choice;
 	do
 	{
-		printf("\nRechnungsbetrag: %d\nFibonnacci: %d\nExit: %d",BETRAG,FIBO,EXIT);
+		printf("\nRechnungsbetrag: %d\nFibonnacci: %d\nExit: %d\n",BETRAG,FIBO,EXIT);
+		scanf("%d",&choice);
 		switch(choice)
 		{
-			case EXIT: printf("\nEnd of the programm");break;
+			case EXIT: printf("\nEnd of the programm\n");break;
 			case BETRAG: printRechnungBetrag();break;
 			case FIBO: printFib();break;
-			default: printf("Diese Funktion existiert nicht");break;
+			default: printf("\nDiese Funktion existiert nicht\n");break;
 		}
 	}while(choice != EXIT);
 	return 0;
