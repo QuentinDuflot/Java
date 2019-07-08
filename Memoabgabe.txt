@@ -39,3 +39,16 @@ grep Name…
 ** ÜBUNG 18
 
 59 Pkt
+
+** ÜBUNG 20
+
+24 Pkt
+
+** ÜBUNG 21
+
+- Producer: main() weg
+- Attributen random
+- Zeitstempel: base millis im Konstruktor
+- += und /=
+
+29 Pkt
