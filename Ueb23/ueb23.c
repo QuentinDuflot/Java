@@ -148,7 +148,7 @@ void printMaxShort() {
 }
 
 void printMaxUChar() {
-    char c = -1;
+    unsigned char c = -1;
     while (c - 1 < 0) {
         --c;
     }
@@ -156,7 +156,7 @@ void printMaxUChar() {
 }
 
 void printMaxUShort() {
-    short s = -1;
+    unsigned short s = -1;
     while (s - 1 < 0) {
         --s;
     }
