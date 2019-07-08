@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include <limits.h>
 #define MWST 0.2
 #define SKONTO 0.02
 #define EXIT 0
 #define BETRAG 1
 #define FIBO 2
+#define LIMITS 3
 
 /*--------------------------AUFGABE 1---------------------------------------------------------------*/
 
@@ -109,7 +111,13 @@ void printFib()
 
 /*--------------------------AUFGABE 3---------------------------------------------------------------*/
 
-
+void printLimitsTyp() {
+    printf("\nMin & max value char: %d - %d\n", CHAR_MIN, CHAR_MAX);
+    printf("\nMin & max value short: %d - %d\n", SHORT_MIN, SHORT_MAX);
+    printf("\nMin & max value unisgned char: %d - %d\n", UCHAR_MIN, UCHAR_MAX);
+    printf("\nMin & max value unsigned short: %d - %d\n", USHORT_MIN, USHORT_MAX);
+    printf("\nMin & max value unsigned int: %d - %d\n", UINT_MIN, UINT_MAX);
+}
 
 /*--------------------------MAIN--------------------------------------------------------------------*/
 
@@ -118,13 +126,14 @@ int main()
 	int choice;
 	do
 	{
-		printf("\nRechnungsbetrag: %d\nFibonnacci: %d\nExit: %d\n", BETRAG, FIBO, EXIT);
+		printf("\nRechnungsbetrag: %d\nFibonnacci: %d\nLimits: %d\nExit: %d\n", BETRAG, FIBO, LIMITS, EXIT);
 		scanf("%d", &choice);
 		switch (choice)
 		{
 		case EXIT: printf("\nEnd of the programm\n");break;
 		case BETRAG: printRechnungBetrag();break;
 		case FIBO: printFib();break;
+        case LIMITS: printLimitsTyp(); break;
 		default: printf("\nDiese Funktion existiert nicht\n");choice = EXIT;break;
 		}
 	} while (choice != EXIT);
