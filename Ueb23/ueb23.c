@@ -111,6 +111,42 @@ void printFib()
 
 /*--------------------------AUFGABE 3---------------------------------------------------------------*/
 
+void printMinChar() {
+    char c = 1;
+    while (c + 1 > 0) {
+        ++c;
+    }
+    printf("\nMin value char: %d", (int)c);
+    return 0;
+}
+
+void printMaxChar() {
+    char c = 1;
+    while (c + 1 < 0) {
+        --c;
+    }
+    printf("\nMin value char: %d", (int)c);
+    return 0;
+}
+
+void printMinShort() {
+    short s = 1;
+    while (s + 1 > 0) {
+        ++s;
+    }
+    printf("\nMin value char: %d", (int)s);
+    return 0;
+}
+
+void printMaxShort() {
+    short s = 1;
+    while (s + 1 < 0) {
+        --s;
+    }
+    printf("\nMin value char: %d", (int)s);
+    return 0;
+}
+
 void printLimitsTyp() {
     printf("\nMin & max value char: %d - %d\n", CHAR_MIN, CHAR_MAX);
     printf("\nMin & max value short: %d - %d\n", SHORT_MIN, SHORT_MAX);
