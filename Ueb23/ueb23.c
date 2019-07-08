@@ -113,95 +113,71 @@ void printFib()
 
 void printMinChar() {
     char c = 1;
-    while (c + 1 < 0) {
-        --c;
-    }
-    printf("\nMin value char: %d", (int)c);
-}
-
-void printMaxChar() {
-    char c = 1;
     while (c + 1 > 0) {
         ++c;
     }
-    printf("\nMax value char: %d", (int)c);
+    printf("%d", (int)c);
+}
+
+void printMaxChar() {
+    char c = -1;
+    while (c - 1 < 0) {
+        --c;
+    }
+    printf("%d", (int)c);
 }
 
 void printMinShort() {
     short s = 1;
-    while (s + 1 < 0) {
-        --s;
+    while (s + 1 > 0) {
+        ++s;
     }
-    printf("\nMin value char: %d", (int)s);
+    printf("%d", (int)s);
 }
 
 void printMaxShort() {
-    short s = 1;
-    while (s + 1 > 0) {
-        ++s;
+    short s = -1;
+    while (s - 1 < 0) {
+        --s;
     }
-    printf("\nMax value char: %d", (int)s);
-}
-
-void printMinUChar() {
-    unsigned char c = 1;
-    while (c + 1 < 0) {
-        --c;
-    }
-    printf("\nMin value char: %d", (int)c);
+    printf("%d", (int)s);
 }
 
 void printMaxUChar() {
-    unsigned char c = 1;
-    while (c + 1 > 0) {
-        ++c;
+    char c = -1;
+    while (c - 1 < 0) {
+        --c;
     }
-    printf("\nMax value char: %d", (int)c);
-}
-
-void printMinUShort() {
-    unsigned short s = 1;
-    while (s + 1 < 0) {
-        --s;
-    }
-    printf("\nMin value char: %d", (int)s);
+    printf("%d", (int)c);
 }
 
 void printMaxUShort() {
-    unsigned short s = 1;
-    while (s + 1 > 0) {
-        ++s;
+    short s = -1;
+    while (s - 1 < 0) {
+        --s;
     }
-    printf("\nMax value char: %d", (int)s);
-}
-
-void printMinUInt() {
-    unsigned int i = 1;
-    while (i + 1 < 0) {
-        --i;
-    }
-    printf("\nMin value char: %d", (int)i);
+    printf("%d", (int)s);
 }
 
 void printMaxUInt() {
-    unsigned int i = 1;
-    while (i + 1 > 0) {
-        ++i;
+    unsigned int i = -1;
+    while (i - 1 < 0) {
+        --i;
     }
-    printf("\nMax value char: %d", (int)i);
+    printf("%d", (int)i);
 }
 
 void printLimitsTyp() {
-    printf("\nMin & max value char:\n"); printMinChar(); printMaxChar();
-    printf("\n[LIMITS] Min & max value char: %d - %d\n", CHAR_MIN, CHAR_MAX);
-    printf("\nMin & max value short:\n"); printMinShort(); printMaxShort();
-    printf("\n[LIMITS] Min & max value short: %d - %d\n", SHRT_MIN, SHRT_MAX);
-    printf("\nMin & max value unisgned char:\n"); /*printMinUChar();*/ printMaxUChar();
-    printf("\n[LIMITS] Min & max value unisgned char: %d - %d\n", 0, UCHAR_MAX);
-    printf("\nMin & max value unsigned short:\n"); /*printMinUShort();*/ printMaxUShort();
-    printf("\n[LIMITS] Min & max value unsigned short: %d - %d\n", 0, USHRT_MAX);
-    printf("\nMin & max value unsigned int: \n"); /*printMinUInt();*/ printMaxUInt();
-    printf("\n[LIMITS] Min & max value unsigned int: %d - %d\n", 0, UINT_MAX);
+    printf("\nMin & max value char: "); printMinChar(); printf(" / "); printMaxChar();
+    printf("\n[LIMITS] Min & max value char: %d / %d\n", CHAR_MIN, CHAR_MAX);
+    printf("\nMin & max value short: "); printMinShort(); printf(" / "); printMaxShort();
+    printf("\n[LIMITS] Min & max value short: %d / %d\n", SHRT_MIN, SHRT_MAX);
+    printf("\nMin & max value unisgned char: "); printf("0 / "); printMaxUChar();
+    printf("\n[LIMITS] Min & max value unisgned char: %d / %d\n", 0, UCHAR_MAX);
+    printf("\nMin & max value unsigned short: "); printf("0 / "); printMaxUShort();
+    printf("\n[LIMITS] Min & max value unsigned short: %d / %d\n", 0, USHRT_MAX);
+    printf("\nMin & max value unsigned int: "); printf("0 / "); printMaxUInt();
+    printf("\n[LIMITS] Min & max value unsigned int: %d / %d\n", 0, UINT_MAX);
 }
 
 /*--------------------------MAIN--------------------------------------------------------------------*/
