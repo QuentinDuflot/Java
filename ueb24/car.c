@@ -7,7 +7,7 @@ CAR createCar(char brand[], float maxSpeed, short numberDoors, bool ABS, char ex
     float horsepower, char cylinder, float capacity) {
     
     ENGINE engine = {horsepower, cylinder, capacity};
-    CAR result = {"", maxSpeed, numberDoors, ABS};
+    CAR result = {"", maxSpeed, numberDoors, ABS, {}, engine};
 
     for(int i = 0; i < 20; i++) {
         result.brand[i] = brand[i];
@@ -30,6 +30,12 @@ int estimateValue(CAR car) {
     if (car.ABS == true) {
         carValue += 5000;
     }
+
+    for (int i = 0; i < 10; i++) {
+        if (car.extras[i][0] != '\0') {
+            carValue += 3000;
+        }
+    }
     
     if (strncmp(car.brand, "Porsche", 20) == 0) {
         carValue *= 2;
@@ -44,12 +50,15 @@ void printCar(CAR car) {
     printf("BRAND: \t\t\t%s\n", car.brand);
     printf("MAX SPEED: \t\t%.2f km/h\n", car.maxSpeed);
     printf("DOORS NUMBER: \t\t%i\n", car.numberDoors);
-    /* printf("ABS: \t\t%i\n", car.ABS); */
+    
+    if (car.ABS == true) {
+        printf("ABS");
+    }
 
     printf("EXTRAS: \t\t");
     for (int i = 0; i < 10; i++) {
         if (car.extras[i][0] != '\0') {
-            printf("%s\t", car.extras[i]);
+            printf("%i] %s\t", i + 1, car.extras[i]);
         }
     }
 

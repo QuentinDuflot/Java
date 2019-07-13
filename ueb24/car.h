@@ -16,5 +16,6 @@ typedef struct {
     ENGINE engine;
 } CAR;
 
-CAR creadteCar(char brand[], float maxSpeed, short numberDoors, bool ABS, char extras[], float horsepower, char cylinder, float capacity);
-int estimateValue();
+CAR createCar(char brand[], float maxSpeed, short numberDoors, bool ABS, char extras[], float horsepower, char cylinder, float capacity);
+int estimateValue(CAR car);
+void printCar(CAR car);
