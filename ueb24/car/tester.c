@@ -16,5 +16,6 @@ int main(void) {
     addCar(c2, carsArray);
     addCar(c3, carsArray);
 
-    printAllCars();
+	//Passage en paramètre de carsArray
+    printAllCars(carsArray);
 }

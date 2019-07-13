@@ -1,4 +1,3 @@
-#pragma once
 #include <stdio.h>
 
 void addCar(CAR car, CAR *carsArray);
