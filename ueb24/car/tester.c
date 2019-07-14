@@ -1,9 +1,34 @@
 #include <stdio.h>
 #include "car.h"
 #include "carDealerShip.h"
+#define SHOW_GARAGE 1
+#define ADD_CAR 2
+#define REMOVE_CAR 3
+#define QUIT 0
 
 double readValueDouble(char *message) {
     double result;
+    printf("%s", message);
+    scanf("%lf", &result);
+    return result;
+}
+
+float readValueFloat(char *message) {
+    float result;
+    printf("%s", message);
+    scanf("%s", &result);
+    return result;
+}
+
+short readValueShort(char *message) {
+    short result;
+    printf("%s", message);
+    scanf("%lf", &result);
+    return result;
+}
+
+bool readValueBool(char *message) {
+    bool result;
     printf("%s", message);
     scanf("%lf", &result);
     return result;
@@ -30,8 +55,12 @@ void printMenu() {
 }
 
 int main() {
-    int choice;
+    CAR carsArray[5];
+	int numberOfCars = 0;
+    int position = 0;
     char extras[10][100] = {"Climatisation", "Cabriolet", "Cruise Control"};
+
+    int choice;
 
     do {
         printMenu();
@@ -39,24 +68,32 @@ int main() {
         scanf("%d", &choice);
 
         switch (choice) {
-        case 1:
-            CAR c1 = createCar(
-                readValueChar("Car's brand name: "),
-                readValueDouble("Car's max speed: "),
-                readValueDouble("Car's doors number"),
-                readValueChar("ABS (true/false): "),
-                extras,
-                250,
-                230,
-                230
-            );
-            printCar(c1);
+        case SHOW_GARAGE:
+            printAllCars(carsArray, numberOfCars);
             break;
 
-        case 2:
+        case ADD_CAR:
+            addCar(
+                createCar(
+                    readValueChar("\nCar's brand name: "),
+                    readValueFloat("\nCar's max speed: "),
+                    readValueShort("\nCar's doors number: "),
+                    readValueBool("\nABS (true/false): "),
+                    extras,
+                    readValueFloat("\nCar's horsepower: "),
+                    readValueChar("\nCar's cylinder: "),
+                    readValueFloat("\nCar's capacity: ")
+                ),
+                carsArray,
+                position,
+                numberOfCars
+            );
+            break;
+
+        case REMOVE_CAR:
             break;
         
-        case 0:
+        case QUIT:
             printf("Quit program\n");
             break;
         
