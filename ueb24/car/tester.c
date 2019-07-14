@@ -9,35 +9,28 @@
 double readValueDouble(char *message) {
     double result;
     printf("%s", message);
-    scanf("%lf", &result);
+    scanf("%le", &result);
     return result;
 }
 
 float readValueFloat(char *message) {
     float result;
     printf("%s", message);
-    scanf("%s", &result);
+    scanf("%f", &result);
     return result;
 }
 
 short readValueShort(char *message) {
     short result;
     printf("%s", message);
-    scanf("%lf", &result);
-    return result;
-}
-
-bool readValueBool(char *message) {
-    bool result;
-    printf("%s", message);
-    scanf("%lf", &result);
+    scanf("%hd", &result);
     return result;
 }
 
 char readValueChar(char *message) {
     char result;
     printf("%s", message);
-    scanf("%lf", &result);
+    scanf("%s", &result);
     return result;
 }
 
@@ -78,7 +71,7 @@ int main() {
                     readValueChar("\nCar's brand name: "),
                     readValueFloat("\nCar's max speed: "),
                     readValueShort("\nCar's doors number: "),
-                    readValueBool("\nABS (true/false): "),
+                    readValueChar("\nABS (true/false): "),
                     extras,
                     readValueFloat("\nCar's horsepower: "),
                     readValueChar("\nCar's cylinder: "),
@@ -86,7 +79,7 @@ int main() {
                 ),
                 carsArray,
                 position,
-                numberOfCars
+                &numberOfCars
             );
             break;
 
