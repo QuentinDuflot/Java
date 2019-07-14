@@ -38,17 +38,17 @@ void printMenu() {
     printf(
         "\n\tMANAGE CARS\n"
         "----------------------------------\n"
-        "\t1. Create a new car\n"
-        "\t2. Print a car\n"
-        "\t3. Create a garage\n"
-        "\t4. Show cars in garage\n"
-        "\t5. Add car to carage\n"
-        "\t6. Remove a car from the garage\n"
+        "\t%d. Show garage\n"
+        "\t%d. Add new car to garage\n"
+        "\t%d. Remove car from garage\n"
+        "\t%d. Quit program\n",
+        SHOW_GARAGE, ADD_CAR, REMOVE_CAR, QUIT
     );
 }
 
 int main() {
-    CAR carsArray[5];
+    int maxNumbersOfCars = 5;
+    CAR carsArray[maxNumbersOfCars];
 	int numberOfCars = 0;
     int position = 0;
     char extras[10][100] = {"Climatisation", "Cabriolet", "Cruise Control"};
@@ -66,24 +66,30 @@ int main() {
             break;
 
         case ADD_CAR:
-            addCar(
-                createCar(
-                    readValueChar("\nCar's brand name: "),
-                    readValueFloat("\nCar's max speed: "),
-                    readValueShort("\nCar's doors number: "),
-                    readValueChar("\nABS (true/false): "),
-                    extras,
-                    readValueFloat("\nCar's horsepower: "),
-                    readValueChar("\nCar's cylinder: "),
-                    readValueFloat("\nCar's capacity: ")
-                ),
-                carsArray,
-                position,
-                &numberOfCars
-            );
+            if (numberOfCars <= maxNumbersOfCars) {
+                addCar(
+                    createCar(
+                        readValueChar("Car's brand name: "),
+                        readValueFloat("Car's max speed: "),
+                        readValueShort("Car's doors number: "),
+                        readValueChar("ABS (true/false): "),
+                        extras[0],
+                        readValueFloat("Car's horsepower: "),
+                        readValueChar("Car's cylinder: "),
+                        readValueFloat("Car's capacity: ")
+                    ),
+                    carsArray,
+                    position,
+                    &numberOfCars
+                );
+            } else {
+                printf("Garage is full");
+            }
             break;
 
         case REMOVE_CAR:
+            int pos = readValueChar("Which position would you like to remove?");
+            removeCar(carsArray, pos, numberOfCars);
             break;
         
         case QUIT:
