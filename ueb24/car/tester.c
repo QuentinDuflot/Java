@@ -28,6 +28,13 @@ short readValueShort(char *message) {
     return result;
 }
 
+/*char[] readValueString(char *message) {
+	char result[20];
+    printf("%s", message);
+    scanf("%s", result);
+    return result;
+}*/
+
 char readValueChar(char *message) {
     char result;
     printf("%s", message);
@@ -35,6 +42,14 @@ char readValueChar(char *message) {
     return result;
 }
 
+bool readValueBool(char *message){
+	bool result;
+	int temp;
+	printf("%s", message);
+	scanf("%d", &temp);
+	result = (bool) temp;
+	return result;
+}
 void quickTest() {
     CAR carsArray[5];
 	int numberOfCars = 0;
@@ -52,7 +67,7 @@ void quickTest() {
     printAllCars(carsArray, numberOfCars);
 
     removeCar(carsArray, 1, &numberOfCars);
-    printf("\n• • • REMOVING CARS • • •\n");
+    printf("\n-----REMOVING CARS-----\n");
     printAllCars(carsArray, numberOfCars);
 }
 
@@ -90,21 +105,22 @@ int main() {
 
         case ADD_CAR:
             if (numberOfCars <= maxNumbersOfCars) {
-                addCar(
-                    createCar(
-                        readValueChar("Car's brand name: "),
+				char name[20];
+				printf("Car's brand name: ");
+				scanf("%s",name);
+				addCar(createCar(
+                        name,
                         readValueFloat("Car's max speed: "),
                         readValueShort("Car's doors number: "),
-                        readValueChar("ABS (true/false): "),
+                        readValueBool("ABS (0:true/1:false): "),
                         extras[0],
                         readValueFloat("Car's horsepower: "),
                         readValueChar("Car's cylinder: "),
                         readValueFloat("Car's capacity: ")
                     ),
-                    carsArray,
-                    position,
-                    &numberOfCars
-                );
+					carsArray,
+					position,
+					&numberOfCars);
             } else {
                 printf("Garage is full");
             }
@@ -128,6 +144,7 @@ int main() {
             break;
         }
 
-        return 0;
     } while (choice != 0);
+	
+	return 0;
 }
