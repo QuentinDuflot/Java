@@ -45,7 +45,7 @@ int estimateValue(CAR car) {
 }
 
 void printCar(CAR car) {
-    printf("CAR CHARACTERISTICS\n");
+    printf("\nCAR CHARACTERISTICS\n");
     printf("--------------------\n");
     printf("BRAND: \t\t\t%s\n", car.brand);
     printf("MAX SPEED: \t\t%.2f km/h\n", car.maxSpeed);

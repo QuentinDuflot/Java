@@ -2,21 +2,27 @@
 #include "car.h"
 #include "carDealerShip.h"
 #define MAX_NUMBER_CARS 5
-//CAR carsArray[5]; inutile car tu auras accès à celui du main lors de la compilation
 
-void addCar(CAR car, CAR *carsArray, int pos, int *numberOfCars) {
-    if(pos >= 0 && pos < MAX_NUMBER_CARS){
-        carsArray[pos] = car;
+void addCar(CAR car, CAR *carsArray, int position, int *numberOfCars) {
+    if (position >= 0 && position < MAX_NUMBER_CARS){
+        carsArray[position] = car;
 		*numberOfCars = *numberOfCars + 1;
-    }else{
+    } else {
 		printf("Invalid position!");
 	}
 }
 
-int removeCar(CAR car);
+void removeCar(CAR *carsArray, int position, int *numberOfCars) {
+    if (position >= 0 && position < MAX_NUMBER_CARS) {
+        for (int i = position; i < MAX_NUMBER_CARS; i++) {
+            carsArray[i] = carsArray[i + 1];
+        }
+        *numberOfCars = *numberOfCars - 1;
+    } else {
+        printf("Invalid position");
+    }
+}
 
-//Il faut mettre le tableau en paramètre sinon il ne sait pas ce qu'est carsArray
-//alternative void printAllCars(CAR *carsArray){...}
 void printAllCars(CAR carsArray[], int numberOfCars) {
     for (int i = 0; i < numberOfCars; i++) {
         printCar(carsArray[i]);

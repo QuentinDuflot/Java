@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-
 typedef struct {
     float horsepower;
     char cylinder;
