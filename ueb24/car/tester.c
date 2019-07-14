@@ -35,19 +35,6 @@ char readValueChar(char *message) {
     return result;
 }
 
-void printMenu() {
-    printf(
-        "\n\tMANAGE CARS\n"
-        "----------------------------------\n"
-        "\t%d. Show garage\n"
-        "\t%d. Add new car to garage\n"
-        "\t%d. Remove car from garage\n"
-        "\t%d. Quick test\n"
-        "\t%d. Quit program\n",
-        SHOW_GARAGE, ADD_CAR, REMOVE_CAR, QUICK_TESTER, QUIT
-    );
-}
-
 void quickTest() {
     CAR carsArray[5];
 	int numberOfCars = 0;
@@ -67,6 +54,19 @@ void quickTest() {
     removeCar(carsArray, 1, &numberOfCars);
     printf("\n• • • REMOVING CARS • • •\n");
     printAllCars(carsArray, numberOfCars);
+}
+
+void printMenu() {
+    printf(
+        "\n\tMANAGE CARS\n"
+        "----------------------------------\n"
+        "\t%d. Show garage\n"
+        "\t%d. Add new car to garage\n"
+        "\t%d. Remove car from garage\n"
+        "\t%d. Quick test\n"
+        "\t%d. Quit program\n",
+        SHOW_GARAGE, ADD_CAR, REMOVE_CAR, QUICK_TESTER, QUIT
+    );
 }
 
 int main() {
