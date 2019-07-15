@@ -10,7 +10,14 @@
 double readValueDouble(char *message) {
     double result;
     printf("%s", message);
-    scanf("%le", &result);
+    scanf("%lf", &result);
+    return result;
+}
+
+int readValueInt(char *message) {
+    int result;
+    printf("%s", message);
+    scanf("%d", &result);
     return result;
 }
 
@@ -97,6 +104,7 @@ int main() {
         printMenu();
         printf("\nChoose an option: ");
         scanf("%d", &choice);
+		int pos; 
 
         switch (choice) {
         case SHOW_GARAGE:
@@ -127,8 +135,9 @@ int main() {
             break;
 
         case REMOVE_CAR:
-            /*char pos = readValueChar("Which position would you like to remove?");
-            removeCar(carsArray, (int)pos, numberOfCars);*/
+            
+			pos = readValueInt("Which position would you like to remove?");
+            removeCar(carsArray, pos - 1, &numberOfCars);
             break;
 
         case QUICK_TESTER:
