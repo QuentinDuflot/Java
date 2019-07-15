@@ -7,7 +7,7 @@ s calculateDistanceUniformLinearMotion(v vt, t tt, t t0)
 
 s calculateDistanceNonUniformLinearMotion(v vt, v v0, a at)
 {
-	return (double) ((pow(vt,2) - pow(v0,2)) / (2 * at));
+	return (double) (vt*vt - v0*v0) / (2 * at);
 }
 
 v calculateSpeedNonUniformLinearMotion(a at, t tt, t t0, v v0)

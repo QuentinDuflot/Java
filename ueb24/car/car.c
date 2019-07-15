@@ -62,5 +62,5 @@ void printCar(CAR car) {
     }
 
     printf("\nENGINE: \t\thorsepower: %.2f \tcylinder: %i \tcapacity: %.2f\n", car.engine.horsepower, car.engine.cylinder, car.engine.capacity);
-    printf("ESTIMATED VALUE: \t%dEuro\n", estimateValue(car));
+    printf("ESTIMATED VALUE: \t%d Euro\n", estimateValue(car));
 }

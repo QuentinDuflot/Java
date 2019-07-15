@@ -1,62 +1,14 @@
 #include <stdio.h>
 #include "car.h"
 #include "carDealerShip.h"
+#include "readMethods.h"
 #define SHOW_GARAGE 1
 #define ADD_CAR 2
 #define REMOVE_CAR 3
 #define QUICK_TESTER 4
 #define QUIT 0
 
-double readValueDouble(char *message) {
-    double result;
-    printf("%s", message);
-    scanf("%lf", &result);
-    return result;
-}
 
-int readValueInt(char *message) {
-    int result;
-    printf("%s", message);
-    scanf("%d", &result);
-    return result;
-}
-
-float readValueFloat(char *message) {
-    float result;
-    printf("%s", message);
-    scanf("%f", &result);
-    return result;
-}
-
-short readValueShort(char *message) {
-    short result;
-    printf("%s", message);
-    scanf("%hd", &result);
-    return result;
-}
-
-/*char[] readValueString(char *message) {
-	char result[20];
-    printf("%s", message);
-    scanf("%s", result);
-    return result;
-}*/
-
-char readValueChar(char *message) {
-    char result;
-    printf("%s", message);
-    scanf("%s", &result);
-    return result;
-}
-
-bool readValueBool(char *message){
-	bool result;
-	int temp;
-	printf("%s", message);
-	scanf("%d", &temp);
-	result = (bool) temp;
-	return result;
-}
 void quickTest() {
     CAR carsArray[5];
 	int numberOfCars = 0;
@@ -129,6 +81,7 @@ int main() {
 					carsArray,
 					position,
 					&numberOfCars);
+					position++;
             } else {
                 printf("Garage is full");
             }
@@ -136,8 +89,9 @@ int main() {
 
         case REMOVE_CAR:
             
-			pos = readValueInt("Which position would you like to remove?");
+			pos = readValueInt("Which position would you like to remove?\n");
             removeCar(carsArray, pos - 1, &numberOfCars);
+			position--;
             break;
 
         case QUICK_TESTER:

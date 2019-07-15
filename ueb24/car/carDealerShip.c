@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "car.h"
 #include "carDealerShip.h"
+#include "readMethods.h"
 #define MAX_NUMBER_CARS 5
 
 void addCar(CAR car, CAR *carsArray, int position, int *numberOfCars) {
